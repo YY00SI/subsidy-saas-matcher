@@ -1,0 +1,48 @@
+[
+  {
+    "id": "mock-1",
+    "title": "IT導入補助金(〇〇枠)",
+    "use_purpose": "業務効率化、インボイス対応",
+    "content": "中小企業・小規模事業者等が自社の課題やニーズに合ったITツール(会計や請求書等)を導入する経費の一部を補助します。",
+    "target_area": [
+      "全国"
+    ],
+    "target_person": "中小企業、個人事業主",
+    "max_limit": "350万円",
+    "rate": "1/2",
+    "start_date": "2024-04-01T00:00:00.000Z",
+    "end_date": "2025-03-31T23:59:59.000Z",
+    "office": "IT導入支援事業者",
+    "url": "https://it-shien.smrj.go.jp/",
+    "contact": "サポートポータル",
+    "status": "受付中",
+    "tags": [
+      "accounting",
+      "invoice",
+      "expense"
+    ]
+  },
+  {
+    "id": "mock-2",
+    "title": "小規模事業者持続化補助金",
+    "use_purpose": "販路開拓、業務効率化",
+    "content": "小規模事業者が経営計画を作成し、インボイス制度対応なども含めた経理事務などの生産性向上に取り組む経費の一部を補助します。",
+    "target_area": [
+      "全国"
+    ],
+    "target_person": "小規模事業者(従業員5名以下等)",
+    "max_limit": "50万円",
+    "rate": "2/3",
+    "start_date": "2024-05-01T00:00:00.000Z",
+    "end_date": "2025-05-31T23:59:59.000Z",
+    "office": "商工会議所・商工会",
+    "url": "https://smaj.go.jp/",
+    "contact": "地方事務局",
+    "status": "受付中",
+    "tags": [
+      "accounting",
+      "invoice",
+      "expense"
+    ]
+  }
+]

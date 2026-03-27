@@ -1,0 +1,66 @@
+import fs from 'fs';
+import path from 'path';
+import { normalizeSubsidy } from '../src/lib/normalize.js';
+import { classifySubsidy, loadTaxonomy } from '../src/lib/classify.js';
+import { loadTools, matchToolsToSubsidy } from '../src/lib/match.js';
+import type { MatchResult } from '../src/lib/types.js';
+
+const RAW_DETAILS_DIR = path.join(process.cwd(), 'data', 'raw', 'subsidy-details');
+const PROCESSED_DIR = path.join(process.cwd(), 'data', 'processed');
+
+function main() {
+  if (!fs.existsSync(PROCESSED_DIR)) {
+    fs.mkdirSync(PROCESSED_DIR, { recursive: true });
+  }
+
+  const taxonomy = loadTaxonomy();
+  const tools = loadTools();
+
+  const subsidies = [];
+  let allMatches: MatchResult[] = [];
+
+  if (!fs.existsSync(RAW_DETAILS_DIR)) {
+    console.warn("No raw data found.");
+    return;
+  }
+
+  const files = fs.readdirSync(RAW_DETAILS_DIR);
+  
+  for (const file of files) {
+    if (!file.endsWith('.json')) continue;
+    
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let raw: any;
+    try {
+      raw = JSON.parse(fs.readFileSync(path.join(RAW_DETAILS_DIR, file), 'utf8'));
+    } catch {
+      continue;
+    }
+
+    const normalized = normalizeSubsidy(raw);
+    const tags = classifySubsidy(normalized, taxonomy);
+    
+    // add tags to metadata
+    const enrichedSubsidy = { ...normalized, tags };
+    subsidies.push(enrichedSubsidy);
+
+    const matchResults = matchToolsToSubsidy(tags, tools, normalized.id);
+    allMatches = allMatches.concat(matchResults);
+  }
+
+  // processed書き出し
+  fs.writeFileSync(
+    path.join(PROCESSED_DIR, 'subsidies.json'),
+    JSON.stringify(subsidies, null, 2)
+  );
+
+  fs.writeFileSync(
+    path.join(PROCESSED_DIR, 'matches.json'),
+    JSON.stringify(allMatches, null, 2)
+  );
+
+  console.log(`Processed ${subsidies.length} subsidies.`);
+  console.log(`Generated ${allMatches.length} matching pairs.`);
+}
+
+main();

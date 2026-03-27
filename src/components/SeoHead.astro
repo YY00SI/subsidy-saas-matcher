@@ -1,0 +1,32 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { 
+  title = "補助金SaaSマッチャー", 
+  description = "補助金とSaaSを自動マッチング",
+  canonical
+} = Astro.props;
+
+const siteTitle = title.includes("補助金SaaSマッチャー") ? title : `${title} | 補助金SaaSマッチャー`;
+---
+
+<!-- SEO Meta Tags -->
+<title>{siteTitle}</title>
+<meta name="description" content={description} />
+<meta charset="utf-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+
+{canonical && <link rel="canonical" href={canonical} />}
+
+<!-- OGP -->
+<meta property="og:title" content={siteTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta name="twitter:card" content="summary_large_image" />

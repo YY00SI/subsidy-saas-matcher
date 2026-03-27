@@ -1,0 +1,46 @@
+[
+  {
+    "subsidyId": "mock-1",
+    "toolSlug": "freee-accounting",
+    "score": 60,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "mock-1",
+    "toolSlug": "misoca",
+    "score": 58,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "mock-1",
+    "toolSlug": "freee-payroll",
+    "score": 9,
+    "reasons": []
+  },
+  {
+    "subsidyId": "mock-2",
+    "toolSlug": "freee-accounting",
+    "score": 60,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "mock-2",
+    "toolSlug": "misoca",
+    "score": 58,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "mock-2",
+    "toolSlug": "freee-payroll",
+    "score": 9,
+    "reasons": []
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "mock-2",
+  "subsidy_name": "小規模事業者持続化補助金",
+  "use_purpose": "販路開拓、業務効率化",
+  "target_area_search": "全国",
+  "content": "小規模事業者が経営計画を作成し、インボイス制度対応なども含めた経理事務などの生産性向上に取り組む経費の一部を補助します。",
+  "target_person": "小規模事業者（従業員5名以下等）",
+  "max_limit": "50万円",
+  "subsidy_rate": "2/3",
+  "acceptance_start_datetime": "2024-05-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2025-05-31T23:59:59.000Z",
+  "office": "商工会議所・商工会",
+  "official_url": "https://smaj.go.jp/",
+  "contact": "地方事務局"
+}

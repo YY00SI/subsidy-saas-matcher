@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "freee-accounting",
+    "name": "freee会計",
+    "category": "accounting",
+    "target_business": "個人事業主・法人",
+    "use_cases": ["会計", "確定申告", "インボイス", "電子帳簿保存法"],
+    "invoice_support": true,
+    "accounting_support": true,
+    "payroll_support": false,
+    "affiliate_url": "https://px.a8.net/svt/ejp?a8mat=YOUR_A8_MAT_ID",
+    "official_url": "https://www.freee.co.jp/accounting/",
+    "strengths": "銀行口座やクレジットカードとの自動連携が強力。初心者でも使いやすいUI。",
+    "caution": "多機能ゆえに使いこなすまでに時間がかかる場合があります。",
+    "priority_score": 100
+  },
+  {
+    "slug": "freee-payroll",
+    "name": "freee人事労務",
+    "category": "payroll",
+    "target_business": "法人・個人事業主(従業員あり)",
+    "use_cases": ["給与計算", "年末調整", "入社手続き", "勤怠管理"],
+    "invoice_support": false,
+    "accounting_support": false,
+    "payroll_support": true,
+    "affiliate_url": "https://px.a8.net/svt/ejp?a8mat=YOUR_A8_MAT_ID_PAYROLL",
+    "official_url": "https://www.freee.co.jp/hr/",
+    "strengths": "給与計算から社会保険手続きまでを一気通貫で自動化。",
+    "caution": "従業員数に応じた従量課金体系です。",
+    "priority_score": 90
+  },
+  {
+    "slug": "misoca",
+    "name": "Misoca",
+    "category": "invoice",
+    "target_business": "個人事業主・小規模法人",
+    "use_cases": ["請求書発行", "見積書", "納品書", "インボイス"],
+    "invoice_support": true,
+    "accounting_support": false,
+    "payroll_support": false,
+    "affiliate_url": "https://px.a8.net/svt/ejp?a8mat=YOUR_A8_MAT_ID_MISOCA",
+    "official_url": "https://www.弥生.jp/products/misoca/",
+    "strengths": "1分で請求書作成が可能。スマホアプリからも操作しやすい。",
+    "caution": "発送代行などは別途費用がかかります。",
+    "priority_score": 80
+  }
+]

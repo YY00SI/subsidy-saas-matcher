@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const dataPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
+  let subsidies = [];
+  try {
+    subsidies = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  } catch (e) {
+    console.warn("getStaticPaths failed in [id].astro", e);
+  }
+  
+  return subsidies.map((s) => ({
+    params: { id: s.id },
+    props: { subsidy: s },
+  }));
+}
+
+const { id } = Astro.params;
+const { subsidy } = Astro.props;
+
+// マッチングツールの読み込み
+const matchesPath = path.join(process.cwd(), 'data', 'processed', 'matches.json');
+const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+let matchedTools = [];
+
+try {
+  const allMatches = JSON.parse(fs.readFileSync(matchesPath, 'utf8'));
+  const allTools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
+  
+  const relevantMatches = allMatches.filter(m => m.subsidyId === id);
+  matchedTools = relevantMatches.map(m => {
+    const tool = allTools.find(t => t.slug === m.toolSlug);
+    return { ...tool, matchScore: m.score, matchReasons: m.reasons };
+  });
+} catch (e) {
+  console.warn("Failed to load matches in [id].astro", e);
+}
+---
+
+<BaseLayout 
+  title={`${subsidy.title} | 補助金詳細`} 
+  description={`${subsidy.title}の補助金内容と、相性の良いSaaSツールのマッチング結果を紹介します。`}
+>
+  <nav class="breadcrumb">
+    <a href="/">TOP</a> &gt; <a href="/subsidies">補助金一覧</a> &gt; <span>詳細</span>
+  </nav>
+
+  <article class="subsidy-detail">
+    <header class="detail-header">
+      <div class="tags">
+        {subsidy.tags?.map(t => <span class="tag">{t}</span>)}
+        <span class="status-badge">受付中</span>
+      </div>
+      <h1>{subsidy.title}</h1>
+      <p class="lead">{subsidy.use_purpose}</p>
+    </header>
+
+    <div class="content-grid">
+      <div class="main-info">
+        <section class="info-section">
+          <h2>補助金の内容</h2>
+          <div class="info-card">
+            <p>{subsidy.content}</p>
+          </div>
+        </section>
+
+        <section class="info-section">
+          <h2>公募要領・詳細スペック</h2>
+          <table class="spec-table">
+            <tr><th>対象者</th><td>{subsidy.target_person || '要問合せ'}</td></tr>
+            <tr><th>補助上限額</th><td>{subsidy.max_limit || '要問合せ'}</td></tr>
+            <tr><th>補助率</th><td>{subsidy.rate || '要問合せ'}</td></tr>
+            <tr><th>対象地域</th><td>{subsidy.target_area?.join(', ') || '全国'}</td></tr>
+            <tr><th>受付期間</th><td>{subsidy.start_date ? new Date(subsidy.start_date).toLocaleDateString('ja-JP') : '-'} 〜 {subsidy.end_date ? new Date(subsidy.end_date).toLocaleDateString('ja-JP') : '-'}</td></tr>
+            <tr><th>事務局/窓口</th><td>{subsidy.office}</td></tr>
+          </table>
+          <div class="official-cta">
+            <a href={subsidy.url} target="_blank" rel="noopener noreferrer" class="btn btn-primary">公式サイトで詳細を確認する</a>
+            <p class="note">※外部サイト（JGrants等）へ移動します。</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="matching-sidebar">
+        <div class="sticky-box">
+          <h2>相性の良いITツール</h2>
+          <p class="sidebar-intro">この補助金の対象になりやすい、おすすめのツールです。</p>
+          
+          <div class="matched-list">
+            {matchedTools.length > 0 ? matchedTools.map(tool => (
+              <div class="tool-mini-card">
+                <div class="tool-head">
+                  <span class="category-label">{tool.category}</span>
+                  <span class="score">マッチ度 {Math.round(tool.matchScore)}%</span>
+                </div>
+                <h3>{tool.name}</h3>
+                <ul class="reasons">
+                  {tool.matchReasons.map(r => <li>{r}</li>)}
+                </ul>
+                <a href={`/tools/${tool.slug}`} class="btn btn-outline">詳細を見る</a>
+                <a href={tool.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="tool-link">公式サイトへ</a>
+              </div>
+            )) : (
+              <p class="no-match">現在、自動マッチングする推奨ツールはありません。</p>
+            )}
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="bottom-warning">
+      <h3>【ご注意】</h3>
+      <p>
+        本ページの情報はJGrants等の公開データをAIにより分類・マッチングしたものです。
+        補助金の採択を保証するものではありません。
+        最新の公募要領および申請の可否については、必ず事務局の公式サイトをご確認ください。
+      </p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .breadcrumb { margin-bottom: 2rem; font-size: 0.85rem; color: #64748b; }
+  .breadcrumb a { color: #64748b; text-decoration: none; }
+  .breadcrumb a:hover { color: #3b82f6; }
+
+  .detail-header { margin-bottom: 3rem; }
+  .detail-header h1 { font-size: 2.25rem; margin: 1rem 0; }
+  .lead { font-size: 1.1rem; color: #475569; line-height: 1.6; }
+  .status-badge { background: #dcfce7; color: #15803d; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; font-size: 0.8rem; }
+  
+  .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; }
+  @media (max-width: 800px) { .content-grid { grid-template-columns: 1fr; } }
+
+  .info-section { margin-bottom: 3rem; }
+  .info-section h2 { border-left: 4px solid #3b82f6; padding-left: 1rem; margin-bottom: 1.5rem; font-size: 1.5rem; }
+  .info-card { background: #f8fafc; padding: 2rem; border-radius: 12px; line-height: 1.8; color: #334155; }
+  
+  .spec-table { width: 100%; border-collapse: collapse; text-align: left; margin-bottom: 2rem;}
+  .spec-table th { background: #f1f5f9; padding: 1rem; border-bottom: 1px solid #e2e8f0; width: 140px; font-size: 0.9rem;}
+  .spec-table td { padding: 1rem; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+
+  .official-cta { text-align: center; margin-top: 3rem; background: #eef2ff; padding: 2rem; border-radius: 12px; }
+  .official-cta .note { font-size: 0.75rem; color: #64748b; margin-top: 0.75rem; }
+
+  .sticky-box { position: sticky; top: 100px; }
+  .matching-sidebar h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .sidebar-intro { font-size: 0.85rem; color: #64748b; margin-bottom: 1.5rem; }
+  
+  .tool-mini-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+  .tool-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+  .category-label { font-size: 0.65rem; background: #f1f5f9; color: #475569; padding: 0.1rem 0.4rem; border-radius: 3px; font-weight: bold; text-transform: uppercase; }
+  .score { font-size: 0.7rem; color: #3b82f6; font-weight: 700; }
+  .tool-mini-card h3 { font-size: 1.1rem; margin: 0 0 0.5rem 0; }
+  .reasons { font-size: 0.75rem; color: #64748b; padding-left: 1.2rem; margin-bottom: 1rem; }
+  .reasons li { margin-bottom: 0.2rem; }
+  
+  .btn-outline { display: block; text-align: center; border: 1px solid #e2e8f0; color: #475569; font-size: 0.85rem; padding: 0.5rem; border-radius: 6px; text-decoration: none; margin-bottom: 0.5rem; }
+  .btn-outline:hover { background: #f8fafc; border-color: #cbd5e1; }
+  .tool-link { display: block; text-align: center; color: #3b82f6; font-weight: 700; font-size: 0.85rem; text-decoration: none; }
+  .tool-link:hover { text-decoration: underline; }
+
+  .bottom-warning { margin-top: 5rem; padding: 2rem; border: 1px dashed #cbd5e1; border-radius: 12px; color: #64748b; font-size: 0.85rem; }
+  .bottom-warning h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #475569; }
+</style>

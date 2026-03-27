@@ -1,0 +1,24 @@
+[
+  {
+    "id": "mock-1",
+    "subsidy_name": "IT導入補助金（〇〇枠）",
+    "target_area_search": "全国",
+    "acceptance_start_datetime": "2024-04-01T00:00:00.000Z",
+    "acceptance_end_datetime": "2025-03-31T23:59:59.000Z",
+    "subsidy_max_limit": "3500000",
+    "subsidy_rate": "1/2",
+    "target_number_of_employees": "50名以下",
+    "detail": "クラウド会計ソフトやインボイス対応ツールの導入費用の一部を補助します。"
+  },
+  {
+    "id": "mock-2",
+    "subsidy_name": "小規模事業者持続化補助金",
+    "target_area_search": "全国",
+    "acceptance_start_datetime": "2024-05-01T00:00:00.000Z",
+    "acceptance_end_datetime": "2025-05-31T23:59:59.000Z",
+    "subsidy_max_limit": "500000",
+    "subsidy_rate": "2/3",
+    "target_number_of_employees": "5名以下",
+    "detail": "小規模事業者が行う販路開拓や業務効率化（経理・請求書ツールの導入等）の取り組みを支援します。"
+  }
+]

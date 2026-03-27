@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+  let tools = [];
+  try {
+    tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
+  } catch (e) {
+    console.warn("getStaticPaths failed in tools/[slug].astro", e);
+  }
+  
+  return tools.map((t) => ({
+    params: { slug: t.slug },
+    props: { tool: t },
+  }));
+}
+
+const { slug } = Astro.params;
+const { tool } = Astro.props;
+
+// このツールと相性の良い補助金を抽出
+const subsidiesPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
+const matchesPath = path.join(process.cwd(), 'data', 'processed', 'matches.json');
+let matchedSubsidies = [];
+
+try {
+  const allSubsidies = JSON.parse(fs.readFileSync(subsidiesPath, 'utf8'));
+  const allMatches = JSON.parse(fs.readFileSync(matchesPath, 'utf8'));
+  
+  const relevantMatches = allMatches.filter(m => m.toolSlug === slug);
+  matchedSubsidies = relevantMatches.map(m => {
+    const subsidy = allSubsidies.find(s => s.id === m.subsidyId);
+    return { ...subsidy, matchScore: m.score };
+  });
+} catch (e) {
+  console.warn("Failed to load matched subsidies in tools/[slug].astro", e);
+}
+---
+
+<BaseLayout 
+  title={`${tool.name}の詳細・導入に使える補助金`} 
+  description={`${tool.name}の特徴や強み、導入時に活用できる補助金情報について詳しく解説します。`}
+>
+  <nav class="breadcrumb">
+    <a href="/">TOP</a> &gt; <span>ツール詳細: {tool.name}</span>
+  </nav>
+
+  <section class="tool-detail">
+    <header class="tool-header">
+      <div class="category-tag">{tool.category}</div>
+      <h1>{tool.name}</h1>
+      <p class="target-info">対象: {tool.target_business}</p>
+    </header>
+
+    <div class="main-grid">
+      <div class="tool-info-col">
+        <section class="content-box">
+          <h2>ツールの特徴・強み</h2>
+          <p>{tool.strengths}</p>
+          
+          <div class="use-cases">
+            <h3>主な活用シーン</h3>
+            <ul>
+              {tool.use_cases.map(uc => <li>{uc}</li>)}
+            </ul>
+          </div>
+        </section>
+
+        <section class="content-box warning-box">
+          <h2>導入時の注意点</h2>
+          <p>{tool.caution}</p>
+        </section>
+
+        <div class="cta-area">
+          <a href={tool.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-large">
+            {tool.name} 公式サイトはこちら
+          </a>
+          <p class="affiliate-notice">※外部サイトに移動します</p>
+        </div>
+      </div>
+
+      <aside class="matching-subsidies-col">
+        <h2>活用のチャンス！相性の良い補助金</h2>
+        <div class="subsidy-mini-list">
+          {matchedSubsidies.length > 0 ? matchedSubsidies.map(s => (
+            <div class="s-mini-card">
+              <span class="score-tag">マッチ度 {Math.round(s.matchScore)}%</span>
+              <h3><a href={`/subsidies/${s.id}`}>{s.title}</a></h3>
+              <p>上限: {s.max_limit}</p>
+            </div>
+          )) : (
+            <p class="empty-msg">現在、このツールに特化した推奨補助金はありません。</p>
+          )}
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .breadcrumb { margin-bottom: 2rem; font-size: 0.85rem; color: #64748b; }
+  .breadcrumb a { color: #64748b; text-decoration: none; }
+
+  .tool-header { margin-bottom: 3rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 2rem;}
+  .category-tag { display: inline-block; background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; color: #64748b; text-transform: uppercase; margin-bottom: 1rem;}
+  .tool-header h1 { font-size: 2.5rem; margin: 0; }
+  .target-info { color: #64748b; margin-top: 0.5rem; }
+
+  .main-grid { display: grid; grid-template-columns: 1fr 300px; gap: 3rem; }
+  @media (max-width: 800px) { .main-grid { grid-template-columns: 1fr; } }
+
+  .content-box { margin-bottom: 2.5rem; }
+  .content-box h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .use-cases { margin-top: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 10px; }
+  .use-cases h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #475569; }
+  .use-cases ul { padding-left: 1.25rem; margin: 0; }
+  .use-cases li { margin-bottom: 0.4rem; color: #334155; }
+
+  .warning-box { background: #fff7ed; padding: 1.5rem; border-radius: 10px; border: 1px solid #fed7aa; }
+  .warning-box h2 { color: #9a3412; font-size: 1.1rem; }
+  .warning-box p { font-size: 0.9rem; color: #9a3412; }
+
+  .cta-area { text-align: center; margin-top: 4rem; padding: 3rem; background: #f0f9ff; border-radius: 20px; }
+  .btn-large { font-size: 1.25rem; padding: 1rem 2rem; }
+  .affiliate-notice { font-size: 0.7rem; color: #94a3b8; margin-top: 1rem; }
+
+  .matching-subsidies-col h2 { font-size: 1.1rem; margin-bottom: 1.5rem; }
+  .s-mini-card { padding: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 1rem; position: relative; }
+  .score-tag { font-size: 0.65rem; color: #3b82f6; font-weight: bold; }
+  .s-mini-card h3 { font-size: 1rem; margin: 0.25rem 0; }
+  .s-mini-card h3 a { color: #0f172a; text-decoration: none; }
+  .s-mini-card h3 a:hover { color: #3b82f6; }
+  .s-mini-card p { font-size: 0.8rem; color: #64748b; margin: 0; }
+  .empty-msg { font-size: 0.85rem; color: #94a3b8; font-style: italic; }
+</style>
