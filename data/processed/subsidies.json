@@ -1,37 +1,29 @@
 [
   {
     "id": "mock-1",
-    "title": "IT導入補助金(〇〇枠)",
-    "use_purpose": "業務効率化、インボイス対応",
-    "content": "中小企業・小規模事業者等が自社の課題やニーズに合ったITツール(会計や請求書等)を導入する経費の一部を補助します。",
-    "target_area": [
-      "全国"
-    ],
-    "target_person": "中小企業、個人事業主",
+    "title": "IT導入補助金2024 (インボイス枠)",
+    "use_purpose": "会計・受発注ソフト等の導入",
+    "content": "インボイス対応に必要なITツール（会計ソフト・請求書ソフト等）の導入経費の一部を補助します。",
+    "target_area": ["全国"],
+    "target_person": "中小企業・小規模事業者等",
     "max_limit": "350万円",
-    "rate": "1/2",
+    "rate": "1/2 〜 4/5",
     "start_date": "2024-04-01T00:00:00.000Z",
     "end_date": "2025-03-31T23:59:59.000Z",
     "office": "IT導入支援事業者",
     "url": "https://it-shien.smrj.go.jp/",
     "contact": "サポートポータル",
     "status": "受付中",
-    "tags": [
-      "accounting",
-      "invoice",
-      "expense"
-    ]
+    "tags": ["accounting", "invoice"]
   },
   {
     "id": "mock-2",
     "title": "小規模事業者持続化補助金",
-    "use_purpose": "販路開拓、業務効率化",
-    "content": "小規模事業者が経営計画を作成し、インボイス制度対応なども含めた経理事務などの生産性向上に取り組む経費の一部を補助します。",
-    "target_area": [
-      "全国"
-    ],
-    "target_person": "小規模事業者(従業員5名以下等)",
-    "max_limit": "50万円",
+    "use_purpose": "販路開拓、業務効率化（IT導入）",
+    "content": "小規模事業者がインボイス制度対応なども含めた経理事務などの生産性向上・販路開拓に取り組む経費の一部を補助します。",
+    "target_area": ["全国"],
+    "target_person": "小规模事業者(従業員5名以下等)",
+    "max_limit": "250万円",
     "rate": "2/3",
     "start_date": "2024-05-01T00:00:00.000Z",
     "end_date": "2025-05-31T23:59:59.000Z",
@@ -39,10 +31,40 @@
     "url": "https://smaj.go.jp/",
     "contact": "地方事務局",
     "status": "受付中",
-    "tags": [
-      "accounting",
-      "invoice",
-      "expense"
-    ]
+    "tags": ["expense", "invoice"]
+  },
+  {
+    "id": "mock-3",
+    "title": "ものづくり・商業・サービス生産性向上促進補助金",
+    "use_purpose": "革新的サービスの開発、生産プロセス改善",
+    "content": "革新的な製品・サービスの開発、生産プロセス改善等のための設備投資やシステム構築（大規模な会計システム導入等）を支援します。",
+    "target_area": ["全国"],
+    "target_person": "中小企業・小規模事業者等",
+    "max_limit": "1250万円",
+    "rate": "1/2",
+    "start_date": "2024-06-01T00:00:00.000Z",
+    "end_date": "2025-06-30T23:59:59.000Z",
+    "office": "ものづくり補助金事務局",
+    "url": "https://portal.monodukuri-hojo.jp/",
+    "contact": "サポートセンター",
+    "status": "受付中",
+    "tags": ["accounting", "large-scale"]
+  },
+  {
+    "id": "mock-4",
+    "title": "事業再構築補助金 (業務改善枠)",
+    "use_purpose": "新事業展開、事業転換へのIT投資",
+    "content": "ポストコロナの時代の経済社会の変化に対応するための企業の思い切った事業再構築を支援します。最新のSaaS導入によるDX化にも利用可能。",
+    "target_area": ["全国"],
+    "target_person": "中小企業等",
+    "max_limit": "2000万円",
+    "rate": "2/3",
+    "start_date": "2024-07-01T00:00:00.000Z",
+    "end_date": "2025-07-31T23:59:59.000Z",
+    "office": "事業再構築補助金事務局",
+    "url": "https://jigyou-saikouchiku.go.jp/",
+    "contact": "インフォメーション",
+    "status": "受付中",
+    "tags": ["expense", "accounting", "invoice"]
   }
 ]

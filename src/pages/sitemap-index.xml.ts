@@ -14,7 +14,7 @@ export async function GET() {
     console.warn("Sitemap generation error", e);
   }
 
-  const baseUrl = 'https://YOUR_USER_NAME.github.io/subsidy-saas-matcher';
+  const baseUrl = 'https://YY00SI.github.io/subsidy-saas-matcher';
   
   const pages = [
     '',

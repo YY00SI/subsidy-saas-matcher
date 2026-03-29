@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import fs from 'fs';
 import path from 'path';
 
+const base = import.meta.env.BASE_URL;
+
 // processedデータ読み込み
 const dataPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
 let subsidies = [];
@@ -17,31 +19,42 @@ const activeSubsidies = subsidies.filter(s => s.status === '受付中' || !s.sta
 ---
 
 <BaseLayout 
-  title="補助金一覧" 
+  title="補助金一覧 | 補助金SaaSマッチャー" 
   description="現在受付中のIT導入・DX関連補助金の一覧です。"
 >
   <div class="header-section">
-    <h1>補助金一覧</h1>
-    <p>{activeSubsidies.length} 件の補助金が見つかりました。</p>
+    <h1 class="page-title">補助金一覧</h1>
+    <p class="subtitle">{activeSubsidies.length} 件の補助金が見つかりました。</p>
   </div>
 
   <div class="subsidy-grid">
     {activeSubsidies.map(s => (
-      <div class="card subsidy-card">
+      <div class="glass-card subsidy-card">
         <div class="card-header">
-          <span class="area-tag">{s.target_area?.[0] || '全国'}</span>
-          <span class="status-tag">受付中</span>
+          <div class="tags-left">
+            <span class="area-tag">{s.target_area?.[0] || '全国'}</span>
+            <span class="status-tag">受付中</span>
+          </div>
+          <div class="tags-right">
+            {s.tags?.slice(0, 2).map(t => <span class="tag">{t}</span>)}
+          </div>
         </div>
-        <h3><a href={`/subsidies/${s.id}`}>{s.title}</a></h3>
+        
+        <h3 class="s-title"><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
         <p class="summary">{s.use_purpose || s.content.substring(0, 100) + '...'}</p>
+        
         <div class="card-footer">
-          <div class="meta">
-            <span class="label">上限額:</span>
-            <span class="value">{s.max_limit || '要問合せ'}</span>
+          <div class="meta-group">
+            <div class="meta">
+              <span class="label">上限額</span>
+              <span class="value text-gradient">{s.max_limit || '要問合せ'}</span>
+            </div>
+            <div class="meta meta-sub">
+              <span class="label">補助率</span>
+              <span class="value">{s.rate || '-'}</span>
+            </div>
           </div>
-          <div class="tags">
-            {s.tags?.map(t => <span class="tag">{t}</span>)}
-          </div>
+          <a href={`${base}subsidies/${s.id}/`} class="btn btn-secondary btn-sm">詳細を見る</a>
         </div>
       </div>
     ))}
@@ -49,27 +62,52 @@ const activeSubsidies = subsidies.filter(s => s.status === '受付中' || !s.sta
 </BaseLayout>
 
 <style>
-  .header-section { margin-bottom: 3rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 1rem;}
-  .header-section h1 { margin-bottom: 0.5rem; }
-  .header-section p { color: #64748b; }
+  .header-section { margin-bottom: 4rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(226, 232, 240, 0.5);}
+  .page-title { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .subtitle { color: var(--secondary); font-size: 1.1rem; }
 
-  .subsidy-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+  .subsidy-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
   
-  .subsidy-card { display: flex; flex-direction: column; gap: 0.5rem; }
-  .card-header { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; }
-  .area-tag { font-size: 0.75rem; color: #0369a1; background: #e0f2fe; padding: 0.1rem 0.5rem; border-radius: 4px; font-weight: bold; }
-  .status-tag { font-size: 0.75rem; color: #15803d; background: #dcfce7; padding: 0.1rem 0.5rem; border-radius: 4px; font-weight: bold; }
+  .subsidy-card { display: flex; flex-direction: column; padding: 2rem; position: relative; overflow: hidden;}
+  .subsidy-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
+  }
+
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;}
+  .tags-left { display: flex; gap: 0.5rem; }
+  .tags-right { display: flex; gap: 0.5rem; }
   
-  .subsidy-card h3 { margin: 0; font-size: 1.25rem; }
-  .subsidy-card h3 a { color: #0f172a; text-decoration: none; }
-  .subsidy-card h3 a:hover { color: #3b82f6; }
+  .area-tag { font-size: 0.75rem; color: #0369a1; background: #e0f2fe; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; }
+  .status-tag { font-size: 0.75rem; color: var(--success); background: rgba(16, 185, 129, 0.1); padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; border: 1px solid rgba(16, 185, 129, 0.2);}
   
-  .summary { color: #475569; font-size: 0.95rem; margin: 0.5rem 0; line-height: 1.6; }
+  .s-title { margin: 0 0 1rem 0; font-size: 1.5rem; }
+  .s-title a { color: var(--primary); text-decoration: none; }
+  .s-title a:hover { color: var(--accent); }
   
-  .card-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; pt: 1rem; border-top: 1px solid #f1f5f9; padding-top: 1rem;}
+  .summary { color: var(--secondary); font-size: 1rem; margin: 0 0 2rem 0; line-height: 1.6; }
+  
+  .card-footer { 
+    margin-top: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    border-top: 1px solid rgba(226, 232, 240, 0.5); 
+    padding-top: 1.5rem;
+  }
+  
+  .meta-group { display: flex; gap: 2.5rem; }
   .meta { display: flex; flex-direction: column; }
-  .meta .label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; }
-  .meta .value { font-weight: 700; color: #0f172a; }
+  .meta-sub { opacity: 0.8; }
+  .meta .label { font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;}
+  .meta .value { font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif; font-size: 1.25rem;}
   
-  .tags { display: flex; gap: 0.25rem; }
+  .btn-sm { padding: 0.5rem 1.25rem; font-size: 0.9rem; }
+  
+  @media (max-width: 600px) {
+    .card-footer { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .btn-sm { width: 100%; text-align: center; }
+  }
 </style>

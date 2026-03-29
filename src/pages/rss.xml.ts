@@ -13,7 +13,7 @@ export async function GET() {
   const items = subsidies.map((s: any) => `
     <item>
       <title>${s.title}</title>
-      <link>https://YOUR_USER_NAME.github.io/subsidy-saas-matcher/subsidies/${s.id}</link>
+      <link>https://YY00SI.github.io/subsidy-saas-matcher/subsidies/${s.id}</link>
       <description>${s.use_purpose || s.content}</description>
       <pubDate>${new Date(s.start_date || new Date()).toUTCString()}</pubDate>
     </item>
@@ -23,7 +23,7 @@ export async function GET() {
 <rss version="2.0">
   <channel>
     <title>補助金SaaSマッチャー | 最新補助金情報</title>
-    <link>https://YOUR_USER_NAME.github.io/subsidy-saas-matcher/</link>
+    <link>https://YY00SI.github.io/subsidy-saas-matcher/</link>
     <description>IT導入・インボイス対応に使える最新の補助金情報をお届けします。</description>
     ${items}
   </channel>

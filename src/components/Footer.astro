@@ -6,7 +6,7 @@ const today = new Date();
   <div class="container">
     <div class="footer-content">
       <div class="footer-info">
-        <p>&copy; {today.getFullYear()} 補助金SaaSマッチャー</p>
+        <p class="copyright">&copy; {today.getFullYear()} 補助金SaaSマッチャー</p>
         <p class="disclaimer">
           当サイトは、JGrantsおよび各ツールの公式サイトより公開情報を収集・提供しています。
           情報の正確性には万全を期していますが、最終的な判断、申請にあたっては必ず公式サイトおよび公募要領を確認してください。
@@ -14,9 +14,8 @@ const today = new Date();
       </div>
       <div class="footer-disclosure">
         <p>
-          本サイトにはアフィリエイト広告が含まれています。
-          リンクを経由してご契約いただいた場合、運営者に手数料が支払われることがありますが、
-          これによりユーザー様の支払い料金が増えることはありません。
+          本サイトにはアフィリエイト広告が含まれています。<br/>
+          リンクを経由してご契約いただいた場合、運営者に手数料が支払われることがありますが、これによりユーザー様の支払い料金が増えることはありません。
         </p>
       </div>
     </div>
@@ -25,29 +24,38 @@ const today = new Date();
 
 <style>
   .site-footer {
-    border-top: 1px solid #e2e8f0;
-    padding: 3rem 0;
+    border-top: 1px solid rgba(226, 232, 240, 0.5);
+    padding: 4rem 0 3rem;
     margin-top: 4rem;
-    background: #f8fafc;
-    color: #64748b;
+    background: rgba(248, 250, 252, 0.5);
+    backdrop-filter: blur(10px);
+    color: var(--text-muted);
     font-size: 0.85rem;
   }
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
+  
   .footer-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
+  
+  .copyright {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
   .disclaimer {
     margin-top: 0.5rem;
     line-height: 1.6;
+    max-width: 800px;
   }
+  
   .footer-disclosure {
-    padding-top: 1.5rem;
-    border-top: 1px dashed #cbd5e1;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(203, 213, 225, 0.6);
+    line-height: 1.6;
   }
 </style>

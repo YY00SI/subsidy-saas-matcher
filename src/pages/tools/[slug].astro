@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const { tool } = Astro.props;
+const base = import.meta.env.BASE_URL;
 
 // このツールと相性の良い補助金を抽出
 const subsidiesPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
@@ -44,55 +45,65 @@ try {
   title={`${tool.name}の詳細・導入に使える補助金`} 
   description={`${tool.name}の特徴や強み、導入時に活用できる補助金情報について詳しく解説します。`}
 >
-  <nav class="breadcrumb">
-    <a href="/">TOP</a> &gt; <span>ツール詳細: {tool.name}</span>
+  <nav class="breadcrumb container">
+    <a href={base}>TOP</a> &gt; <span>ツール詳細: {tool.name}</span>
   </nav>
 
-  <section class="tool-detail">
+  <section class="tool-detail container">
     <header class="tool-header">
       <div class="category-tag">{tool.category}</div>
-      <h1>{tool.name}</h1>
-      <p class="target-info">対象: {tool.target_business}</p>
+      <h1 class="page-title">{tool.name}</h1>
+      <p class="target-info">推奨対象: <strong>{tool.target_business}</strong></p>
     </header>
 
     <div class="main-grid">
       <div class="tool-info-col">
-        <section class="content-box">
-          <h2>ツールの特徴・強み</h2>
-          <p>{tool.strengths}</p>
+        <section class="glass-card content-box">
+          <h2 class="section-title">ツールの特徴・強み</h2>
+          <p class="content-text">{tool.strengths}</p>
           
           <div class="use-cases">
             <h3>主な活用シーン</h3>
             <ul>
-              {tool.use_cases.map(uc => <li>{uc}</li>)}
+              {tool.use_cases.map(uc => <li><span class="check-icon">✓</span> {uc}</li>)}
             </ul>
           </div>
         </section>
 
-        <section class="content-box warning-box">
-          <h2>導入時の注意点</h2>
-          <p>{tool.caution}</p>
+        <section class="glass-card warning-box">
+          <div class="warning-header">
+            <span class="warning-icon">⚠️</span>
+            <h2>導入時の注意点</h2>
+          </div>
+          <p class="content-text">{tool.caution}</p>
         </section>
 
         <div class="cta-area">
-          <a href={tool.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-large">
-            {tool.name} 公式サイトはこちら
-          </a>
-          <p class="affiliate-notice">※外部サイトに移動します</p>
+          <div class="cta-bg shape-1"></div>
+          <div class="cta-content">
+            <h3 class="cta-title">{tool.name} をもっと詳しく知る</h3>
+            <p class="cta-desc">公式サイトで実際の画面や料金プランを確認してみましょう。</p>
+            <a href={tool.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-large btn-block">
+              公式サイトへ移動する
+            </a>
+            <p class="affiliate-notice">※外部サイト（公式サイト）に移動します</p>
+          </div>
         </div>
       </div>
 
       <aside class="matching-subsidies-col">
-        <h2>活用のチャンス！相性の良い補助金</h2>
+        <h2 class="sidebar-title">活用のチャンス！<br/>相性の良い補助金</h2>
         <div class="subsidy-mini-list">
           {matchedSubsidies.length > 0 ? matchedSubsidies.map(s => (
-            <div class="s-mini-card">
+            <div class="glass-card s-mini-card">
               <span class="score-tag">マッチ度 {Math.round(s.matchScore)}%</span>
-              <h3><a href={`/subsidies/${s.id}`}>{s.title}</a></h3>
-              <p>上限: {s.max_limit}</p>
+              <h4><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h4>
+              <div class="s-meta">
+                <span class="meta-label">上限:</span> <span class="meta-value">{s.max_limit}</span>
+              </div>
             </div>
           )) : (
-            <p class="empty-msg">現在、このツールに特化した推奨補助金はありません。</p>
+            <div class="glass-card empty-msg">現在、このツールに特化した推奨補助金はありません。</div>
           )}
         </div>
       </aside>
@@ -101,38 +112,50 @@ try {
 </BaseLayout>
 
 <style>
-  .breadcrumb { margin-bottom: 2rem; font-size: 0.85rem; color: #64748b; }
-  .breadcrumb a { color: #64748b; text-decoration: none; }
+  .breadcrumb { margin-bottom: 2rem; font-size: 0.85rem; color: var(--secondary); padding: 0 1.5rem;}
+  .breadcrumb a { color: var(--secondary); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
 
-  .tool-header { margin-bottom: 3rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 2rem;}
-  .category-tag { display: inline-block; background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold; color: #64748b; text-transform: uppercase; margin-bottom: 1rem;}
-  .tool-header h1 { font-size: 2.5rem; margin: 0; }
-  .target-info { color: #64748b; margin-top: 0.5rem; }
+  .tool-header { margin-bottom: 3rem; border-bottom: 1px solid rgba(226, 232, 240, 0.5); padding-bottom: 2rem; text-align: center;}
+  .category-tag { display: inline-block; background: rgba(59, 130, 246, 0.1); padding: 0.4rem 1rem; border-radius: 9999px; font-size: 0.85rem; font-weight: bold; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em;}
+  .page-title { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: -0.02em;}
+  .target-info { color: var(--secondary); font-size: 1.1rem; }
+  .target-info strong { color: var(--primary); }
 
-  .main-grid { display: grid; grid-template-columns: 1fr 300px; gap: 3rem; }
-  @media (max-width: 800px) { .main-grid { grid-template-columns: 1fr; } }
+  .main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start;}
+  @media (max-width: 900px) { .main-grid { grid-template-columns: 1fr; } }
 
-  .content-box { margin-bottom: 2.5rem; }
-  .content-box h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-  .use-cases { margin-top: 2rem; background: #f8fafc; padding: 1.5rem; border-radius: 10px; }
-  .use-cases h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #475569; }
-  .use-cases ul { padding-left: 1.25rem; margin: 0; }
-  .use-cases li { margin-bottom: 0.4rem; color: #334155; }
+  .content-box { margin-bottom: 2.5rem; padding: 2.5rem; }
+  .section-title { font-size: 1.5rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid rgba(226, 232, 240, 0.5);}
+  .content-text { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); }
+  
+  .use-cases { margin-top: 2.5rem; background: rgba(248, 250, 252, 0.6); padding: 2rem; border-radius: var(--radius-md); border: 1px dashed rgba(226, 232, 240, 0.8);}
+  .use-cases h3 { font-size: 1.1rem; margin-bottom: 1.25rem; color: var(--primary); }
+  .use-cases ul { list-style: none; padding: 0; margin: 0; }
+  .use-cases li { margin-bottom: 0.75rem; color: var(--text-main); display: flex; align-items: flex-start; gap: 0.5rem; font-size: 1.05rem;}
+  .check-icon { color: var(--success); font-weight: bold; }
 
-  .warning-box { background: #fff7ed; padding: 1.5rem; border-radius: 10px; border: 1px solid #fed7aa; }
-  .warning-box h2 { color: #9a3412; font-size: 1.1rem; }
-  .warning-box p { font-size: 0.9rem; color: #9a3412; }
+  .warning-box { margin-bottom: 3rem; padding: 2rem; background: rgba(254, 243, 199, 0.4); border-color: rgba(252, 211, 77, 0.6); }
+  .warning-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+  .warning-icon { font-size: 1.5rem; }
+  .warning-box h2 { color: #b45309; font-size: 1.25rem; margin: 0; }
+  .warning-box .content-text { color: #92400e; }
 
-  .cta-area { text-align: center; margin-top: 4rem; padding: 3rem; background: #f0f9ff; border-radius: 20px; }
-  .btn-large { font-size: 1.25rem; padding: 1rem 2rem; }
-  .affiliate-notice { font-size: 0.7rem; color: #94a3b8; margin-top: 1rem; }
+  .cta-area { position: relative; overflow: hidden; border-radius: var(--radius-lg); text-align: center; margin-top: 4rem; padding: 3rem 2rem; background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, rgba(255, 255, 255, 0.8) 100%); border: 1px solid rgba(226, 232, 240, 0.8); box-shadow: var(--glass-shadow);}
+  .cta-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);}
+  .cta-desc { font-size: 1rem; color: var(--secondary); margin-bottom: 2rem;}
+  .btn-large { font-size: 1.15rem; padding: 1.1rem; }
+  .btn-block { width: 100%; max-width: 400px; margin: 0 auto;}
+  .affiliate-notice { font-size: 0.75rem; color: var(--secondary); margin-top: 1.25rem; }
 
-  .matching-subsidies-col h2 { font-size: 1.1rem; margin-bottom: 1.5rem; }
-  .s-mini-card { padding: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 1rem; position: relative; }
-  .score-tag { font-size: 0.65rem; color: #3b82f6; font-weight: bold; }
-  .s-mini-card h3 { font-size: 1rem; margin: 0.25rem 0; }
-  .s-mini-card h3 a { color: #0f172a; text-decoration: none; }
-  .s-mini-card h3 a:hover { color: #3b82f6; }
-  .s-mini-card p { font-size: 0.8rem; color: #64748b; margin: 0; }
-  .empty-msg { font-size: 0.85rem; color: #94a3b8; font-style: italic; }
+  .sidebar-title { font-size: 1.25rem; margin-bottom: 1.5rem; line-height: 1.4;}
+  .s-mini-card { padding: 1.5rem; margin-bottom: 1.25rem; position: relative; border-left: 4px solid var(--accent); }
+  .score-tag { position: absolute; top: -10px; right: 15px; background: var(--accent); color: white; padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.7rem; font-weight: bold; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);}
+  .s-mini-card h4 { margin: 0 0 1rem 0; font-size: 1.05rem; line-height: 1.4; }
+  .s-mini-card h4 a { color: var(--primary); text-decoration: none; }
+  .s-mini-card h4 a:hover { color: var(--accent); }
+  .s-meta { font-size: 0.85rem; color: var(--secondary); display: flex; align-items: center; gap: 0.25rem;}
+  .meta-value { font-weight: bold; color: var(--primary); }
+  
+  .empty-msg { padding: 2rem; text-align: center; font-size: 0.9rem; color: var(--secondary); }
 </style>

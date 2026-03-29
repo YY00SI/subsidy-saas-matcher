@@ -1,52 +1,97 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 <header class="site-header">
-  <div class="container">
-    <a href="/" class="logo">
+  <div class="container header-inner">
+    <a href={base} class="logo">
+      <span class="logo-icon">✨</span>
       <span class="logo-text">補助金SaaSマッチャー</span>
     </a>
     <nav class="nav">
-      <a href="/subsidies">補助金を探す</a>
-      <a href="/needs/accounting">会計ソフト</a>
-      <a href="/needs/invoice">インボイス</a>
+      <a href={`${base}subsidies/`}>補助金を探す</a>
+      <a href={`${base}needs/accounting/`}>経理・会計</a>
+      <a href={`${base}needs/invoice/`}>インボイス</a>
     </nav>
   </div>
 </header>
 
 <style>
   .site-header {
-    border-bottom: 1px solid #e2e8f0;
-    padding: 1rem 0;
-    background: white;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: all 0.3s ease;
   }
-  .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  
+  .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 1.5rem;
   }
+
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    color: #0f172a;
+    color: var(--primary);
     font-weight: 800;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+    transition: transform 0.2s;
   }
+  
+  .logo:hover {
+    transform: scale(1.02);
+  }
+
   .nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
   }
+
   .nav a {
     text-decoration: none;
-    color: #475569;
-    font-size: 0.9rem;
-    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    position: relative;
   }
+
+  .nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+
   .nav a:hover {
-    color: #0f172a;
+    color: var(--primary);
+  }
+
+  .nav a:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .nav {
+      gap: 1rem;
+    }
+    .nav a {
+      font-size: 0.85rem;
+    }
+    .logo-text {
+      display: none;
+    }
   }
 </style>

@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import fs from 'fs';
 import path from 'path';
 
+const base = import.meta.env.BASE_URL;
+
 // processedデータ読み込み
 const dataPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
 let subsidies = [];
@@ -18,53 +20,420 @@ const topSubsidies = subsidies.slice(0, 3);
 ---
 
 <BaseLayout 
-  title="補助金SaaSマッチャー | あなたに最適なツールと補助金を見つける"
-  description="会計ソフト・インボイス対応・給与計算など、自社のIT化に使える補助金を自動でマッチングするポータルサイトです。"
+  title="補助金SaaSマッチャー | 企業のIT化を賢くサポート"
+  description="会計ソフト・インボイス対応など、自社のIT化に使える最適な補助金とSaaSツールを自動でマッチング。"
 >
-  <div class="hero">
-    <h1>IT導入・経理DXを、補助金でおトクに。</h1>
-    <p>今応募できる補助金と、それに最適なSaaSツールを自動マッチング。</p>
-    <div class="stats">
-      <span>現在 <strong>{activeCount}</strong> 件の受付中補助金を掲載しています</span>
+  <div class="homepage-wrapper">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="badge">Match &amp; Grow</div>
+        <h1 class="hero-title">IT導入・経理DXを、<br/><span class="text-gradient">補助金でもっと身近に。</span></h1>
+        <p class="hero-subtitle">今すぐ応募できる補助金と、あなたの企業に最適なSaaSツールを自動でマッチングします。</p>
+        <div class="hero-actions">
+          <a href={`${base}subsidies/`} class="btn btn-primary btn-large">補助金を探す</a>
+          <a href="#needs" class="btn btn-secondary btn-large">課題から探す</a>
+        </div>
+        <div class="hero-stats">
+          <span>ただいま <strong>{activeCount}</strong> 件の補助金を掲載中</span>
+        </div>
+      </div>
+      
+      <!-- Decorative UI Elements in Hero -->
+      <div class="hero-decoration">
+        <div class="mock-card card-1">
+          <div class="mock-tag">IT導入補助金2024</div>
+          <div class="mock-line mock-line-1"></div>
+          <div class="mock-line mock-line-2"></div>
+          <div class="mock-score">Match: 95%</div>
+        </div>
+        <div class="mock-card card-2">
+          <div class="mock-tag">小規模事業者持続化</div>
+          <div class="mock-line mock-line-1"></div>
+          <div class="mock-line mock-line-3"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="needs" class="needs-section">
+        <div class="section-header">
+          <h2 class="section-title">カテゴリーから探す</h2>
+          <p class="section-desc">解決したい業務ツールに合わせて最適な補助金を見つけましょう。</p>
+        </div>
+        <div class="needs-grid">
+          <a href={`${base}needs/accounting/`} class="glass-card need-card">
+            <span class="need-icon">📊</span>
+            <h3>会計ツール導入</h3>
+            <p>クラウド会計や経理自動化に取り組みたい企業向け</p>
+            <div class="need-arrow">→</div>
+          </a>
+          <a href={`${base}needs/invoice/`} class="glass-card need-card">
+            <span class="need-icon">🧾</span>
+            <h3>インボイス対応</h3>
+            <p>請求書の電子化など、制度対応をスムーズに</p>
+            <div class="need-arrow">→</div>
+          </a>
+        </div>
+      </section>
+
+      <section class="latest-section">
+        <div class="section-header">
+          <h2 class="section-title">注目の補助金</h2>
+          <a href={`${base}subsidies/`} class="view-all">すべて見る →</a>
+        </div>
+        
+        <div class="subsidy-grid">
+          {topSubsidies.map(s => (
+            <div class="glass-card subsidy-card">
+              <div class="s-card-header">
+                <span class="tag">{s.target_area?.[0] || '全国'}</span>
+                {s.tags?.slice(0, 1).map(t => <span class="tag tag-accent">{t}</span>)}
+              </div>
+              <h3 class="s-card-title"><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
+              <p class="s-card-desc">{s.use_purpose || '用途設定なし'}</p>
+              
+              <div class="s-card-footer">
+                <div class="s-card-meta">
+                  <span class="meta-label">上限額</span>
+                  <span class="meta-value text-gradient">{s.max_limit || '要問合せ'}</span>
+                </div>
+                <a href={`${base}subsidies/${s.id}/`} class="detail-link">詳細へ →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   </div>
-
-  <section class="needs">
-    <h2>課題・ニーズから探す</h2>
-    <div class="needs-grid">
-      <a href="/needs/accounting" class="need-card">会計ツールを導入したい</a>
-      <a href="/needs/invoice" class="need-card">インボイス・請求書対応したい</a>
-    </div>
-  </section>
-
-  <section class="latest">
-    <h2>注目の補助金</h2>
-    <div class="subsidy-list">
-      {topSubsidies.map(s => (
-        <div class="subsidy-card">
-          <h3><a href={`/subsidies/${s.id}`}>{s.title}</a></h3>
-          <p>{s.use_purpose || '用途設定なし'}</p>
-          <div class="tags">
-            {s.tags?.map(t => <span class="tag">{t}</span>)}
-          </div>
-        </div>
-      ))}
-    </div>
-    <a href="/subsidies" class="btn-more">すべての補助金を見る →</a>
-  </section>
 </BaseLayout>
 
 <style>
-  .hero { text-align: center; padding: 4rem 1rem; background: #f8fafc; margin-bottom: 2rem;}
-  .stats { margin-top: 2rem; color: #475569; }
-  .needs-grid { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem;}
-  .need-card { display: block; padding: 1.5rem 2rem; border-radius: 8px; background: #e0f2fe; color: #0369a1; text-decoration: none; font-weight: bold; border: 1px solid #bae6fd;}
-  .need-card:hover { background: #bae6fd; }
-  .subsidy-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
-  .subsidy-card { padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 6px; }
-  .subsidy-card h3 a { color: #0f172a; text-decoration: none; }
-  .subsidy-card h3 a:hover { text-decoration: underline; }
-  .tags { display: flex; gap: 0.5rem; margin-top: 1rem;}
-  .tag { background: #f1f5f9; padding: 0.2rem 0.5rem; font-size: 0.8rem; border-radius: 4px;}
-  .btn-more { display: inline-block; padding: 0.5rem 1rem; background: #0f172a; color: white; text-decoration: none; border-radius: 4px; }
+  /* Base layout adjustments */
+  .homepage-wrapper {
+    margin-top: -2rem; /* Pull up into the header slightly */
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    padding: 3rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,1) 0%, rgba(248,250,252,0) 100%);
+    overflow: hidden;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .hero-stats {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--glass-bg);
+    border-radius: 9999px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    font-size: 0.9rem;
+    color: var(--secondary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+
+  .hero-stats strong {
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  /* Decorative elements */
+  .hero-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .mock-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    opacity: 0.8;
+  }
+
+  .card-1 {
+    top: 20%;
+    right: 5%;
+    width: 240px;
+    transform: rotate(5deg);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .card-2 {
+    bottom: 15%;
+    left: 8%;
+    width: 200px;
+    transform: rotate(-3deg);
+    animation: float 7s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(5deg); }
+    50% { transform: translateY(-20px) rotate(3deg); }
+    100% { transform: translateY(0px) rotate(5deg); }
+  }
+
+  .mock-tag { font-size: 0.7rem; color: #64748b; margin-bottom: 0.5rem; font-weight: bold; }
+  .mock-line { height: 8px; border-radius: 4px; background: #e2e8f0; margin-bottom: 0.5rem; }
+  .mock-line-1 { width: 80%; background: #94a3b8; }
+  .mock-line-2 { width: 60%; }
+  .mock-line-3 { width: 40%; }
+  .mock-score { margin-top: 1rem; font-size: 0.8rem; color: var(--accent); font-weight: bold; text-align: right; }
+
+  /* Sections */
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .section-desc {
+    color: var(--secondary);
+    margin: 0;
+  }
+
+  .view-all {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .view-all:hover {
+    text-decoration: underline;
+  }
+
+  /* Needs Grid */
+  .needs-section {
+    padding: 6rem 0;
+  }
+
+  .needs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .need-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .need-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .need-card:hover::before {
+    opacity: 1;
+  }
+
+  .need-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .need-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+
+  .need-card p {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .need-arrow {
+    align-self: flex-start;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+  .need-card:hover .need-arrow {
+    background: var(--accent);
+    color: white;
+    transform: translateX(5px);
+  }
+
+  /* Latest Subsidies */
+  .latest-section {
+    padding-bottom: 6rem;
+  }
+
+  .subsidy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .subsidy-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .s-card-header {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .tag-accent {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+  }
+
+  .s-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .s-card-title a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .s-card-title a:hover {
+    color: var(--accent);
+  }
+
+  .s-card-desc {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex: 1;
+  }
+
+  .s-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(226, 232, 240, 0.5);
+    padding-top: 1.5rem;
+  }
+
+  .s-card-meta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meta-label {
+    font-size: 0.75rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .meta-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  .detail-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .detail-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .hero-actions { flex-direction: column; }
+    .mock-card { display: none; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  }
 </style>
