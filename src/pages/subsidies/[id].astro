@@ -75,8 +75,8 @@ try {
 
           <div class="cta-box">
             <p>※必ず公式サイトで最新の公募要領をご確認の上、申請してください。</p>
-            {subsidy.detail_url ? (
-              <a href={subsidy.detail_url} target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large btn-block">公式サイトを確認する</a>
+            {(subsidy.detail_url || subsidy.official_url) ? (
+              <a href={subsidy.detail_url || subsidy.official_url} target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large btn-block">公式サイトを確認する</a>
             ) : (
               <a href="https://www.jgrants-portal.go.jp/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large btn-block">JGrantsで確認する</a>
             )}
