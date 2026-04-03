@@ -86,6 +86,9 @@ try {
             <a href={tool.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-large btn-block">
               公式サイトへ移動する
             </a>
+            {tool.impression_url && tool.impression_url !== "" && (
+              <img border="0" width="1" height="1" src={tool.impression_url} alt="" style="display:none;" />
+            )}
             <p class="affiliate-notice">※外部サイト（公式サイト）に移動します</p>
           </div>
         </div>
