@@ -37,7 +37,7 @@ ${toolDescriptions}
   let resultText = null;
 
   for (const apiKey of apiKeys) {
-    const endpoint = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=${apiKey}`;
     try {
       const response = await fetch(endpoint, {
         method: "POST",
