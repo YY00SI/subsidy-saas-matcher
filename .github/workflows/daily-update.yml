@@ -37,6 +37,9 @@ jobs:
         run: npm run fetch:subsidies
 
       - name: Build dataset
+        env:
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
         run: npm run build:data
 
       - name: Build website

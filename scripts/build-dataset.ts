@@ -8,7 +8,13 @@ import type { MatchResult } from '../src/lib/types.js';
 const RAW_DETAILS_DIR = path.join(process.cwd(), 'data', 'raw', 'subsidy-details');
 const PROCESSED_DIR = path.join(process.cwd(), 'data', 'processed');
 
-function main() {
+import { matchWithLLM } from '../src/lib/llmMatch.js';
+
+function delay(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function main() {
   if (!fs.existsSync(PROCESSED_DIR)) {
     fs.mkdirSync(PROCESSED_DIR, { recursive: true });
   }
@@ -44,8 +50,14 @@ function main() {
     const enrichedSubsidy = { ...normalized, tags };
     subsidies.push(enrichedSubsidy);
 
-    const matchResults = matchToolsToSubsidy(tags, tools, normalized.id);
+    // LLMマッチングの実行（APIキーがない場合はフォールバックとして従来のマッチングを実行）
+    let matchResults = await matchWithLLM(enrichedSubsidy, tools);
+    if (!matchResults || matchResults.length === 0) {
+      matchResults = matchToolsToSubsidy(tags, tools, normalized.id);
+    }
+    
     allMatches = allMatches.concat(matchResults);
+    await delay(1500); // APIのレートリミット対策
   }
 
   // processed書き出し
