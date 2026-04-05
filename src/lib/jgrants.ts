@@ -2,15 +2,27 @@ const BASE_URL = 'https://api.jgrants-portal.go.jp/exp/v1/public';
 
 /**
  * 補助金一覧を取得する
- * @param page 
- * @param limit 
+ * @param keyword 検索キーワード（最低2文字必須）
  * @returns 
  */
-export async function fetchSubsidyList(page: number = 1, limit: number = 100) {
-  const url = `${BASE_URL}/subsidies?page=${page}&limit=${limit}&sort=updated_at&order=desc`;
+export async function fetchSubsidyList(keyword: string = "IT") {
+  // yaml仕様書で定義されている必須パラメーター4つを正確に付与
+  const params = new URLSearchParams({
+    keyword: keyword,
+    sort: "created_date",
+    order: "DESC",
+    acceptance: "1" // 1: 募集期間内のものだけ
+  });
+  
+  const url = `${BASE_URL}/subsidies?${params.toString()}`;
   console.log(`Fetching subsidy list: ${url}`);
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0.0.0",
+        "Accept": "application/json"
+      }
+    });
     if (!response.ok) {
       throw new Error(`Failed to fetch subsidy list: ${response.status} ${response.statusText}`);
     }
@@ -53,7 +65,12 @@ export async function fetchSubsidyDetail(id: string) {
   const url = `${BASE_URL}/subsidies/${id}`;
   console.log(`Fetching subsidy detail: ${url}`);
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0.0.0",
+        "Accept": "application/json"
+      }
+    });
     if (!response.ok) {
       throw new Error(`Failed to fetch subsidy detail for ${id}: ${response.status}`);
     }

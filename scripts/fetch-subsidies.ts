@@ -12,19 +12,23 @@ async function main() {
     }
 
     console.log('Fetching subsidy list...');
-    const result = await fetchSubsidyList(1, 20); // MVP: 最初の方の20件
+    // 仕様書の制限に基づくため、キーワード「IT」で検索
+    const result = await fetchSubsidyList("補助金"); 
     
     // API仕様変更やモックデータ対応
     const subsidies = result.result || result.subsidies || result.items || [];
+    
+    // 先頭の30件に絞り込む（APIが無制限に返してきた場合への安全対策）
+    const limitedSubsidies = subsidies.slice(0, 30);
 
     fs.writeFileSync(
       path.join(RAW_DIR, 'subsidies-list.json'),
-      JSON.stringify(subsidies, null, 2)
+      JSON.stringify(limitedSubsidies, null, 2)
     );
 
-    console.log(`Saved ${subsidies.length} subsidies to list.`);
-
-    for (const subsidy of subsidies) {
+    console.log(`Saved ${limitedSubsidies.length} subsidies to list.`);
+    
+    for (const subsidy of limitedSubsidies) {
       const id = subsidy.subsidy_id || subsidy.id;
       if (!id) continue;
       console.log(`Fetching detail for: ${id}`);
