@@ -10,7 +10,7 @@ interface LLMResponse {
  */
 export async function matchWithLLM(subsidy: any, tools: Tool[]): Promise<LLMResponse | null> {
   const apiKeys = [process.env.GEMINI_API_KEY_1, process.env.GEMINI_API_KEY_2].filter(Boolean);
-  
+
   if (apiKeys.length === 0) {
     console.warn("Gemini API Keys are not set. Falling back to basic matching.");
     return null;
@@ -93,13 +93,13 @@ ${toolDescriptions}
     // 確実なJSON抽出: 最初の { から最後の } までを取り出す（LLMの前後の無駄話を除外）
     const match = resultText.match(/\{[\s\S]*\}/);
     if (!match) throw new Error("JSON object not found in the response.");
-    
+
     let jsonStr = match[0];
     // 万が一残っているMarkdownのバッククォートを除去
     jsonStr = jsonStr.replace(/```json/g, "").replace(/```/g, "");
-    
+
     const parsed = JSON.parse(jsonStr);
-    
+
     const matches = parsed.matches.map((m: any) => ({
       subsidyId: subsidy.id,
       toolSlug: m.toolSlug,
