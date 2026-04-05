@@ -95,6 +95,10 @@ ${toolDescriptions}
     if (!match) throw new Error("JSON object not found in the response.");
 
     let jsonStr = match[0];
+    
+    // 【重要】パースエラーの最大の原因となる、JSON内の「AIが勝手に入れた改行（\n）」や「タブ文字」を完全に消し去る
+    jsonStr = jsonStr.replace(/[\r\n\t]+/g, "");
+    
     // 万が一残っているMarkdownのバッククォートを除去
     jsonStr = jsonStr.replace(/```json/g, "").replace(/```/g, "");
 
