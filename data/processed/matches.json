@@ -9,6 +9,14 @@
   },
   {
     "subsidyId": "mock-1",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "mock-1",
     "toolSlug": "misoca",
     "score": 58,
     "reasons": [
@@ -25,6 +33,14 @@
     "subsidyId": "mock-2",
     "toolSlug": "freee-accounting",
     "score": 60,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "mock-2",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
     ]
