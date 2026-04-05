@@ -90,7 +90,14 @@ ${toolDescriptions}
   if (!resultText) return null;
 
   try {
-    const jsonStr = resultText.replace(/```json/g, "").replace(/```/g, "").trim();
+    // 確実なJSON抽出: 最初の { から最後の } までを取り出す（LLMの前後の無駄話を除外）
+    const match = resultText.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error("JSON object not found in the response.");
+    
+    let jsonStr = match[0];
+    // 万が一残っているMarkdownのバッククォートを除去
+    jsonStr = jsonStr.replace(/```json/g, "").replace(/```/g, "");
+    
     const parsed = JSON.parse(jsonStr);
     
     const matches = parsed.matches.map((m: any) => ({
