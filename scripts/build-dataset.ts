@@ -47,15 +47,21 @@ async function main() {
     const tags = classifySubsidy(normalized, taxonomy);
     
     // add tags to metadata
-    const enrichedSubsidy = { ...normalized, tags };
-    subsidies.push(enrichedSubsidy);
+    const enrichedSubsidy = { ...normalized, tags, seoArticle: "" };
 
-    // LLMマッチングの実行（APIキーがない場合はフォールバックとして従来のマッチングを実行）
-    let matchResults = await matchWithLLM(enrichedSubsidy, tools);
-    if (!matchResults || matchResults.length === 0) {
+    // LLMマッチング＆SEO記事自動生成の実行
+    let matchResults: MatchResult[] = [];
+    const llmResponse = await matchWithLLM(enrichedSubsidy, tools);
+    
+    if (llmResponse && llmResponse.matches.length > 0) {
+      matchResults = llmResponse.matches;
+      enrichedSubsidy.seoArticle = llmResponse.seoArticle;
+    } else {
       matchResults = matchToolsToSubsidy(tags, tools, normalized.id);
+      enrichedSubsidy.seoArticle = `<h3>${enrichedSubsidy.title}の特徴</h3><p>${enrichedSubsidy.use_purpose}</p> <p>この機会にバックオフィス業務の見直しを行い、スムーズな申請と経営改善を目指しましょう。</p>`;
     }
     
+    subsidies.push(enrichedSubsidy);
     allMatches = allMatches.concat(matchResults);
     await delay(1500); // APIのレートリミット対策
   }

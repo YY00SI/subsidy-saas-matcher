@@ -1,20 +1,45 @@
 import type { Tool, MatchResult } from './types.js';
 
+interface LLMResponse {
+  matches: MatchResult[];
+  seoArticle: string;
+}
+
 /**
- * Gemini APIを用いた高度なマッチングロジック
+ * Gemini APIを用いた高度なマッチングロジック＆SEO記事自動執筆
  */
-export async function matchWithLLM(subsidy: any, tools: Tool[]): Promise<MatchResult[]> {
+export async function matchWithLLM(subsidy: any, tools: Tool[]): Promise<LLMResponse | null> {
   const apiKeys = [process.env.GEMINI_API_KEY_1, process.env.GEMINI_API_KEY_2].filter(Boolean);
   
   if (apiKeys.length === 0) {
     console.warn("Gemini API Keys are not set. Falling back to basic matching.");
-    return [];
+    return null;
   }
 
   const toolDescriptions = tools.map(t => `- ${t.name}(${t.category}): ${t.strengths}`).join('\n');
-  const prompt = `あなたはプロのIT導入コンサルタントです。
-以下の「補助金情報」に対して、リストアップされた「SaaSツール」の相性をスコアリング（0〜100点）し、その理由を出力してください。
-【重要】事業再構築や設備投資がメインの補助金であっても、「新規事業の基盤となる経理・バックオフィスのDX対応」は不可欠です。一見無関係に見えても、補助金事業を支える汎用ツールとしての価値を読み取り、必ず50点以上のスコアをつけて上位ツールを推薦してください。結果は空の配列ではなく、必ず関連性が一番高いツールを最低1〜2つは含めてください。必ずJSON配列としてパース可能な形式で回答し、前後の説明は省いてください。
+  const prompt = `あなたはプロのIT導入コンサルタント兼、最高峰のSEOライターです。
+以下の「補助金情報」に対して、２つのタスクを実行してください。
+
+【タスク1：SaaSツールとのマッチング】
+リストアップされた「SaaSツール」との相性をスコアリング（0〜100点）し理由を出力してください。
+・事業再構築や設備投資がメインの補助金であっても、「新規事業の基盤となる経理・バックオフィスのDX対応」は不可欠です。一見無関係でも汎用ツールとしての価値を見出し、必ず1つ以上は50点以上のスコアをつけて上位ツール（freee等）を推薦してください。
+
+【タスク2：自動SEOブログ記事の執筆】
+この補助金を検討している経営者向けに、検索エンジンで上位表示されるような1000文字程度の解説記事（HTML形式）を執筆してください（seoArticleフィールド）。
+・構成案： <h3>この補助金の特徴と活用メリット</h3><p>...</p> <h3>バックオフィスDXツール（SaaS）を同時導入すべき理由</h3><p>...</p> <h3>専門家への無料相談を活用しよう</h3><p>...</p>
+・必ず <h3> や <p>、 <strong> タグなどのHTMLタグのみを用いて装飾してください。
+
+【必須出力JSONフォーマット（Markdownの\`\`\`json等の装飾は一切入れず、純粋なJSONテキストのみを出力してください）】
+{
+  "matches": [
+    {
+      "toolSlug": "ツールのslug（完全一致）",
+      "score": 85,
+      "reasons": ["理由1", "理由2"]
+    }
+  ],
+  "seoArticle": "<h3>この補助金の特徴と...</h3><p>...</p>"
+}
 
 【補助金情報】
 名称: ${subsidy.subsidy_name || subsidy.title}
@@ -23,15 +48,6 @@ export async function matchWithLLM(subsidy: any, tools: Tool[]): Promise<MatchRe
 
 【SaaSツール候補】
 ${toolDescriptions}
-
-【出力JSONフォーマット】
-[
-  {
-    "toolSlug": "ツールのslug",
-    "score": 85,
-    "reasons": ["理由1", "理由2"]
-  }
-]
 `;
 
   let resultText = null;
@@ -50,7 +66,7 @@ ${toolDescriptions}
 
       if (response.status === 429) {
         console.warn(`API Rate Limit exceeded for one key, attempting next key...`);
-        continue; // 次のキーへフォールバック
+        continue;
       }
 
       if (!response.ok) {
@@ -60,27 +76,32 @@ ${toolDescriptions}
 
       const data = await response.json();
       resultText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (resultText) break; // 成功したらループを抜ける
+      if (resultText) break;
 
     } catch (e) {
       console.warn("LLM Request error, trying next key", e);
     }
   }
 
-  if (!resultText) return [];
+  if (!resultText) return null;
 
   try {
     const jsonStr = resultText.replace(/```json/g, "").replace(/```/g, "").trim();
-    const llmMatches = JSON.parse(jsonStr);
+    const parsed = JSON.parse(jsonStr);
     
-    return llmMatches.map((m: any) => ({
+    const matches = parsed.matches.map((m: any) => ({
       subsidyId: subsidy.id,
       toolSlug: m.toolSlug,
       score: m.score,
       reasons: m.reasons
     }));
+
+    return {
+      matches,
+      seoArticle: parsed.seoArticle || ""
+    };
   } catch (e) {
     console.error("Failed to parse LLM response JSON", e);
-    return [];
+    return null;
   }
 }

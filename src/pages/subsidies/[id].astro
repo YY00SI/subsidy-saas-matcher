@@ -83,6 +83,14 @@ try {
             )}
           </div>
         </div>
+
+        {subsidy.seoArticle && (
+          <div class="glass-card detail-card" style="margin-top: 2.5rem; background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,0.8) 100%);">
+            <div style="font-size:0.8rem; font-weight:800; color:var(--accent); letter-spacing:0.1em; margin-bottom:0.5rem;">プロが解説する活用術</div>
+            <h2 class="card-title" style="border-bottom:none; padding-bottom:0; margin-bottom:1.5rem;">補助金 × バックオフィスDXで会社を変える</h2>
+            <div class="content-text seo-content" set:html={subsidy.seoArticle} />
+          </div>
+        )}
       </div>
 
       <aside class="sidebar-col">
@@ -162,6 +170,23 @@ try {
   
   .tags-row { display: flex; gap: 0.5rem; margin: 2rem 0; flex-wrap: wrap; }
   .tag-accent { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
+
+  /* SEO記事用スタイル */
+  .seo-content :global(h3) {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin: 2.5rem 0 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent);
+  }
+  .seo-content :global(p) {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .seo-content :global(strong) {
+    background: linear-gradient(transparent 60%, rgba(167, 139, 250, 0.3) 60%);
+    color: var(--primary);
+  }
 
   .cta-box { margin-top: 3rem; background: rgba(248, 250, 252, 0.8); padding: 2rem; border-radius: var(--radius-md); text-align: center; border: 1px solid rgba(226, 232, 240, 0.8);}
   .cta-box p { font-size: 0.85rem; color: var(--secondary); margin-bottom: 1.5rem;}
