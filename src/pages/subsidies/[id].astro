@@ -33,8 +33,9 @@ try {
   const relevantMatches = allMatches.filter(m => m.subsidyId === subsidy.id);
   matchedTools = relevantMatches.map(m => {
     const tool = allTools.find(t => t.slug === m.toolSlug);
+    if (!tool) return null; // AIが架空のslugを出力した場合は弾く
     return { ...tool, matchScore: m.score };
-  });
+  }).filter(t => t !== null); // 空になったものを完全除外
 } catch(e) {
   console.warn("Failed to load matching tools in [id].astro", e);
 }
