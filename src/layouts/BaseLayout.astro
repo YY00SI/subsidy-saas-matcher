@@ -29,6 +29,16 @@ const { title, description, canonical } = Astro.props;
       </main>
       <Footer />
     </div>
+
+    <!-- コンサル送客用 フローティングCTA (超高単価コンバージョン狙い) -->
+    <a href="https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6" target="_blank" rel="sponsored noopener" class="floating-cta glass-card">
+      <div class="cta-pulse"></div>
+      <span class="cta-icon">💴</span>
+      <div class="cta-text">
+        <strong>資金繰り・補助金にお悩みですか？</strong>
+        <span>プロに無料相談（オンライン即日対応）</span>
+      </div>
+    </a>
   </body>
 </html>
 
@@ -77,5 +87,82 @@ const { title, description, canonical } = Astro.props;
     width: 50vw;
     height: 50vw;
     background: radial-gradient(circle, rgba(167,139,250,0.6) 0%, rgba(139,92,246,0) 70%);
+  }
+
+  /* Floating CTA */
+  .floating-cta {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .floating-cta:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+    background: var(--accent);
+  }
+
+  .floating-cta:hover .cta-text strong,
+  .floating-cta:hover .cta-text span {
+    color: white;
+  }
+
+  .cta-icon {
+    font-size: 1.8rem;
+  }
+
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-text strong {
+    color: var(--primary);
+    font-size: 0.95rem;
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+
+  .cta-text span {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .cta-pulse {
+    position: absolute;
+    top: -5px; right: -5px;
+    width: 15px; height: 15px;
+    background: #ef4444;
+    border-radius: 50%;
+    animation: pulse-red 2s infinite;
+  }
+
+  @keyframes pulse-red {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  }
+
+  @media (max-width: 768px) {
+    .floating-cta {
+      bottom: 1rem;
+      right: 1rem;
+      left: 1rem;
+      justify-content: center;
+    }
   }
 </style>

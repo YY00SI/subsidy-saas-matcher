@@ -62,17 +62,25 @@ const topSubsidies = subsidies.slice(0, 3);
           <p class="section-desc">解決したい業務ツールに合わせて最適な補助金を見つけましょう。</p>
         </div>
         <div class="needs-grid">
-          <a href={`${base}needs/accounting/`} class="glass-card need-card">
-            <span class="need-icon">📊</span>
-            <h3>会計ツール導入</h3>
-            <p>クラウド会計や経理自動化に取り組みたい企業向け</p>
-            <div class="need-arrow">→</div>
+          <a href={`${base}tools/freee-accounting/`} class="glass-card need-card problem-card">
+            <div class="problem-header text-gradient">課題 01</div>
+            <span class="need-icon">😮‍💨</span>
+            <h3>「毎月の経理・請求書発行が辛い…」</h3>
+            <p>紙やエクセルの管理から脱却し、クラウド会計で劇的に自動化。インボイスや電帳法にも完全対応。</p>
+            <div class="need-action">
+              <span class="suggest-tag">おすすめ: 会計DXツール</span>
+              <div class="need-arrow">→</div>
+            </div>
           </a>
-          <a href={`${base}needs/invoice/`} class="glass-card need-card">
-            <span class="need-icon">🧾</span>
-            <h3>インボイス対応</h3>
-            <p>請求書の電子化など、制度対応をスムーズに</p>
-            <div class="need-arrow">→</div>
+          <a href={`${base}needs/invoice/`} class="glass-card need-card problem-card">
+            <div class="problem-header text-gradient">課題 02</div>
+            <span class="need-icon">📄</span>
+            <h3>「インボイス制度・電帳法によくわからないまま対応している…」</h3>
+            <p>法対応の漏れを防ぎ、スムーズに電子化へ移行するためのツール選び。</p>
+            <div class="need-action">
+              <span class="suggest-tag">関連補助金をチェック</span>
+              <div class="need-arrow">→</div>
+            </div>
           </a>
         </div>
       </section>
@@ -340,6 +348,43 @@ const topSubsidies = subsidies.slice(0, 3);
     background: var(--accent);
     color: white;
     transform: translateX(5px);
+  }
+
+  .problem-card {
+    padding: 2.5rem;
+    border-top: 4px solid var(--accent);
+  }
+
+  .problem-header {
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+  }
+
+  .problem-card h3 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .need-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-top: 1px dashed rgba(226, 232, 240, 0.8);
+    padding-top: 1rem;
+  }
+
+  .suggest-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--accent);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
   }
 
   /* Latest Subsidies */

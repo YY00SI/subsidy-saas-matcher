@@ -117,7 +117,11 @@ try {
               ))}
             </div>
           ) : (
-            <div class="glass-card empty-state">現在、この補助金に特化したおすすめツールはありません。</div>
+            <div class="glass-card empty-state" style="border-left: 4px solid var(--primary);">
+              <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem;">汎用おすすめツール</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">どの補助金事業であっても、事業ベースとなる「会計・労務のDX」は必須です。</p>
+              <a href={`${base}tools/freee-accounting/`} class="btn btn-primary btn-block" style="font-size:0.9rem; padding:0.6rem;">DX基礎ツールを見る</a>
+            </div>
           )}
         </div>
       </aside>
