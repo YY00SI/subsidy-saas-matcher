@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://YY00SI.github.io/subsidy-saas-matcher/sitemap-index.xml
