@@ -63,7 +63,9 @@ async function main() {
     
     subsidies.push(enrichedSubsidy);
     allMatches = allMatches.concat(matchResults);
-    await delay(1500); // APIのレートリミット対策
+    
+    // 【最重要】Gemini無料枠（1分間に15リクエスト）を絶対に超えないよう、1回につき5秒待機する
+    await delay(5000); 
   }
 
   // processed書き出し
