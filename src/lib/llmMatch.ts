@@ -29,6 +29,10 @@ export async function matchWithLLM(subsidy: any, tools: Tool[]): Promise<LLMResp
 ・構成案： <h3>この補助金の特徴と活用メリット</h3><p>...</p> <h3>バックオフィスDXツール（SaaS）を同時導入すべき理由</h3><p>...</p> <h3>専門家への無料相談を活用しよう</h3><p>...</p>
 ・必ず <h3> や <p>、 <strong> タグなどのHTMLタグのみを用いて装飾してください。
 
+【厳重注意：JSON構文エラー回避のため】
+seoArticleの値（HTML文字列）の中には**絶対に改行を含めない**でください。すべて1行のつながった文字列として出力してください。（改行コードが含まれるとJSON.parseがクラッシュします）。
+また、HTMLタグの属性（class等）にはダブルクォート（"）ではなくシングルクォート（'）を使ってください。
+
 【必須出力JSONフォーマット（Markdownの\`\`\`json等の装飾は一切入れず、純粋なJSONテキストのみを出力してください）】
 {
   "matches": [
@@ -50,7 +54,7 @@ export async function matchWithLLM(subsidy: any, tools: Tool[]): Promise<LLMResp
 ${toolDescriptions}
 `;
 
-  let resultText = null;
+  let resultText: string | null = null;
 
   for (const apiKey of apiKeys) {
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=${apiKey}`;
@@ -100,8 +104,9 @@ ${toolDescriptions}
       matches,
       seoArticle: parsed.seoArticle || ""
     };
-  } catch (e) {
-    console.error("Failed to parse LLM response JSON", e);
+  } catch (e: any) {
+    console.error("Failed to parse LLM response JSON. Raw text was:", resultText?.substring(0, 500) + '...');
+    console.error("Error details:", e.message);
     return null;
   }
 }
