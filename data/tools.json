@@ -72,9 +72,9 @@
     "invoice_support": false,
     "accounting_support": true,
     "payroll_support": false,
-    "affiliate_url": "https://www.smbc-card.com/camp/biz/index.jsp",
+    "affiliate_url": "https://www.smbc-card.com/hojin/lineup/biz_owners_index.jsp",
     "impression_url": "",
-    "official_url": "https://www.smbc-card.com/camp/biz/index.jsp",
+    "official_url": "https://www.smbc-card.com/hojin/lineup/biz_owners_index.jsp",
     "strengths": "補助金の申請から入金までの半年〜1年の間の立替資金として無くてはならない存在。最大500万円のゆとりある枠で事業を牽引。（※現在A8提携待ち）",
     "caution": "審査状況によっては限度額が希望に満たない場合があります。",
     "priority_score": 150
