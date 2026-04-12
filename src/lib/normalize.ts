@@ -16,6 +16,11 @@ export function normalizeDate(dateStr: string | null | undefined): string | null
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function normalizeSubsidy(raw: any) {
+  // 配列で渡された場合は最初の要素を取り出す
+  if (Array.isArray(raw) && raw.length > 0) {
+    raw = raw[0];
+  }
+  
   return {
     id: raw.id || raw.subsidy_id || '',
     title: normalizeText(raw.subsidy_name || raw.title),

@@ -31,9 +31,13 @@ export async function fetchSubsidyList(keyword: string = "IT") {
   } catch(e) {
     console.warn("JGrants API fetch failed, using massive local JSON data.");
     try {
+      // @ts-ignore
       const fs = await import('fs');
+      // @ts-ignore
       const path = await import('path');
+      // @ts-ignore
       const dataPath = path.join(process.cwd(), 'data', 'raw', 'fallback-subsidies.json');
+      // @ts-ignore
       const items = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
       
       // 一覧用データを生成
@@ -79,9 +83,13 @@ export async function fetchSubsidyDetail(id: string) {
   } catch(e) {
     console.warn(`JGrants API fetch failed for detail ${id}, using local massive JSON.`);
     try {
+      // @ts-ignore
       const fs = await import('fs');
+      // @ts-ignore
       const path = await import('path');
+      // @ts-ignore
       const dataPath = path.join(process.cwd(), 'data', 'raw', 'fallback-subsidies.json');
+      // @ts-ignore
       const items = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
       const found = items.find((i: any) => i.id === id);
       return found || null;
