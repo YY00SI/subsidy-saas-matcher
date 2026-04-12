@@ -62,5 +62,53 @@
     "strengths": "1分で請求書作成が可能。スマホアプリからも操作しやすい。",
     "caution": "発送代行などは別途費用がかかります。",
     "priority_score": 80
+  },
+  {
+    "slug": "smbc-business-card",
+    "name": "三井住友カード ビジネスオーナーズ",
+    "category": "corporate-card",
+    "target_business": "法人・個人事業主",
+    "use_cases": ["経費決済", "補助金の立替払い", "キャッシュフロー改善"],
+    "invoice_support": false,
+    "accounting_support": true,
+    "payroll_support": false,
+    "affiliate_url": "https://px.a8.net/svt/ejp?a8mat=YOUR_A8_MAT_ID_SMBC",
+    "impression_url": "",
+    "official_url": "https://www.smbc-card.com/camp/biz/index.jsp",
+    "strengths": "補助金の申請から入金までの半年〜1年の間の立替資金として無くてはならない存在。最大500万円のゆとりある枠で事業を牽引。",
+    "caution": "審査状況によっては限度額が希望に満たない場合があります。",
+    "priority_score": 150
+  },
+  {
+    "slug": "paytner-factoring",
+    "name": "ペイトナーファクタリング",
+    "category": "cashflow",
+    "target_business": "個人事業主・法人",
+    "use_cases": ["資金調達", "つなぎ資金", "キャッシュフロー改善"],
+    "invoice_support": false,
+    "accounting_support": false,
+    "payroll_support": false,
+    "affiliate_url": "https://px.a8.net/svt/ejp?a8mat=YOUR_A8_MAT_ID_PAYTNER",
+    "impression_url": "",
+    "official_url": "https://paytner.co.jp/factoring",
+    "strengths": "補助金特有の『後払い』のせいで発生する資金ショート対策に絶大な威力を発揮。最短10分でサクッと資金調達可能。",
+    "caution": "手数料が審査によって変動します。",
+    "priority_score": 140
+  },
+  {
+    "slug": "zeirishi-dot-com",
+    "name": "税理士ドットコム",
+    "category": "consulting",
+    "target_business": "法人・個人事業主",
+    "use_cases": ["補助金申請代行", "税理士変更", "会社設立"],
+    "invoice_support": false,
+    "accounting_support": true,
+    "payroll_support": false,
+    "affiliate_url": "https://px.a8.net/svt/ejp?a8mat=YOUR_A8_MAT_ID_ZEIRISHI",
+    "impression_url": "",
+    "official_url": "https://www.zeiri4.com/",
+    "strengths": "複雑で難解な公募要領を読み込み、受かる申請書を作る時間がないならプロに丸投げ。採択率を劇的に上げる実績あるパートナー。",
+    "caution": "依頼内容やマッチングする税理士によって報酬額が異なります。",
+    "priority_score": 130
   }
 ]

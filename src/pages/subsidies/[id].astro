@@ -85,10 +85,30 @@ try {
         </div>
 
         {subsidy.seoArticle && (
-          <div class="glass-card detail-card" style="margin-top: 2.5rem; background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,0.8) 100%);">
-            <div style="font-size:0.8rem; font-weight:800; color:var(--accent); letter-spacing:0.1em; margin-bottom:0.5rem;">プロが解説する活用術</div>
-            <h2 class="card-title" style="border-bottom:none; padding-bottom:0; margin-bottom:1.5rem;">補助金 × バックオフィスDXで会社を変える</h2>
+          <div class="glass-card detail-card" style="margin-top: 2.5rem; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+            <div style="font-size:0.8rem; font-weight:800; color:var(--accent); letter-spacing:0.1em; margin-bottom:0.5rem;">プロが解説する資金繰り＆活用術</div>
+            <h2 class="card-title" style="border-bottom:none; padding-bottom:0; margin-bottom:1.5rem;">補助金の採択率と資金繰りを最適化する</h2>
             <div class="content-text seo-content" set:html={subsidy.seoArticle} />
+            
+            {matchedTools.length > 0 && (
+              <div class="cta-banner" style="margin-top:3.5rem;">
+                <h3 style="margin-top:0; color:var(--primary); font-size:1.4rem; border-bottom:2px solid var(--accent); padding-bottom:1rem; text-align:center;">この記事を読んだ方に選ばれている推奨対策サービス</h3>
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin-top:2rem;">
+                  {matchedTools.slice(0, 2).map(t => (
+                    <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.06); display:flex; flex-direction:column; justify-content:space-between; border-top:5px solid var(--accent);">
+                      <div>
+                        <div style="font-size:0.8rem; color:white; background:var(--primary); display:inline-block; padding:0.2rem 0.6rem; border-radius:4px; margin-bottom:0.5rem; font-weight:bold;">{t.category === 'cashflow' ? '必携の資金繰り対策' : t.category === 'corporate-card' ? '立替用法人カード' : t.category === 'consulting' ? '申請代行のプロ' : '必須バックオフィスSaaS'}</div>
+                        <h4 style="font-size:1.15rem; color:var(--text-color); margin-bottom:0.8rem;">{t.name}</h4>
+                        <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.5; margin-bottom:1.5rem;">{t.strengths}</p>
+                      </div>
+                      <a href={t.affiliate_url} target="_blank" rel="noopener noreferrer" class="cta-pulse-button" style="display:block; text-align:center; padding:1rem; font-weight:bold; color:white; background:linear-gradient(45deg, var(--primary), var(--accent)); border-radius:30px; text-decoration:none; font-size:1rem;">
+                        公式サイトを見る・無料相談 👉
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -213,4 +233,19 @@ try {
   .t-mini-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; line-height: 1.5;}
   
   .empty-state { padding: 2rem; text-align: center; font-size: 0.9rem; color: var(--secondary); }
+
+  .cta-pulse-button {
+    animation: pulse 2.5s infinite;
+    transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  }
+  .cta-pulse-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5); }
+    70% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  }
 </style>
