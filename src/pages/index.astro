@@ -16,7 +16,7 @@ try {
 
 // 簡単な件数カウント
 const activeCount = subsidies.length;
-const topSubsidies = subsidies.slice(0, 3);
+const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full and premium
 ---
 
 <BaseLayout 
@@ -26,31 +26,60 @@ const topSubsidies = subsidies.slice(0, 3);
   <div class="homepage-wrapper">
     <!-- Hero Section -->
     <header class="hero">
-      <div class="hero-content">
-        <div class="badge">Match &amp; Grow</div>
-        <h1 class="hero-title">IT導入・経理DXを、<br/><span class="text-gradient">補助金でもっと身近に。</span></h1>
-        <p class="hero-subtitle">今すぐ応募できる補助金と、あなたの企業に最適なSaaSツールを自動でマッチングします。</p>
-        <div class="hero-actions">
-          <a href={`${base}subsidies/`} class="btn btn-primary btn-large">補助金を探す</a>
-          <a href="#needs" class="btn btn-secondary btn-large">課題から探す</a>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="pulse-dot"></span>
+            Match &amp; Grow
+          </div>
+          <h1 class="hero-title">IT導入・経理DXを、<br/><span class="text-gradient">補助金でもっと身近に。</span></h1>
+          <p class="hero-subtitle">今すぐ応募できる補助金と、あなたの企業に最適なSaaSツールを最新AIが自動でマッチングします。</p>
+          <div class="hero-actions">
+            <a href={`${base}subsidies/`} class="btn btn-primary btn-large">
+              補助金を探す
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="btn-icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#needs" class="btn btn-secondary btn-large">課題から探す</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-group">
+              <span class="stat-label">AI自動マッチング</span>
+              <span class="stat-value"><strong>{activeCount}</strong> 件の最新補助金</span>
+            </div>
+            <div class="stat-group">
+              <span class="stat-label">専門家サポート</span>
+              <span class="stat-value"><strong>即日</strong> 対応可能</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <span>ただいま <strong>{activeCount}</strong> 件の補助金を掲載中</span>
-        </div>
-      </div>
-      
-      <!-- Decorative UI Elements in Hero -->
-      <div class="hero-decoration">
-        <div class="mock-card card-1">
-          <div class="mock-tag">IT導入補助金2024</div>
-          <div class="mock-line mock-line-1"></div>
-          <div class="mock-line mock-line-2"></div>
-          <div class="mock-score">Match: 95%</div>
-        </div>
-        <div class="mock-card card-2">
-          <div class="mock-tag">小規模事業者持続化</div>
-          <div class="mock-line mock-line-1"></div>
-          <div class="mock-line mock-line-3"></div>
+        
+        <!-- Decorative Premium UI Elements -->
+        <div class="hero-decoration">
+          <div class="glow-orb orb-1"></div>
+          <div class="glow-orb orb-2"></div>
+          <div class="glow-orb orb-3"></div>
+          <div class="mock-dashboard">
+            <div class="mock-header">
+              <div class="dots"><i/><i/><i/></div>
+              <div class="mock-title">SaaS Matching Engine AI</div>
+            </div>
+            <div class="mock-body">
+              <div class="mock-item anim-item-1">
+                <div class="m-icon" style="background: linear-gradient(135deg, #10B981, #059669)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <div class="m-lines"><div class="ml-1"/><div class="ml-2"/></div>
+                <div class="m-badge" style="color:#059669; background:rgba(16,185,129,0.1)">Match: 99%</div>
+              </div>
+              <div class="mock-item anim-item-2">
+                <div class="m-icon" style="background: linear-gradient(135deg, #2563EB, #1D4ED8)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                </div>
+                <div class="m-lines"><div class="ml-1" style="width:60%"/><div class="ml-2" style="width:40%"/></div>
+                <div class="m-badge" style="color:#1D4ED8; background:rgba(37,99,235,0.1)">資金対策</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -64,22 +93,26 @@ const topSubsidies = subsidies.slice(0, 3);
         <div class="needs-grid">
           <a href={`${base}tools/freee-accounting/`} class="glass-card need-card problem-card">
             <div class="problem-header text-gradient">課題 01</div>
-            <span class="need-icon">😮‍💨</span>
+            <div class="need-icon-wrapper">
+              <span class="need-icon">💶</span>
+            </div>
             <h3>「毎月の経理・請求書発行が辛い…」</h3>
             <p>紙やエクセルの管理から脱却し、クラウド会計で劇的に自動化。インボイスや電帳法にも完全対応。</p>
             <div class="need-action">
               <span class="suggest-tag">おすすめ: 会計DXツール</span>
-              <div class="need-arrow">→</div>
+              <div class="need-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </div>
           </a>
           <a href={`${base}needs/invoice/`} class="glass-card need-card problem-card">
             <div class="problem-header text-gradient">課題 02</div>
-            <span class="need-icon">📄</span>
-            <h3>「インボイス制度・電帳法によくわからないまま対応している…」</h3>
-            <p>法対応の漏れを防ぎ、スムーズに電子化へ移行するためのツール選び。</p>
+            <div class="need-icon-wrapper">
+              <span class="need-icon">💳</span>
+            </div>
+            <h3>「立替払いや資金繰りが厳しい…」</h3>
+            <p>補助金特有の手元資金ショートを防ぐ、最新の法改正対応ファクタリングや法人カードの活用法。</p>
             <div class="need-action">
               <span class="suggest-tag">関連補助金をチェック</span>
-              <div class="need-arrow">→</div>
+              <div class="need-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </div>
           </a>
         </div>
@@ -87,7 +120,7 @@ const topSubsidies = subsidies.slice(0, 3);
 
       <section class="latest-section">
         <div class="section-header">
-          <h2 class="section-title">注目の補助金</h2>
+          <h2 class="section-title">注目の最新補助金</h2>
           <a href={`${base}subsidies/`} class="view-all">すべて見る →</a>
         </div>
         
@@ -122,189 +155,293 @@ const topSubsidies = subsidies.slice(0, 3);
     margin-top: -2rem; /* Pull up into the header slightly */
   }
 
-  /* Hero Section */
+  /* Premium Hero Section */
   .hero {
     position: relative;
-    padding: 3rem 0 2rem;
+    padding: 6rem 0 5rem;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-    background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,1) 0%, rgba(248,250,252,0) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.7) 0%, rgba(248,250,252,0) 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
   }
 
   .hero-content {
-    position: relative;
-    z-index: 10;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 1.5rem;
+    text-align: left;
+    max-width: 650px;
   }
 
   .badge {
     display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
     color: var(--accent);
     border-radius: 9999px;
     font-weight: 700;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: pulse-dot 2s infinite cubic-bezier(0.66, 0, 0, 1);
+  }
+
+  @keyframes pulse-dot {
+    to {
+      box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
   }
 
   .hero-title {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     color: var(--primary);
+    line-height: 1.1;
   }
 
   .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--secondary);
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    line-height: 1.6;
+    margin: 0 0 3rem;
+    line-height: 1.7;
   }
 
   .hero-actions {
     display: flex;
     gap: 1.5rem;
-    justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 
-  .btn-large {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+  .btn-icon {
+    margin-left: 0.5rem;
+    transition: transform 0.3s;
+  }
+
+  .btn-primary:hover .btn-icon {
+    transform: translateX(4px);
   }
 
   .hero-stats {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--glass-bg);
-    border-radius: 9999px;
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    font-size: 0.9rem;
+    display: flex;
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+  }
+
+  .stat-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
     color: var(--secondary);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
   }
 
-  .hero-stats strong {
+  .stat-value {
+    color: var(--primary);
+    font-size: 1rem;
+  }
+
+  .stat-value strong {
     color: var(--accent);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-family: 'Outfit', sans-serif;
   }
 
-  /* Decorative elements */
+  /* High-end Dashboard Mockup */
   .hero-decoration {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    pointer-events: none;
-    z-index: 1;
+    height: 500px;
+    perspective: 1000px;
   }
 
-  .mock-card {
+  .glow-orb {
     position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  .orb-1 {
+    top: 10%; right: 10%;
+    width: 250px; height: 250px;
+    background: var(--accent);
+    animation: drift 10s ease-in-out infinite alternate;
+  }
+
+  .orb-2 {
+    bottom: 10%; left: 10%;
+    width: 300px; height: 300px;
+    background: #ec4899;
+    animation: drift 15s ease-in-out infinite alternate-reverse;
+  }
+
+  .orb-3 {
+    top: 40%; left: 40%;
+    width: 200px; height: 200px;
+    background: #10b981;
+    animation: drift 12s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, -30px) scale(1.1); }
+  }
+
+  .mock-dashboard {
+    position: absolute;
+    top: 50%; right: 0;
+    width: 110%;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    padding: 1.5rem;
-    opacity: 0.8;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255,255,255,1);
+    transform: translateY(-50%) rotateY(-10deg) rotateX(5deg);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: floating-dash 8s ease-in-out infinite;
+    z-index: 10;
   }
 
-  .card-1 {
-    top: 20%;
-    right: 5%;
-    width: 240px;
-    transform: rotate(5deg);
-    animation: float 6s ease-in-out infinite;
+  @keyframes floating-dash {
+    0%, 100% { transform: translateY(-50%) rotateY(-10deg) rotateX(5deg); }
+    50% { transform: translateY(-55%) rotateY(-8deg) rotateX(6deg); }
   }
 
-  .card-2 {
-    bottom: 15%;
-    left: 8%;
-    width: 200px;
-    transform: rotate(-3deg);
-    animation: float 7s ease-in-out infinite reverse;
+  .mock-header {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex; align-items: center; gap: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 24px 24px 0 0;
   }
 
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(5deg); }
-    50% { transform: translateY(-20px) rotate(3deg); }
-    100% { transform: translateY(0px) rotate(5deg); }
+  .dots { display: flex; gap: 8px; }
+  .dots i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+  .dots i:nth-child(1) { background: #ef4444; }
+  .dots i:nth-child(2) { background: #f59e0b; }
+  .dots i:nth-child(3) { background: #10b981; }
+
+  .mock-title { font-size: 0.75rem; font-weight: 800; color: #64748b; letter-spacing: 0.15em; text-transform: uppercase;}
+  
+  .mock-body { padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .mock-item { 
+    display: flex; align-items: center; gap: 1rem; padding: 1.25rem; 
+    background: white; border-radius: 16px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
   }
 
-  .mock-tag { font-size: 0.7rem; color: #64748b; margin-bottom: 0.5rem; font-weight: bold; }
-  .mock-line { height: 8px; border-radius: 4px; background: #e2e8f0; margin-bottom: 0.5rem; }
-  .mock-line-1 { width: 80%; background: #94a3b8; }
-  .mock-line-2 { width: 60%; }
-  .mock-line-3 { width: 40%; }
-  .mock-score { margin-top: 1rem; font-size: 0.8rem; color: var(--accent); font-weight: bold; text-align: right; }
+  .anim-item-1 { animation: slide-in 0.6s ease-out backwards 0.5s; }
+  .anim-item-2 { animation: slide-in 0.6s ease-out backwards 0.7s; }
+
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .m-icon { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; display:flex; align-items:center; justify-content:center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  .m-lines { flex: 1; display: flex; flex-direction: column; gap: 10px;}
+  .ml-1 { height: 8px; width: 85%; background: var(--secondary); border-radius: 4px; opacity: 0.2; }
+  .ml-2 { height: 8px; width: 40%; background: var(--secondary); border-radius: 4px; opacity: 0.1; }
+  .m-badge { 
+    padding: 0.5rem 1rem; font-size: 0.8rem; font-weight: 800; border-radius: 999px;
+  }
 
   /* Sections */
   .section-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0 0 0.5rem 0;
   }
 
   .section-desc {
     color: var(--secondary);
+    font-size: 1.1rem;
     margin: 0;
   }
 
   .view-all {
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .view-all:hover {
-    text-decoration: underline;
+    gap: 0.8rem;
   }
 
   /* Needs Grid */
   .needs-section {
-    padding: 6rem 0;
+    padding: 8rem 0;
   }
 
   .needs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
   }
 
   .need-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
+    padding: 3rem;
   }
 
   .need-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--accent) 0%, #8b5cf6 100%);
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -313,60 +450,35 @@ const topSubsidies = subsidies.slice(0, 3);
     opacity: 1;
   }
 
-  .need-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  .need-icon-wrapper {
+    width: 60px; height: 60px;
+    background: rgba(37,99,235,0.1);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
   }
 
+  .need-icon { font-size: 2rem; }
+
   .need-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
     color: var(--primary);
   }
 
   .need-card p {
     color: var(--secondary);
-    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
     flex: 1;
   }
 
-  .need-arrow {
-    align-self: flex-start;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    transition: all 0.3s;
-  }
-
-  .need-card:hover .need-arrow {
-    background: var(--accent);
-    color: white;
-    transform: translateX(5px);
-  }
-
-  .problem-card {
-    padding: 2.5rem;
-    border-top: 4px solid var(--accent);
-  }
-
   .problem-header {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-  }
-
-  .problem-card h3 {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    color: var(--primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
   }
   
   .need-action {
@@ -374,52 +486,60 @@ const topSubsidies = subsidies.slice(0, 3);
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
-    border-top: 1px dashed rgba(226, 232, 240, 0.8);
-    padding-top: 1rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
+    padding-top: 1.5rem;
   }
 
   .suggest-tag {
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.85rem;
+    font-weight: 700;
     color: var(--accent);
-    background: rgba(59, 130, 246, 0.1);
-    padding: 0.3rem 0.8rem;
+    background: rgba(37, 99, 235, 0.1);
+    padding: 0.4rem 1rem;
     border-radius: 999px;
+  }
+
+  .need-arrow {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: white; color: var(--accent);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .need-card:hover .need-arrow {
+    background: var(--accent);
+    color: white;
+    transform: translateX(5px) rotate(45deg);
   }
 
   /* Latest Subsidies */
   .latest-section {
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
   }
 
   .subsidy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2.5rem;
   }
 
   .subsidy-card {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2.5rem;
   }
 
   .s-card-header {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
   }
 
-  .tag-accent {
-    background: rgba(16, 185, 129, 0.1);
-    border-color: rgba(16, 185, 129, 0.2);
-    color: var(--success);
-  }
-
   .s-card-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
   }
 
   .s-card-title a {
@@ -433,9 +553,9 @@ const topSubsidies = subsidies.slice(0, 3);
 
   .s-card-desc {
     color: var(--secondary);
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     flex: 1;
   }
 
@@ -443,42 +563,39 @@ const topSubsidies = subsidies.slice(0, 3);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-top: 1px solid rgba(226, 232, 240, 0.5);
+    border-top: 1px solid rgba(15, 23, 42, 0.1);
     padding-top: 1.5rem;
   }
 
-  .s-card-meta {
-    display: flex;
-    flex-direction: column;
-  }
-
   .meta-label {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--secondary);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
 
   .meta-value {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1.4rem;
+    margin-top: 0.25rem;
   }
 
   .detail-link {
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex; align-items: center; gap: 0.25rem;
   }
 
   .detail-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    transform: translateX(4px);
   }
 
-  @media (max-width: 768px) {
-    .hero-title { font-size: 2.5rem; }
-    .hero-actions { flex-direction: column; }
-    .mock-card { display: none; }
-    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  @media (max-width: 1024px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .hero-decoration { display: none; }
+    .hero-content { margin: 0 auto; text-align: center; }
+    .hero-actions { justify-content: center; }
+    .hero-stats { justify-content: center; }
   }
 </style>

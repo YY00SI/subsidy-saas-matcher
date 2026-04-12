@@ -18,9 +18,7 @@ const { title, description, canonical } = Astro.props;
     <SeoHead title={title} description={description} canonical={canonical} />
   </head>
   <body>
-    <!-- Decorative background elements -->
-    <div class="bg-shape shape-1"></div>
-    <div class="bg-shape shape-2"></div>
+    <!-- Background managed by global.css -->
     
     <div class="layout-wrapper">
       <Header />
@@ -65,28 +63,7 @@ const { title, description, canonical } = Astro.props;
   
   /* Abstract modern background shapes */
   .bg-shape {
-    position: absolute;
-    filter: blur(100px);
-    z-index: 0;
-    border-radius: 50%;
-    opacity: 0.4;
-    pointer-events: none;
-  }
-  
-  .shape-1 {
-    top: -10%;
-    right: -5%;
-    width: 50vw;
-    height: 50vw;
-    background: radial-gradient(circle, rgba(96,165,250,0.8) 0%, rgba(59,130,246,0) 70%);
-  }
-  
-  .shape-2 {
-    bottom: 10%;
-    left: -10%;
-    width: 50vw;
-    height: 50vw;
-    background: radial-gradient(circle, rgba(167,139,250,0.6) 0%, rgba(139,92,246,0) 70%);
+    display: none;
   }
 
   /* Floating CTA */
