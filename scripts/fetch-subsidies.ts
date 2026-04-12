@@ -7,9 +7,11 @@ const DETAILS_DIR = path.join(RAW_DIR, 'subsidy-details');
 
 async function main() {
   try {
-    if (!fs.existsSync(DETAILS_DIR)) {
-      fs.mkdirSync(DETAILS_DIR, { recursive: true });
+    // 過去のJSON（モックデータなど）が残っているとビルドに混ざるため、一度ディレクトリをリセットする
+    if (fs.existsSync(DETAILS_DIR)) {
+      fs.rmSync(DETAILS_DIR, { recursive: true, force: true });
     }
+    fs.mkdirSync(DETAILS_DIR, { recursive: true });
 
     console.log('Fetching subsidy list...');
     // 仕様書の制限に基づくため、キーワード「IT」で検索

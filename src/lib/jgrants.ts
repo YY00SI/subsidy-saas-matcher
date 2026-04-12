@@ -62,7 +62,8 @@ export async function fetchSubsidyList(keyword: string = "IT") {
  * @returns 
  */
 export async function fetchSubsidyDetail(id: string) {
-  const url = `${BASE_URL}/subsidies/${id}`;
+  // 仕様書に準拠し、/id/ を間に挟む
+  const url = `${BASE_URL}/subsidies/id/${id}`;
   console.log(`Fetching subsidy detail: ${url}`);
   try {
     const response = await fetch(url, {
