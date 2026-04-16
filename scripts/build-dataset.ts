@@ -71,8 +71,8 @@ async function main() {
     subsidies.push(enrichedSubsidy);
     allMatches = allMatches.concat(matchResults);
     
-    // 【最重要】Gemini無料枠を絶対に超えないよう、1回につき10秒待機する
-    await delay(10000); 
+    // 【最重要】Gemini無料枠を絶対に超えないよう、1回につき5秒待機する
+    await delay(5000); 
   }
 
   // processed書き出し
