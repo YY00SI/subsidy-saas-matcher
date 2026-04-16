@@ -51,12 +51,19 @@ async function main() {
 
     // LLMマッチング＆SEO記事自動生成の実行
     let matchResults: MatchResult[] = [];
-    const llmResponse = await matchWithLLM(enrichedSubsidy, tools);
+    let llmResponse = null;
     
-    if (llmResponse && llmResponse.matches.length > 0) {
+    try {
+      llmResponse = await matchWithLLM(enrichedSubsidy, tools);
+    } catch (llmError) {
+      console.error(`LLM Matching failed for ${enrichedSubsidy.id}:`, llmError);
+    }
+    
+    if (llmResponse && llmResponse.matches && llmResponse.matches.length > 0) {
       matchResults = llmResponse.matches;
       enrichedSubsidy.seoArticle = llmResponse.seoArticle;
     } else {
+      console.log(`Using fallback matching for ${enrichedSubsidy.id}`);
       matchResults = matchToolsToSubsidy(tags, tools, normalized.id);
       enrichedSubsidy.seoArticle = `<h3>${enrichedSubsidy.title}の特徴</h3><p>${enrichedSubsidy.use_purpose}</p> <p>この機会にバックオフィス業務の見直しを行い、スムーズな申請と経営改善を目指しましょう。</p>`;
     }
