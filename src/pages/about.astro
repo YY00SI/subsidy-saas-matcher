@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="このサイトについて | 補助金SaaSマッチャー"
+  description="補助金SaaSマッチャーの運営目的、信頼性への取り組み、およびアフィリエイト広告に関する開示事項。"
+>
+  <div class="container py-20">
+    <div class="glass-card about-card">
+      <h1 class="text-4xl font-bold mb-8 text-gradient">このサイトについて</h1>
+      
+      <section class="about-section">
+        <h2>運営目的</h2>
+        <p>
+          「補助金SaaSマッチャー」は、IT導入や経理DXを進めたいと考える中小企業・個人事業主の皆様が、
+          複雑な補助金制度を賢く活用し、自社に最適なITツール（SaaS）を迷わず見つけられるよう支援することを目的としています。
+        </p>
+        <p>
+          補助金は最大75%もの導入費用が補助される一方で、公募要領の解読や書類作成、さらには「後払い（立替）」による
+          資金繰りのリスクなど、多くのハードルが存在します。私たちは、AIとテクノロジーの力でこれらのハードルを下げ、
+          日本のDX化を加速させるパートナーを目指しています。
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>情報の信頼性と免責事項</h2>
+        <p>
+          本サイトに掲載されている補助金情報は、経済産業省が運営する「JGrants API」および公式サイトの公募要領を
+          定期的に取得し、AIによる分析を行っております。
+        </p>
+        <p>
+          情報の正確性には万全を期しておりますが、補助金の公募内容は頻繁に更新されます。
+          <strong>最終的な申請要件や公募期間については、必ず公式サイト（JGrants、各事務局）の最新情報をご確認ください。</strong>
+          本サイトの情報に基づいた判断によって生じた損害については、一切の責任を負いかねます。
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>アフィリエイト広告の掲載について</h2>
+        <p>
+          本サイトには、SaaSツールの紹介および専門家への相談案内としてアフィリエイト広告が含まれています。
+          紹介料は本サイトの運営・開発およびデータ更新のための費用に充てられております。
+        </p>
+        <p>
+          なお、広告の有無にかかわらず、補助金の趣旨に合致する有用なツールの推薦を第一に考えてマッチングを行っております。
+          不当に特定のツールを優先的にスコアリングする行為は行いません。
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2>お問い合わせ・運営元</h2>
+        <p>
+          本サイトは、個人開発者のプロジェクト「Antigravity」の一環として開発・運営されています。<br/>
+          技術的な検証を含むMVP（最小機能版）として公開しており、随時機能改善を行っております。
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .py-20 { padding: 5rem 0; }
+  .about-card {
+    padding: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .about-section {
+    margin-bottom: 3rem;
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    border-left: 5px solid var(--accent);
+    padding-left: 1rem;
+  }
+  .about-section p {
+    line-height: 1.8;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+  }
+</style>

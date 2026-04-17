@@ -1,5 +1,6 @@
 ---
 const today = new Date();
+const base = import.meta.env.BASE_URL;
 ---
 
 <footer class="site-footer">
@@ -7,6 +8,10 @@ const today = new Date();
     <div class="footer-content">
       <div class="footer-info">
         <p class="copyright">&copy; {today.getFullYear()} 補助金SaaSマッチャー</p>
+        <nav class="footer-nav">
+          <a href={`${base}about/`}>このサイトについて</a>
+          <a href={`${base}subsidies/`}>補助金一覧</a>
+        </nav>
         <p class="disclaimer">
           当サイトは、JGrantsおよび各ツールの公式サイトより公開情報を収集・提供しています。
           情報の正確性には万全を期していますが、最終的な判断、申請にあたっては必ず公式サイトおよび公募要領を確認してください。
@@ -56,6 +61,10 @@ const today = new Date();
   .footer-disclosure {
     padding-top: 2rem;
     border-top: 1px dashed rgba(203, 213, 225, 0.6);
+    line-height: 1.6;
+  }
+</style>
+6);
     line-height: 1.6;
   }
 </style>

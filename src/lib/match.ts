@@ -34,11 +34,12 @@ export function matchToolsToSubsidy(subsidyTags: string[], tools: Tool[], subsid
       score += tool.priority_score * 0.1;
     }
 
-    if (score > 0) {
+    // 最終判定: 30点未満は「マッチしていない」とみなして除外
+    if (score >= 30) {
       results.push({
         subsidyId,
         toolSlug: tool.slug,
-        score,
+        score: Math.min(score, 100), // 100点満点にキャップ
         reasons
       });
     }

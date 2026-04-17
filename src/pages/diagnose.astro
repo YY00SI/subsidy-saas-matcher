@@ -1,0 +1,68 @@
+---
+import fs from 'fs';
+import path from 'path';
+
+const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+const tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
+const base = import.meta.env.BASE_URL;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>無料診断 ─ あなたに最適なSaaSと補助金を診断 | 補助金SaaSマッチャー</title>
+  <meta name="description" content="業種・従業員数・お困りごとを選ぶだけ。AIが最適な会計・経費SaaSと使える補助金を無料でご提案します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    :root { --navy: #0f1f3d; --indigo: #1e3a6e; --accent: #2563eb; --accent-light: #dbeafe; --green: #059669; --green-light: #d1fae5; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --white: #ffffff; --radius: 12px; --shadow: 0 4px 24px rgba(15,31,61,0.08); }
+    body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    .site-header { background: var(--navy); padding: 14px 24px; display: flex; align-items: center; gap: 8px; }
+    .site-header a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; opacity: 0.85; }
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--indigo) 100%); padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); color: #93c5fd; border: 1px solid rgba(147,197,253,0.3); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; margin-bottom: 20px; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 32px; color: #fff; margin-bottom: 14px; }
+    .hero p { color: rgba(255,255,255,0.72); font-size: 15px; max-width: 480px; margin: 0 auto; }
+    .progress-wrap { max-width: 600px; margin: 32px auto 0; padding: 0 24px; }
+    .progress-steps { display: flex; align-items: center; justify-content: center; gap: 0; }
+    .step-dot { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; font-size: 12px; color: rgba(255,255,255,0.5); }
+    .step-dot.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .step-line { flex: 1; height: 2px; background: rgba(255,255,255,0.15); max-width: 80px; }
+    .step-labels { display: flex; justify-content: space-between; margin-top: 8px; }
+    .step-label { font-size: 11px; color: rgba(255,255,255,0.45); text-align: center; flex: 1; }
+    main { max-width: 680px; margin: 0 auto; padding: 40px 20px 80px; }
+    .card { background: var(--white); border-radius: 16px; box-shadow: var(--shadow); padding: 36px 32px; }
+    .options-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 28px; }
+    .option-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; text-align: left; }
+    .option-btn.selected { border-color: var(--accent); background: var(--accent-light); }
+    .check-options { display: flex; flex-direction: column; gap: 10px; }
+    .check-btn { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; width: 100%; }
+    .check-btn.selected { border-color: var(--accent); background: var(--accent-light); }
+    .nav-row { display: flex; gap: 12px; justify-content: flex-end; }
+    .btn-next { padding: 11px 28px; background: var(--accent); border: none; border-radius: 8px; color: #fff; cursor: pointer; }
+    .btn-next:disabled { background: #94a3b8; }
+    .hidden { display: none !important; }
+    [data-step] { display: none; }
+    [data-step].active { display: block; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href={`${base}`}>✨ 補助金SaaSマッチャー</a>
+  </header>
+  <div class="hero">
+    <h1>あなたの会社に合う<em>SaaSと補助金</em>を診断</h1>
+  </div>
+  <main id="wizard-app">
+    <!-- Step 1〜4 -->
+  </main>
+  <script is:inline define:vars={{ tools, base }}>
+    const TOOLS_MAP = tools;
+    const CONSULT_URL = 'https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=diagnose&utm_medium=cta&utm_content=consult';
+    const SUBSIDY_LIST_URL = base + 'subsidies/?utm_source=diagnose&utm_medium=cta&utm_content=subsidy_list';
+    // ... 診断ロジック ...
+  </script>
+</body>
+</html>

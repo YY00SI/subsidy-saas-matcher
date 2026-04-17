@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import DiagnosisWizard from '../components/DiagnosisWizard.astro';
 import fs from 'fs';
 import path from 'path';
 
@@ -32,14 +33,15 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
             <span class="pulse-dot"></span>
             Match &amp; Grow
           </div>
-          <h1 class="hero-title">IT導入・経理DXを、<br/><span class="text-gradient">補助金でもっと身近に。</span></h1>
+          <h1 class="hero-title">IT導入・経理DXを、<br/><span class="text-gradient">補助金でもっと身近に.</span></h1>
           <p class="hero-subtitle">今すぐ応募できる補助金と、あなたの企業に最適なSaaSツールを最新AIが自動でマッチングします。</p>
           <div class="hero-actions">
+            <a href={`${base}diagnose/`} class="btn btn-accent btn-large">
+              🔍 1分でわかる！無料SaaS診断
+            </a>
             <a href={`${base}subsidies/`} class="btn btn-primary btn-large">
               補助金を探す
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="btn-icon"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="#needs" class="btn btn-secondary btn-large">課題から探す</a>
           </div>
           <div class="hero-stats">
             <div class="stat-group">
@@ -60,23 +62,23 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
           <div class="glow-orb orb-3"></div>
           <div class="mock-dashboard">
             <div class="mock-header">
-              <div class="dots"><i/><i/><i/></div>
+              <div class="dots"><span></span><span></span><span></span></div>
               <div class="mock-title">SaaS Matching Engine AI</div>
             </div>
             <div class="mock-body">
               <div class="mock-item anim-item-1">
-                <div class="m-icon" style="background: linear-gradient(135deg, #10B981, #059669)">
+                <div class="m-icon" style="background-color: #10B981">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
-                <div class="m-lines"><div class="ml-1"/><div class="ml-2"/></div>
-                <div class="m-badge" style="color:#059669; background:rgba(16,185,129,0.1)">Match: 99%</div>
+                <div class="m-lines"><div class="ml-1"></div><div class="ml-2"></div></div>
+                <div class="m-badge" style="color:#059669; background-color:rgba(16,185,129,0.1)">Match: 99%</div>
               </div>
               <div class="mock-item anim-item-2">
-                <div class="m-icon" style="background: linear-gradient(135deg, #2563EB, #1D4ED8)">
+                <div class="m-icon" style="background-color: #2563EB">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
                 </div>
-                <div class="m-lines"><div class="ml-1" style="width:60%"/><div class="ml-2" style="width:40%"/></div>
-                <div class="m-badge" style="color:#1D4ED8; background:rgba(37,99,235,0.1)">資金対策</div>
+                <div class="m-lines"><div class="ml-1" style="width:60%"></div><div class="ml-2" style="width:40%"></div></div>
+                <div class="m-badge" style="color:#1D4ED8; background-color:rgba(37,99,235,0.1)">資金対策</div>
               </div>
             </div>
           </div>
@@ -84,7 +86,37 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
       </div>
     </header>
 
+    <DiagnosisWizard />
+
     <div class="container">
+      <!-- Success Stories Section -->
+      <section class="success-stories-section">
+        <div class="section-header">
+          <h2 class="section-title">業種別・IT導入モデルケース</h2>
+          <p class="section-desc">補助金を活用した、先行企業のDX成功パターンをご紹介します。</p>
+        </div>
+        <div class="stories-grid">
+          <div class="glass-card story-card">
+            <div class="story-industry">飲食店・小売業</div>
+            <h3>POSレジ・セルフオーダー導入</h3>
+            <p>人手不足の解消と売上分析を同時に実現。IT導入補助金の活用で、導入費用の最大3/4が補助されます。</p>
+            <div class="story-benefit">効果: 月間30時間の事務作業削減</div>
+          </div>
+          <div class="glass-card story-card">
+            <div class="story-industry">製造業・卸売業</div>
+            <h3>在庫管理・受発注DX</h3>
+            <p>アナログな在庫管理から脱却。クラウドツール導入で、リアルタイムな経営判断が可能に。ものづくり補助金等の活用が有力です。</p>
+            <div class="story-benefit">効果: 在庫ロス20%削減</div>
+          </div>
+          <div class="glass-card story-card">
+            <div class="story-industry">建設業・不動産業</div>
+            <h3>現場管理・原価管理SaaS</h3>
+            <p>2024年問題への対応として必須の勤怠・工程管理。IT導入補助金（通常枠・インボイス枠）の活用で、コストを抑えて導入可能です。</p>
+            <div class="story-benefit">効果: 現場報告の完全ペーパーレス化</div>
+          </div>
+        </div>
+      </section>
+
       <section id="needs" class="needs-section">
         <div class="section-header">
           <h2 class="section-title">カテゴリーから探す</h2>
@@ -153,6 +185,46 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
   /* Base layout adjustments */
   .homepage-wrapper {
     margin-top: -2rem; /* Pull up into the header slightly */
+  }
+
+  /* Success Stories Section */
+  .success-stories-section {
+    padding: 8rem 0 4rem;
+  }
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  .story-card {
+    padding: 2.5rem;
+    border-top: 4px solid var(--accent);
+  }
+  .story-industry {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .story-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .story-card p {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .story-benefit {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--success);
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
   }
 
   /* Premium Hero Section */
@@ -355,10 +427,10 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
   }
 
   .dots { display: flex; gap: 8px; }
-  .dots i { width: 12px; height: 12px; border-radius: 50%; display: block; }
-  .dots i:nth-child(1) { background: #ef4444; }
-  .dots i:nth-child(2) { background: #f59e0b; }
-  .dots i:nth-child(3) { background: #10b981; }
+  .dots span { width: 12px; height: 12px; border-radius: 50%; display: block; }
+  .dots span:nth-child(1) { background: #ef4444; }
+  .dots span:nth-child(2) { background: #f59e0b; }
+  .dots span:nth-child(3) { background: #10b981; }
 
   .mock-title { font-size: 0.75rem; font-weight: 800; color: #64748b; letter-spacing: 0.15em; text-transform: uppercase;}
   

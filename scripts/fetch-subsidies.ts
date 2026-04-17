@@ -14,14 +14,32 @@ async function main() {
     fs.mkdirSync(DETAILS_DIR, { recursive: true });
 
     console.log('Fetching subsidy list...');
-    // 仕様書の制限に基づくため、キーワード「IT」で検索
-    const result = await fetchSubsidyList("補助金"); 
+    // 複数のキーワードで検索して網羅性を高める
+    const keywords = ["IT導入補助金", "DX", "デジタル化", "SaaS"];
+    let allSubsidies = [];
+    const seenIds = new Set();
+
+    for (const kw of keywords) {
+      console.log(`Searching for keyword: ${kw}`);
+      const result = await fetchSubsidyList(kw);
+      const items = result.result || result.subsidies || result.items || [];
+      
+      // 各キーワードごとに最大10件ずつ取得し、重複を排除して追加
+      let count = 0;
+      for (const item of items) {
+        if (count >= 10) break; // キーワードあたり最大10件
+        const id = item.subsidy_id || item.id;
+        if (id && !seenIds.has(id)) {
+          seenIds.add(id);
+          allSubsidies.push(item);
+          count++;
+        }
+      }
+      await new Promise(r => setTimeout(r, 1000)); // API負荷軽減
+    }
     
-    // API仕様変更やモックデータ対応
-    const subsidies = result.result || result.subsidies || result.items || [];
-    
-    // 先頭の30件に絞り込む（APIが無制限に返してきた場合への安全対策）
-    const limitedSubsidies = subsidies.slice(0, 30);
+    // 合計の中から、最終的に処理する30件を抽出
+    const limitedSubsidies = allSubsidies.slice(0, 30);
 
     fs.writeFileSync(
       path.join(RAW_DIR, 'subsidies-list.json'),

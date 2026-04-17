@@ -119,7 +119,11 @@ try {
           <ul class="summary-list">
             <li>
               <span class="l-label">上限額</span>
-              <span class="l-value text-gradient">{subsidy.max_limit || '要問合せ'}</span>
+              <span class="l-value text-gradient">
+                {(!subsidy.max_limit || subsidy.max_limit === '0' || subsidy.max_limit === '0円') 
+                  ? '公募要領を確認' 
+                  : subsidy.max_limit}
+              </span>
             </li>
             <li>
               <span class="l-label">補助率</span>

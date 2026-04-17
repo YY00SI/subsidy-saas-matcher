@@ -1,0 +1,312 @@
+---
+const base = import.meta.env.BASE_URL;
+
+const steps = [
+  {
+    id: 'step-industry',
+    title: 'Q1. あなたの業種は何ですか？',
+    options: [
+      { id: 'ind-food', label: '飲食・サービス', icon: '🍽️' },
+      { id: 'ind-const', label: '建設・不動産', icon: '🏗️' },
+      { id: 'ind-it', label: 'IT・ソフトウェア', icon: '💻' },
+      { id: 'ind-manuf', label: '製造・卸売', icon: '🏭' },
+      { id: 'ind-other', label: 'その他', icon: '🤝' },
+    ]
+  },
+  {
+    id: 'step-needs',
+    title: 'Q2. 解決したい一番の課題は？',
+    options: [
+      { id: 'need-accounting', label: '経理・決算の自動化', icon: '💶', tag: 'accounting' },
+      { id: 'need-invoice', label: 'インボイス・請求書対応', icon: '💳', tag: 'invoice' },
+      { id: 'need-payroll', label: '給与・労務のペーパーレス化', icon: '👥', tag: 'payroll' },
+      { id: 'need-cashflow', label: '資金繰り・キャッシュフロー改善', icon: '💰', tag: 'cashflow' },
+    ]
+  },
+  {
+    id: 'step-size',
+    title: 'Q3. 従業員（役員含む）の規模は？',
+    options: [
+      { id: 'size-small', label: '1〜5名（小規模）', icon: '🌱' },
+      { id: 'size-mid', label: '6〜50名（中堅）', icon: '🌿' },
+      { id: 'size-large', label: '51名以上', icon: '🌳' },
+    ]
+  }
+];
+---
+
+<section id="diagnosis" class="diagnosis-section container">
+  <div class="glass-card diagnosis-wizard">
+    <div class="wizard-header">
+      <div class="wizard-title-group">
+        <h2 class="wizard-main-title">補助金・SaaS診断</h2>
+        <p class="wizard-subtitle">わずか3つの質問で、あなたの会社に最適な補助金とツールを特定します。</p>
+      </div>
+      <div class="step-indicator">
+        <div class="step-dot active" data-step="0"></div>
+        <div class="step-dot" data-step="1"></div>
+        <div class="step-dot" data-step="2"></div>
+      </div>
+    </div>
+
+    <div class="wizard-body">
+      {steps.map((step, index) => (
+        <div class={`wizard-step ${index === 0 ? 'active' : ''}`} id={step.id} data-index={index}>
+          <h3 class="step-title">{step.title}</h3>
+          <div class="options-grid">
+            {step.options.map((opt) => (
+              <button class="option-btn" data-id={opt.id} data-tag={opt.tag || ''}>
+                <span class="option-icon">{opt.icon}</span>
+                <span class="option-label">{opt.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div class="wizard-step" id="step-result" data-index="3">
+        <div class="result-loading">
+          <div class="spinner"></div>
+          <p>AIが最適なマッチングを計算中...</p>
+        </div>
+        <div class="result-content hidden">
+          <div class="result-icon">✨</div>
+          <h3 class="step-title">診断結果</h3>
+          <p class="result-message">あなたに最適な補助金とSaaSツールの候補が見つかりました。</p>
+          <div class="result-actions">
+            <a href={`${base}subsidies/`} id="result-link" class="btn btn-primary btn-large">
+              診断結果を見る
+            </a>
+            <button class="btn btn-secondary" onclick="location.reload()">もう一度診断する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const steps = document.querySelectorAll('.wizard-step');
+  const dots = document.querySelectorAll('.step-dot');
+  let currentStep = 0;
+  const selections = {
+    industry: '',
+    needs: '',
+    size: ''
+  };
+
+  const optionBtns = document.querySelectorAll('.option-btn');
+  optionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parentStep = btn.closest('.wizard-step');
+      const stepIndex = parseInt(parentStep.dataset.index);
+      
+      // 選択状態を記録
+      if (stepIndex === 0) selections.industry = btn.dataset.id;
+      if (stepIndex === 1) selections.needs = btn.dataset.tag;
+      if (stepIndex === 2) selections.size = btn.dataset.id;
+
+      // 次のステップへ
+      nextStep();
+    });
+  });
+
+  function nextStep() {
+    if (currentStep < steps.length - 1) {
+      steps[currentStep].classList.remove('active');
+      currentStep++;
+      steps[currentStep].classList.add('active');
+      
+      // ドット更新
+      if (currentStep < 3) {
+        dots[currentStep].classList.add('active');
+      }
+
+      // 最終ステップ（リザルト）の演出
+      if (currentStep === 3) {
+        showResult();
+      }
+    }
+  }
+
+  function showResult() {
+    const loading = document.querySelector('.result-loading');
+    const content = document.querySelector('.result-content');
+    const link = document.getElementById('result-link');
+
+    // ローディング演出
+    setTimeout(() => {
+      loading.classList.add('hidden');
+      content.classList.remove('hidden');
+      
+      // 診断結果に基づいたリンク先の生成（簡易版）
+      // selections.needs があればそのカテゴリーページへ、なければ一覧へ
+      const baseUrl = document.querySelector('base')?.href || '/subsidy-saas-matcher/';
+
+      if (selections.needs === 'accounting') {
+        link.href = `${baseUrl}tools/freee-accounting/`;
+        link.textContent = '最適なツールと補助金を見る';
+      } else if (selections.needs) {
+        // needsに応じたページがあれば飛ばす、なければ一覧
+        link.href = `${baseUrl}subsidies/?tag=${selections.needs}`;
+        link.textContent = '最適な補助金を見る';
+      }
+
+    }, 1500);
+  }
+</script>
+
+<style>
+  .diagnosis-section {
+    padding: 4rem 0 2rem;
+    position: relative;
+    z-index: 20;
+    margin-top: -3rem; /* Heroに食い込ませる */
+  }
+
+  .diagnosis-wizard {
+    padding: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.12);
+  }
+
+  .wizard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 2rem;
+  }
+
+  .wizard-main-title {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--primary);
+  }
+
+  .wizard-subtitle {
+    color: var(--secondary);
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .step-indicator {
+    display: flex;
+    gap: 10px;
+  }
+
+  .step-dot {
+    width: 40px;
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .step-dot.active {
+    background: var(--accent);
+    width: 60px;
+  }
+
+  .wizard-step {
+    display: none;
+    animation: fade-in 0.4s ease-out;
+  }
+
+  .wizard-step.active {
+    display: block;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .step-title {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary);
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .option-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: white;
+    border: 2px solid #f1f5f9;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: inherit;
+  }
+
+  .option-btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+  }
+
+  .option-icon {
+    font-size: 2.5rem;
+  }
+
+  .option-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  /* Result styling */
+  .result-loading, .result-content {
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(37, 99, 235, 0.1);
+    border-left-color: var(--accent);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .result-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .result-message {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 2.5rem;
+  }
+
+  .result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+</style>

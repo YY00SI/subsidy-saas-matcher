@@ -37,6 +37,7 @@ export async function fetchSubsidyList(keyword: string = "IT") {
       const path = await import('path');
       // @ts-ignore
       const dataPath = path.join(process.cwd(), 'data', 'raw', 'fallback-subsidies.json');
+      if (!fs.existsSync(dataPath)) return { subsidies: [] };
       // @ts-ignore
       const items = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
       
@@ -89,6 +90,7 @@ export async function fetchSubsidyDetail(id: string) {
       const path = await import('path');
       // @ts-ignore
       const dataPath = path.join(process.cwd(), 'data', 'raw', 'fallback-subsidies.json');
+      if (!fs.existsSync(dataPath)) return { subsidies: [] };
       // @ts-ignore
       const items = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
       const found = items.find((i: any) => i.id === id);

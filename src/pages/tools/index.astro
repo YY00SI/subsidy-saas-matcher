@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+const base = import.meta.env.BASE_URL;
+
+// tools.json読み込み
+const dataPath = path.join(process.cwd(), 'data', 'tools.json');
+let tools = [];
+try {
+  tools = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+} catch (e) {
+  console.warn("Failed to load tools in index.astro", e);
+}
+
+// スコア順または定義順に並び替え
+const sortedTools = tools.sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0));
+---
+
+<BaseLayout 
+  title="推奨SaaS・サービス一覧 | 補助金SaaSマッチャー" 
+  description="補助金活用に最適な会計ソフト、法人カード、資金繰り支援サービスの一覧です。"
+>
+  <div class="header-section">
+    <h1 class="page-title">推奨サービス一覧</h1>
+    <p class="subtitle">補助金申請の効率化と、受取までの資金繰りを支える厳選ツール群</p>
+  </div>
+
+  <div class="tool-grid">
+    {sortedTools.map(t => (
+      <div class="glass-card tool-card">
+        <div class="card-header">
+          <span class={`category-tag cat-${t.category}`}>{t.category}</span>
+          {t.priority_score > 120 && <span class="hot-tag">RECOMMENDED</span>}
+        </div>
+        
+        <h3 class="t-title"><a href={`${base}tools/${t.slug}/`}>{t.name}</a></h3>
+        <p class="strengths">{t.strengths}</p>
+        
+        <div class="use-cases">
+          {t.use_cases?.map(uc => <span class="uc-tag">#{uc}</span>)}
+        </div>
+
+        <div class="card-footer">
+          <a href={`${base}tools/${t.slug}/`} class="btn btn-secondary btn-sm">解説を見る</a>
+          <a href={t.affiliate_url} target="_blank" rel="noopener noreferrer nofollow" class="btn btn-primary btn-sm">公式サイト</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .header-section { margin-bottom: 4rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(226, 232, 240, 0.5);}
+  .page-title { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .subtitle { color: var(--secondary); font-size: 1.1rem; }
+
+  .tool-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 2rem; 
+  }
+  
+  .tool-card { 
+    display: flex; 
+    flex-direction: column; 
+    padding: 1.5rem; 
+    transition: transform 0.2s ease;
+  }
+  .tool-card:hover { transform: translateY(-5px); }
+
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  
+  .category-tag { font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: bold; text-transform: uppercase; background: #f1f5f9; color: #475569;}
+  .cat-accounting { background: #dcfce7; color: #166534; }
+  .cat-cashflow { background: #fee2e2; color: #991b1b; }
+  .cat-corporate-card { background: #fef9c3; color: #854d0e; }
+  
+  .hot-tag { font-size: 0.65rem; color: #fff; background: var(--accent); padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 900; letter-spacing: 0.05em; }
+  
+  .t-title { margin: 0 0 0.75rem 0; font-size: 1.25rem; }
+  .t-title a { color: var(--primary); text-decoration: none; }
+  
+  .strengths { color: var(--secondary); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
+  
+  .use-cases { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+  .uc-tag { font-size: 0.75rem; color: var(--accent); }
+
+  .card-footer { 
+    display: flex; 
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.5);
+  }
+  .card-footer .btn { flex: 1; text-align: center; }
+  .btn-sm { padding: 0.4rem 0.75rem; font-size: 0.85rem; }
+</style>
