@@ -212,3 +212,36 @@ a {
   background-image: linear-gradient(135deg, #2563EB 0%, #8B5CF6 50%, #EC4899 100%);
   display: inline-block;
 }
+
+/* Site Footer Styles */
+.site-footer {
+  border-top: 1px solid rgba(226, 232, 240, 0.5);
+  padding: 4rem 0 3rem;
+  margin-top: 4rem;
+  background: rgba(248, 250, 252, 0.5);
+  backdrop-filter: blur(10px);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.copyright {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.disclaimer {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+.footer-disclosure {
+  padding-top: 2rem;
+  border-top: 1px dashed #cbd5e1;
+  line-height: 1.6;
+}

@@ -1,5 +1,4 @@
 @echo off
-@chcp 65001 > lul
 setlocal
 cd /d "%~dp0"
 
@@ -8,14 +7,12 @@ echo Subsidy SaaS Matcher - GitHub Sync Tool
 echo ==============================================
 echo.
 
-rem 引数があればそれをメッセージに、なければ入力を促す
 set "commit_msg=%~1"
 
 if "%commit_msg%"=="" (
     set /p "commit_msg=Enter commit message (or press Enter for 'Auto-update'): "
 )
 
-rem 入力が空なら現在日時を入れる
 if "%commit_msg%"=="" (
     set "commit_msg=Auto-update: %date% %time%"
 )

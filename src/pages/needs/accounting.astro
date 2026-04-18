@@ -1,169 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatCurrency } from '../../lib/normalize';
 import fs from 'fs';
 import path from 'path';
 
 const base = import.meta.env.BASE_URL;
 const category = 'accounting';
-const label = '会計・経理ソフト導入';
 
-// processedデータ読み込み
 const dataPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
 let subsidies = [];
 try {
   subsidies = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 } catch (e) {
-  console.warn("Failed to load subsidies in accounting.astro", e);
+  console.warn("Failed to load subsidies", e);
 }
 
-// このカテゴリに属する補助金を抽出
 const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
-
-// おすすめツールの読み込み
-const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
-let tools = [];
-try {
-  const allTools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
-  tools = allTools.filter(t => t.category === category);
-} catch (e) {
-  console.warn("Failed to load tools in accounting.astro", e);
-}
 ---
 
-<BaseLayout 
-  title={`${label}に使える補助金マッチング`} 
-  description={`経理・会計業務の効率化やクラウド会計ソフト導入に活用できる補助金の一覧と、おすすめツールを紹介します。`}
->
-  <div class="hero-section">
-    <div class="tags"><span class="badge">ニーズ別ガイド</span></div>
-    <h1 class="page-title">{label}を<br/><span class="text-gradient">補助金でもっと前へ</span></h1>
-    <p class="lead">面倒な経理業務を自動化。クラウド会計ソフトの導入費用は補助金で補填できる可能性があります。</p>
-  </div>
-
-  <section class="guide-section container">
-    <h2 class="section-title">なぜ会計ソフト導入に補助金が使えるの？</h2>
-    <div class="glass-card guide-card">
-      <div class="guide-icon">💡</div>
-      <p>
-        政府は中小企業の「デジタル化・DX」を強力に推進しています。
-        特に会計ソフトは、経営状況の可視化や生産性向上に直結するため、多くの補助金において「ITツール」として認定されています。
-        インボイス制度や電子帳簿保存法への対応も、補助金活用の大きな理由となります。
-      </p>
-    </div>
-  </section>
-
-  <div class="content-grid container">
-    <div class="left-col">
-      <section class="subsidies-section">
-        <h2 class="section-title">おすすめの補助金</h2>
-        <div class="subsidy-list">
-          {categorySubsidies.length > 0 ? categorySubsidies.map(s => (
-            <div class="glass-card s-card">
-              <h3><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
-              <p class="s-desc">{s.use_purpose}</p>
-              <div class="s-footer">
-                <div class="s-meta">
-                  <span class="label">上限額</span>
-                  <span class="value">{s.max_limit}</span>
-                </div>
-                <div class="s-meta">
-                  <span class="label">補助率</span>
-                  <span class="value">{s.rate}</span>
-                </div>
-              </div>
-            </div>
-          )) : (
-            <div class="glass-card empty-card">現在、このカテゴリに特化した補助金情報は準備中です。</div>
-          )}
+<BaseLayout title="経理・会計ソフト導入 | 補助金SaaSマッチャー">
+  <div class="container py-12">
+    <h1 class="text-3xl font-bold mb-8">経理・会計DXに使える補助金</h1>
+    <div class="grid gap-6">
+      {categorySubsidies.map(s => (
+        <div class="glass-card">
+          <h3><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
+          <p>{formatCurrency(s.max_limit)}</p>
         </div>
-      </section>
+      ))}
     </div>
-
-    <aside class="right-col">
-      <section class="tools-section">
-        <h2 class="section-title">おすすめの会計ソフト</h2>
-        <div class="tool-list">
-          {tools.map(t => (
-            <div class="glass-card t-card">
-              <div class="t-badge">Top Tool</div>
-              <h3>{t.name}</h3>
-              <p>{t.strengths}</p>
-              <div class="t-actions">
-                <a href={t.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-block">公式サイトで見る</a>
-                <a href={`${base}tools/${t.slug}/`} class="detail-link">詳しく解説 →</a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </aside>
   </div>
 </BaseLayout>
-
-<style>
-  .hero-section { 
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-    padding: 6rem 1.5rem 4rem; 
-    text-align: center;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-    margin-bottom: 4rem;
-  }
-  
-  .badge {
-    display: inline-flex;
-    padding: 0.4rem 1rem;
-    background: rgba(15, 23, 42, 0.05);
-    color: var(--primary);
-    border-radius: 9999px;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
-  }
-
-  .page-title { font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-  .lead { max-width: 700px; margin: 0 auto; color: var(--secondary); font-size: 1.15rem; line-height: 1.6;}
-
-  .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
-
-  .guide-section { margin-bottom: 5rem; }
-  .guide-card { 
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    border-left: 4px solid var(--accent);
-  }
-  .guide-icon { font-size: 2rem; }
-  .guide-card p { margin: 0; line-height: 1.8; color: var(--text-muted); font-size: 1.05rem; }
-
-  .content-grid { display: grid; grid-template-columns: 1fr 360px; gap: 3rem; }
-  @media (max-width: 900px) { .content-grid { grid-template-columns: 1fr; } }
-
-  .s-card { margin-bottom: 1.5rem; padding: 1.75rem; }
-  .s-card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
-  .s-card h3 a { color: var(--primary); text-decoration: none; }
-  .s-card h3 a:hover { color: var(--accent); }
-  .s-desc { color: var(--secondary); margin-bottom: 1.5rem; line-height: 1.6; }
-  
-  .s-footer { 
-    display: flex; 
-    gap: 2rem; 
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(226, 232, 240, 0.5);
-  }
-  .s-meta { display: flex; flex-direction: column; }
-  .s-meta .label { font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;}
-  .s-meta .value { font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif;}
-
-  .t-card { position: relative; padding: 2rem 1.5rem; border-top: 4px solid var(--accent-light); margin-bottom: 1.5rem;}
-  .t-badge { position: absolute; top: -12px; right: 20px; background: var(--primary); color: white; padding: 0.2rem 0.8rem; border-radius: 9999px; font-size: 0.7rem; font-weight: bold;}
-  .t-card h3 { font-size: 1.4rem; margin-bottom: 1rem; text-align: center; }
-  .t-card p { font-size: 0.9rem; color: var(--secondary); margin-bottom: 2rem; line-height: 1.6; text-align: center;}
-  
-  .t-actions { display: flex; flex-direction: column; gap: 1rem; }
-  .btn-block { width: 100%; text-align: center; }
-  .detail-link { text-align: center; font-size: 0.9rem; font-weight: 600; text-decoration: none; }
-  .detail-link:hover { text-decoration: underline; }
-  
-  .empty-card { text-align: center; color: var(--secondary); padding: 3rem; }
-</style>

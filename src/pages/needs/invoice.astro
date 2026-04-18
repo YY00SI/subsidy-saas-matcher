@@ -1,175 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatCurrency } from '../../lib/normalize';
 import fs from 'fs';
 import path from 'path';
 
 const base = import.meta.env.BASE_URL;
 const category = 'invoice';
-const label = 'インボイス・請求書対応';
 
-// processedデータ読み込み
 const dataPath = path.join(process.cwd(), 'data', 'processed', 'subsidies.json');
 let subsidies = [];
 try {
   subsidies = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 } catch (e) {
-  console.warn("Failed to load subsidies in invoice.astro", e);
+  console.warn("Failed to load subsidies", e);
 }
 
-// このカテゴリに属する補助金を抽出
 const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
-
-// おすすめツールの読み込み
-const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
-let tools = [];
-try {
-  const allTools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
-  tools = allTools.filter(t => t.category === category);
-} catch (e) {
-  console.warn("Failed to load tools in invoice.astro", e);
-}
 ---
 
-<BaseLayout 
-  title={`${label}に使える補助金攻略ガイド`} 
-  description={`インボイス制度への対応や、請求書管理業務のデジタル化に活用できる補助金の一覧と、おすすめツールを紹介します。`}
->
-  <div class="hero-section">
-    <div class="tags"><span class="badge">ニーズ別ガイド</span></div>
-    <h1 class="page-title">{label}を<br/><span class="text-gradient">補助金で解決</span></h1>
-    <p class="lead">制度対応の負担を軽減。インボイス対応ツールの導入費用は補助金で賢くカバーしましょう。</p>
-  </div>
-
-  <section class="guide-section container">
-    <h2 class="section-title">インボイス対応に補助金は使える？</h2>
-    <div class="glass-card guide-card">
-      <div class="guide-icon">✅</div>
-      <p>
-        2023年10月から開始されたインボイス制度への対応は、多くの中小企業・個人事業主にとって急務です。
-        IT導入補助金などでは「インボイス対応枠」といった枠組みもあり、通常よりも補助率が優遇されるケースがあります。
-        単なる事務作業の増加としてではなく、業務フロー全体のデジタル化のチャンスとして補助金を活用しましょう。
-      </p>
-    </div>
-  </section>
-
-  <div class="content-grid container">
-    <div class="left-col">
-      <section class="subsidies-section">
-        <h2 class="section-title">おすすめの補助金</h2>
-        <div class="subsidy-list">
-          {categorySubsidies.length > 0 ? categorySubsidies.map(s => (
-            <div class="glass-card s-card">
-              <h3><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
-              <p class="s-desc">{s.use_purpose}</p>
-              <div class="s-footer">
-                <div class="s-meta">
-                  <span class="label">上限額</span>
-                  <span class="value">{s.max_limit}</span>
-                </div>
-                <div class="s-meta">
-                  <span class="label">補助率</span>
-                  <span class="value">{s.rate}</span>
-                </div>
-              </div>
-            </div>
-          )) : (
-            <div class="glass-card empty-card">現在、このカテゴリに特化した補助金情報は準備中です。</div>
-          )}
+<BaseLayout title="インボイス・電帳法対応 | 補助金SaaSマッチャー">
+  <div class="container py-12">
+    <h1 class="text-3xl font-bold mb-8">インボイス・電帳法DXに使える補助金</h1>
+    <div class="grid gap-6">
+      {categorySubsidies.map(s => (
+        <div class="glass-card">
+          <h3><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
+          <p>{formatCurrency(s.max_limit)}</p>
         </div>
-      </section>
+      ))}
     </div>
-
-    <aside class="right-col">
-      <section class="tools-section">
-        <h2 class="section-title">おすすめの対応ツール</h2>
-        <div class="tool-list">
-          {tools.map(t => (
-            <div class="glass-card t-card">
-              <div class="t-badge">Top Tool</div>
-              <h3>{t.name}</h3>
-              <p>{t.strengths}</p>
-              <div class="t-actions">
-                <a href={t.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-block">公式サイトで見る</a>
-                <a href={`${base}tools/${t.slug}/`} class="detail-link">詳しく解説 →</a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </aside>
   </div>
 </BaseLayout>
-
-<style>
-  .hero-section { 
-    background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-    padding: 6rem 1.5rem 4rem; 
-    text-align: center;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-    margin-bottom: 4rem;
-  }
-  
-  .badge {
-    display: inline-flex;
-    padding: 0.4rem 1rem;
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--success);
-    border-radius: 9999px;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.5rem;
-  }
-
-  .text-gradient {
-    background-image: linear-gradient(135deg, var(--success) 0%, #059669 100%);
-  }
-
-  .page-title { font-size: 3rem; margin-bottom: 1.5rem; letter-spacing: -0.02em; }
-  .lead { max-width: 700px; margin: 0 auto; color: var(--secondary); font-size: 1.15rem; line-height: 1.6;}
-
-  .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
-
-  .guide-section { margin-bottom: 5rem; }
-  .guide-card { 
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    border-left: 4px solid var(--success);
-  }
-  .guide-icon { font-size: 2rem; }
-  .guide-card p { margin: 0; line-height: 1.8; color: var(--text-muted); font-size: 1.05rem; }
-
-  .content-grid { display: grid; grid-template-columns: 1fr 360px; gap: 3rem; }
-  @media (max-width: 900px) { .content-grid { grid-template-columns: 1fr; } }
-
-  .s-card { margin-bottom: 1.5rem; padding: 1.75rem; }
-  .s-card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
-  .s-card h3 a { color: var(--primary); text-decoration: none; }
-  .s-card h3 a:hover { color: var(--success); }
-  .s-desc { color: var(--secondary); margin-bottom: 1.5rem; line-height: 1.6; }
-  
-  .s-footer { 
-    display: flex; 
-    gap: 2rem; 
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(226, 232, 240, 0.5);
-  }
-  .s-meta { display: flex; flex-direction: column; }
-  .s-meta .label { font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; font-weight: 600; margin-bottom: 0.25rem;}
-  .s-meta .value { font-weight: 800; color: var(--primary); font-family: 'Outfit', sans-serif;}
-
-  .t-card { position: relative; padding: 2rem 1.5rem; border-top: 4px solid var(--success); margin-bottom: 1.5rem;}
-  .t-badge { position: absolute; top: -12px; right: 20px; background: var(--success); color: white; padding: 0.2rem 0.8rem; border-radius: 9999px; font-size: 0.7rem; font-weight: bold;}
-  .t-card h3 { font-size: 1.4rem; margin-bottom: 1rem; text-align: center; }
-  .t-card p { font-size: 0.9rem; color: var(--secondary); margin-bottom: 2rem; line-height: 1.6; text-align: center;}
-  
-  .t-actions { display: flex; flex-direction: column; gap: 1rem; }
-  .btn-block { width: 100%; text-align: center; }
-  .btn-primary { background: linear-gradient(135deg, var(--success) 0%, #059669 100%); box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.4); }
-  .btn-primary:hover { box-shadow: 0 6px 20px 0 rgba(16, 185, 129, 0.4); }
-  .detail-link { text-align: center; font-size: 0.9rem; font-weight: 600; text-decoration: none; }
-  .detail-link:hover { text-decoration: underline; }
-  
-  .empty-card { text-align: center; color: var(--secondary); padding: 3rem; }
-</style>
