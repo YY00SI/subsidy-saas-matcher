@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatCurrency } from '../lib/normalize';
 import fs from 'fs';
 import path from 'path';
 
@@ -180,7 +181,7 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
               <div class="s-card-footer">
                 <div class="s-card-meta">
                   <span class="meta-label">上限額</span>
-                  <span class="meta-value text-gradient">{s.max_limit || '要問合せ'}</span>
+                  <span class="meta-value text-gradient">{formatCurrency(s.max_limit)}</span>
                 </div>
                 <a href={`${base}subsidies/${s.id}/`} class="detail-link">詳細へ →</a>
               </div>

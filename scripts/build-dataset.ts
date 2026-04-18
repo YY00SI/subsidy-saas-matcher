@@ -58,14 +58,22 @@ async function main() {
 
     // 上限額によるフィルタリング（0円や巨大すぎるものを排除）
     const maxLimitStr = normalized.max_limit || "0";
-    const maxLimitNum = parseInt(maxLimitStr.replace(/[^0-9]/g, "")) || 0;
+    // カンマや円、万円を考慮して数値化
+    let parsedMax = 0;
+    if (maxLimitStr.includes('億円')) {
+      parsedMax = parseFloat(maxLimitStr.replace(/[^0-9.]/g, '')) * 100000000;
+    } else if (maxLimitStr.includes('万円')) {
+      parsedMax = parseFloat(maxLimitStr.replace(/[^0-9.]/g, '')) * 10000;
+    } else {
+      parsedMax = parseInt(maxLimitStr.replace(/[^0-9]/g, "")) || 0;
+    }
     
-    if (maxLimitNum === 0 && !maxLimitStr.includes("万円") && !maxLimitStr.includes("円")) {
+    if (parsedMax === 0 && !maxLimitStr.includes("万円") && !maxLimitStr.includes("円")) {
        console.log(`Skipping zero-limit subsidy: ${title}`);
        continue;
     }
     
-    if (maxLimitNum > 500000000) { // 5億円以上は中小企業向けSaaSの範疇を超えるため除外
+    if (parsedMax > 200000000) { // 2億円以上は除外（商用車電動化295億円対策）
       console.log(`Skipping massive-limit subsidy: ${title} (${maxLimitStr})`);
       continue;
     }

@@ -14,6 +14,19 @@ export function normalizeDate(dateStr: string | null | undefined): string | null
   }
 }
 
+export function formatCurrency(value: string | number | null | undefined): string {
+  if (!value) return '要問合せ';
+  const num = typeof value === 'string' ? parseInt(value.replace(/[^0-9]/g, '')) : value;
+  if (isNaN(num) || num === 0) return '公募要領を確認';
+  
+  if (num >= 10000) {
+    const manValue = Math.floor(num / 10000);
+    const remainder = num % 10000;
+    return `${manValue.toLocaleString()}万円${remainder > 0 ? remainder.toLocaleString() + '円' : ''}`;
+  }
+  return `${num.toLocaleString()}円`;
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function normalizeSubsidy(raw: any) {
   // 配列で渡された場合は最初の要素を取り出す

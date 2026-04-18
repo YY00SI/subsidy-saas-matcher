@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatCurrency } from '../../lib/normalize';
 import fs from 'fs';
 import path from 'path';
 
@@ -121,9 +122,7 @@ try {
             <li>
               <span class="l-label">上限額</span>
               <span class="l-value text-gradient">
-                {(!subsidy.max_limit || subsidy.max_limit === '0' || subsidy.max_limit === '0円') 
-                  ? '公募要領を確認' 
-                  : subsidy.max_limit}
+                {formatCurrency(subsidy.max_limit)}
               </span>
             </li>
             <li>
