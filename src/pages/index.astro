@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import DiagnosisWizard from '../components/DiagnosisWizard.astro';
 import fs from 'fs';
 import path from 'path';
 
@@ -71,7 +70,7 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                 </div>
                 <div class="m-lines"><div class="ml-1"></div><div class="ml-2"></div></div>
-                <div class="m-badge" style="color:#059669; background-color:rgba(16,185,129,0.1)">Match: 99%</div>
+                <div class="m-badge" style="color:#059669; background-color:rgba(16,185,129,0.1)">AIマッチング</div>
               </div>
               <div class="mock-item anim-item-2">
                 <div class="m-icon" style="background-color: #2563EB">
@@ -86,7 +85,19 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
       </div>
     </header>
 
-    <DiagnosisWizard />
+    <!-- Diagnosis CTA Section (Replaced broken wizard) -->
+    <section class="diagnosis-cta-section container">
+      <div class="glass-card cta-banner-wide">
+        <div class="cta-banner-content">
+          <div class="cta-kicker">WIZARD</div>
+          <h2>どの補助金が使えるか、1分で判定。</h2>
+          <p>簡単な質問に答えるだけで、あなたの業種や課題にぴったりの「SaaSツール」と「補助金」をAIがピックアップします。</p>
+        </div>
+        <a href={`${base}diagnose/`} class="btn btn-accent btn-large pulse-button">
+          無料で診断を始める 👉
+        </a>
+      </div>
+    </section>
 
     <div class="container">
       <!-- Success Stories Section -->
@@ -188,6 +199,52 @@ const topSubsidies = subsidies.slice(0, 6); // 6 items to make grid look full an
   }
 
   /* Success Stories Section */
+  .diagnosis-cta-section {
+    padding: 4rem 0;
+  }
+  .cta-banner-wide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.5rem;
+    background: linear-gradient(135deg, #fff 0%, #f0f7ff 100%);
+    border: 2px solid var(--accent-light);
+    gap: 2rem;
+  }
+  .cta-banner-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  .cta-banner-content p {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    max-width: 600px;
+  }
+  .cta-kicker {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+  }
+  .pulse-button {
+    animation: pulse-light 2s infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse-light {
+    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+  }
+  @media (max-width: 768px) {
+    .cta-banner-wide {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+  }
+
   .success-stories-section {
     padding: 8rem 0 4rem;
   }

@@ -18,34 +18,42 @@ const base = import.meta.env.BASE_URL;
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <style>
     :root { --navy: #0f1f3d; --indigo: #1e3a6e; --accent: #2563eb; --accent-light: #dbeafe; --green: #059669; --green-light: #d1fae5; --text: #1e293b; --muted: #64748b; --border: #e2e8f0; --bg: #f8fafc; --white: #ffffff; --radius: 12px; --shadow: 0 4px 24px rgba(15,31,61,0.08); }
-    body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; margin: 0; padding: 0; }
     .site-header { background: var(--navy); padding: 14px 24px; display: flex; align-items: center; gap: 8px; }
     .site-header a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; opacity: 0.85; }
-    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--indigo) 100%); padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.12); color: #93c5fd; border: 1px solid rgba(147,197,253,0.3); padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 500; margin-bottom: 20px; }
-    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 32px; color: #fff; margin-bottom: 14px; }
-    .hero p { color: rgba(255,255,255,0.72); font-size: 15px; max-width: 480px; margin: 0 auto; }
-    .progress-wrap { max-width: 600px; margin: 32px auto 0; padding: 0 24px; }
-    .progress-steps { display: flex; align-items: center; justify-content: center; gap: 0; }
-    .step-dot { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; font-size: 12px; color: rgba(255,255,255,0.5); }
-    .step-dot.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .step-line { flex: 1; height: 2px; background: rgba(255,255,255,0.15); max-width: 80px; }
-    .step-labels { display: flex; justify-content: space-between; margin-top: 8px; }
-    .step-label { font-size: 11px; color: rgba(255,255,255,0.45); text-align: center; flex: 1; }
-    main { max-width: 680px; margin: 0 auto; padding: 40px 20px 80px; }
-    .card { background: var(--white); border-radius: 16px; box-shadow: var(--shadow); padding: 36px 32px; }
-    .options-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 28px; }
-    .option-btn { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; text-align: left; }
+    .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--indigo) 100%); padding: 48px 24px; text-align: center; color: white; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 28px; margin-bottom: 8px; }
+    .hero p { opacity: 0.8; font-size: 14px; }
+    
+    main { max-width: 680px; margin: 0 auto; padding: 32px 20px 80px; }
+    .card { background: var(--white); border-radius: 16px; box-shadow: var(--shadow); padding: 32px; min-height: 400px; display: flex; flex-direction: column; }
+    
+    .step-title { font-size: 20px; font-weight: 700; margin-bottom: 24px; color: var(--navy); }
+    .options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+    .option-btn { padding: 16px; border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; text-align: left; background: white; transition: all 0.2s; }
+    .option-btn:hover { border-color: var(--accent); }
     .option-btn.selected { border-color: var(--accent); background: var(--accent-light); }
-    .check-options { display: flex; flex-direction: column; gap: 10px; }
-    .check-btn { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; width: 100%; }
-    .check-btn.selected { border-color: var(--accent); background: var(--accent-light); }
-    .nav-row { display: flex; gap: 12px; justify-content: flex-end; }
-    .btn-next { padding: 11px 28px; background: var(--accent); border: none; border-radius: 8px; color: #fff; cursor: pointer; }
-    .btn-next:disabled { background: #94a3b8; }
-    .hidden { display: none !important; }
+    .option-icon { font-size: 24px; margin-bottom: 8px; display: block; }
+    .option-label { font-weight: 700; font-size: 15px; display: block; margin-bottom: 4px; }
+    .option-desc { font-size: 12px; color: var(--muted); }
+
+    .nav-row { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+    .btn-next { padding: 12px 32px; background: var(--accent); border: none; border-radius: 8px; color: white; font-weight: 700; cursor: pointer; }
+    .btn-next:disabled { background: #cbd5e1; cursor: not-allowed; }
+    .btn-back { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 14px; }
+
     [data-step] { display: none; }
-    [data-step].active { display: block; }
+    [data-step].active { display: flex; flex-direction: column; height: 100%; }
+
+    /* Result styles */
+    .result-card { text-align: center; }
+    .result-header { margin-bottom: 24px; }
+    .result-badge { background: var(--green-light); color: var(--green); padding: 4px 12px; border-radius: 99px; font-weight: 800; font-size: 12px; margin-bottom: 12px; display: inline-block; }
+    .tool-result-box { background: #f1f5f9; padding: 24px; border-radius: 12px; margin-bottom: 24px; text-align: left; border-left: 4px solid var(--accent); }
+    .tool-name { font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 8px; display: block; }
+    .tool-desc { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .cta-button { display: block; width: 100%; padding: 16px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 800; margin-top: 16px; text-align: center; }
+    .subsidy-link { color: var(--accent); font-weight: 700; text-decoration: underline; margin-top: 16px; display: inline-block; }
   </style>
 </head>
 <body>
@@ -53,16 +61,220 @@ const base = import.meta.env.BASE_URL;
     <a href={`${base}`}>✨ 補助金SaaSマッチャー</a>
   </header>
   <div class="hero">
-    <h1>あなたの会社に合う<em>SaaSと補助金</em>を診断</h1>
+    <h1>1分でわかる！SaaS・補助金診断</h1>
+    <p>あなたの企業に最適なツールと補助金をAIが判定します。</p>
   </div>
-  <main id="wizard-app">
-    <!-- Step 1〜4 -->
+  
+  <main id="diagnose-app">
+    <div class="card">
+      <!-- Step 1: 業種 -->
+      <div data-step="1" class="active">
+        <h2 class="step-title">Q1. あなたの業種は？</h2>
+        <div class="options-grid">
+          <div class="option-btn" data-value="retail">
+            <span class="option-icon">飲食店・小売</span>
+            <span class="option-label">飲食・小売・サービス</span>
+            <span class="option-desc">店舗運営や接客が中心</span>
+          </div>
+          <div class="option-btn" data-value="construction">
+            <span class="option-icon">建設・不動産</span>
+            <span class="option-label">建設・不動産・製造</span>
+            <span class="option-desc">現場作業や在庫管理がある</span>
+          </div>
+          <div class="option-btn" data-value="office">
+            <span class="option-icon">IT・専門職</span>
+            <span class="option-label">IT・士業・オフィス業</span>
+            <span class="option-desc">デスクワークやPC作業中心</span>
+          </div>
+          <div class="option-btn" data-value="other">
+            <span class="option-icon">その他</span>
+            <span class="option-label">その他</span>
+            <span class="option-desc">上記以外の業種</span>
+          </div>
+        </div>
+        <div class="nav-row">
+          <span></span>
+          <button class="btn-next" id="to-step-2" disabled>次へ進む</button>
+        </div>
+      </div>
+
+      <!-- Step 2: 課題 -->
+      <div data-step="2">
+        <h2 class="step-title">Q2. 今、一番解決したい課題は？</h2>
+        <div class="options-grid">
+          <div class="option-btn" data-value="accounting">
+            <span class="option-icon">経理DX</span>
+            <span class="option-label">経理・確定申告の効率化</span>
+            <span class="option-desc">インボイスや電帳法対応</span>
+          </div>
+          <div class="option-btn" data-value="invoice">
+            <span class="option-icon">請求管理</span>
+            <span class="option-label">請求書発行・受取</span>
+            <span class="option-desc">ミスの削減、ペーパーレス化</span>
+          </div>
+          <div class="option-btn" data-value="cashflow">
+            <span class="option-icon">資金繰り</span>
+            <span class="option-label">資金繰り・支払い対策</span>
+            <span class="option-desc">立替払いや資金不足の解消</span>
+          </div>
+          <div class="option-btn" data-value="cost">
+            <span class="option-icon">コスト削減</span>
+            <span class="option-label">通信費や固定費の削減</span>
+            <span class="option-desc">無駄な経費を削りたい</span>
+          </div>
+        </div>
+        <div class="nav-row">
+          <button class="btn-back">戻る</button>
+          <button class="btn-next" id="to-step-3" disabled>次へ進む</button>
+        </div>
+      </div>
+
+      <!-- Step 3: 従業員数 -->
+      <div data-step="3">
+        <h2 class="step-title">Q3. 従業員数は何名ですか？</h2>
+        <div class="options-grid">
+          <div class="option-btn" data-value="solo">
+            <span class="option-icon">1名</span>
+            <span class="option-label">個人事業主（自分のみ）</span>
+          </div>
+          <div class="option-btn" data-value="small">
+            <span class="option-icon">〜5名</span>
+            <span class="option-label">小規模（5名以下）</span>
+          </div>
+          <div class="option-btn" data-value="medium">
+            <span class="option-icon">〜20名</span>
+            <span class="option-label">中小規模（20名以下）</span>
+          </div>
+          <div class="option-btn" data-value="large">
+            <span class="option-icon">21名以上</span>
+            <span class="option-label">21名以上</span>
+          </div>
+        </div>
+        <div class="nav-row">
+          <button class="btn-back">戻る</button>
+          <button class="btn-next" id="show-result" disabled>診断結果を見る</button>
+        </div>
+      </div>
+
+      <!-- Step 4: 結果 -->
+      <div data-step="4" class="result-card">
+        <div class="result-header">
+          <div class="result-badge">診断完了</div>
+          <h2 class="step-title">あなたに最適な構成が見つかりました！</h2>
+        </div>
+        
+        <div id="result-container">
+          <!-- JSで動的に挿入 -->
+        </div>
+
+        <div class="nav-row" style="justify-content: center; margin-top: 32px;">
+          <a href={`${base}subsidies/`} class="subsidy-link">他の補助金も一覧で見る</a>
+        </div>
+      </div>
+    </div>
   </main>
+
   <script is:inline define:vars={{ tools, base }}>
-    const TOOLS_MAP = tools;
-    const CONSULT_URL = 'https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=diagnose&utm_medium=cta&utm_content=consult';
-    const SUBSIDY_LIST_URL = base + 'subsidies/?utm_source=diagnose&utm_medium=cta&utm_content=subsidy_list';
-    // ... 診断ロジック ...
+    let currentStep = 1;
+    const selections = {
+      industry: null,
+      need: null,
+      size: null
+    };
+
+    const steps = document.querySelectorAll('[data-step]');
+    const nextBtns = document.querySelectorAll('.btn-next');
+    const backBtns = document.querySelectorAll('.btn-back');
+    const optionBtns = document.querySelectorAll('.option-btn');
+
+    // オプション選択
+    optionBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const stepDiv = btn.closest('[data-step]');
+        const stepNum = stepDiv.getAttribute('data-step');
+        
+        // 選択解除と再選択
+        stepDiv.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        
+        // 値の保存
+        const val = btn.getAttribute('data-value');
+        if (stepNum == "1") selections.industry = val;
+        if (stepNum == "2") selections.need = val;
+        if (stepNum == "3") selections.size = val;
+        
+        // 次へボタンの有効化
+        stepDiv.querySelector('.btn-next').disabled = false;
+      });
+    });
+
+    // 次へ・戻る
+    nextBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (currentStep < 4) {
+          if (currentStep === 3) {
+            calculateResult();
+          }
+          changeStep(currentStep + 1);
+        }
+      });
+    });
+
+    backBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (currentStep > 1) changeStep(currentStep - 1);
+      });
+    });
+
+    function changeStep(n) {
+      steps.forEach(s => s.classList.remove('active'));
+      document.querySelector(`[data-step="${n}"]`).classList.add('active');
+      currentStep = n;
+      window.scrollTo(0, 0);
+    }
+
+    function calculateResult() {
+      const container = document.getElementById('result-container');
+      let tool = null;
+      let subsidyName = "IT導入補助金（インボイス枠・通常枠）";
+      let message = "";
+
+      // 簡易マッチングロジック
+      if (selections.need === 'accounting') {
+        tool = tools.find(t => t.slug === 'freee-accounting');
+        message = "法改正への対応と経理の自動化を同時に進めましょう。";
+      } else if (selections.need === 'invoice') {
+        tool = tools.find(t => t.slug === 'kanbei-sign') || tools.find(t => t.slug === 'misoca');
+        message = "請求書の発行・受取をデジタル化し、印紙代や郵送費を削減しましょう。";
+      } else if (selections.need === 'cashflow') {
+        tool = tools.find(t => t.slug === 'no1-factoring');
+        subsidyName = "資金繰り改善サポート / 各種補助金";
+        message = "補助金が入金されるまでの「つなぎ資金」対策として最適です。";
+      } else {
+        tool = tools.find(t => t.slug === 'cloudphone');
+        message = "固定費を削減しつつ、テレワークにも対応した電話環境を構築しましょう。";
+      }
+
+      if (tool) {
+        container.innerHTML = `
+          <div class="tool-result-box">
+            <div class="cta-kicker" style="color:var(--accent); font-weight:800; margin-bottom:8px;">推奨ツール</div>
+            <span class="tool-name">${tool.name}</span>
+            <p class="tool-desc">${tool.strengths}</p>
+            <p style="font-size:13px; color:var(--muted); margin-top:12px;">💡 <strong>診断アドバイス:</strong> ${message}</p>
+            <a href="${tool.affiliate_url}" target="_blank" rel="sponsored noopener" class="cta-button">
+              補助金プランの詳細を見る 👉
+            </a>
+            <img src="${tool.impression_url}" width="1" height="1" style="display:none;" />
+          </div>
+          <div class="tool-result-box" style="border-left-color: var(--green);">
+            <div class="cta-kicker" style="color:var(--green); font-weight:800; margin-bottom:8px;">活用できる補助金</div>
+            <span class="tool-name" style="font-size:18px;">${subsidyName}</span>
+            <p class="tool-desc">あなたの業種と規模であれば、最大で導入費用の3/4が還付される可能性があります。</p>
+          </div>
+        `;
+      }
+    }
   </script>
 </body>
 </html>

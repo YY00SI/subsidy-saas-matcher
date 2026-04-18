@@ -44,6 +44,32 @@ async function main() {
     }
 
     const normalized = normalizeSubsidy(raw);
+    
+    // 【データ品質向上】マッチャーのコンセプトに合わない補助金を徹底排除
+    const title = normalized.title || "";
+    const content = normalized.content || "";
+    const excludeKeywords = ["農業", "原子力", "林業", "木育", "漁業", "畜産", "臨床", "医療機器", "電気自動車", "商用車", "電気バス", "車両交通"];
+    const isIrrelevant = excludeKeywords.some(kw => title.includes(kw) || content.includes(kw));
+    
+    if (isIrrelevant) {
+      console.log(`Skipping irrelevant subsidy: ${title}`);
+      continue;
+    }
+
+    // 上限額によるフィルタリング（0円や巨大すぎるものを排除）
+    const maxLimitStr = normalized.max_limit || "0";
+    const maxLimitNum = parseInt(maxLimitStr.replace(/[^0-9]/g, "")) || 0;
+    
+    if (maxLimitNum === 0 && !maxLimitStr.includes("万円") && !maxLimitStr.includes("円")) {
+       console.log(`Skipping zero-limit subsidy: ${title}`);
+       continue;
+    }
+    
+    if (maxLimitNum > 500000000) { // 5億円以上は中小企業向けSaaSの範疇を超えるため除外
+      console.log(`Skipping massive-limit subsidy: ${title} (${maxLimitStr})`);
+      continue;
+    }
+
     const tags = classifySubsidy(normalized, taxonomy);
     
     // add tags to metadata
