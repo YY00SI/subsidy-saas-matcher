@@ -29,14 +29,42 @@ const topSubsidies = sortedSubsidies.slice(0, 6);
     <header class="hero">
       <div class="container hero-container">
         <div class="hero-content">
+          <div class="hero-badge">✦ あなたにピッタリの支援が見つかる</div>
           <h1>IT導入・補助金をもっと身近に。</h1>
           <p>今すぐ応募できる補助金と、最適なSaaSツールをAIが自動でマッチングします。</p>
           <div class="hero-actions">
-            <a href={`${base}diagnose/`} class="btn btn-accent btn-large">無料SaaS診断</a>
-            <a href={`${base}subsidies/`} class="btn btn-primary btn-large">補助金を探す</a>
+            <a href={`${base}diagnose/`} class="btn btn-accent btn-large">🔍 1分でわかる！無料SaaS診断</a>
+            <a href={`${base}subsidies/`} class="btn btn-primary btn-large">補助金を一覧から探す</a>
           </div>
         </div>
       </div>
     </header>
+
+    <section class="top-content">
+      <div class="container">
+        <div class="section-header">
+          <h2>🏢 業種別のおすすめツール活用事例</h2>
+          <p class="section-lead">各業界で定番となっている補助金×ツールの成功事例</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card card-hover">
+            <h3>🛒 飲食・小売業</h3>
+            <p><strong>IT導入補助金 × POSレジ (AirPAYなど)</strong></p>
+            <p style="font-size:0.9rem; color:var(--muted); margin-top:0.5rem">キャッシュレス決済の手数料や導入費用を補助金で補填し、一気にDX化を進める王道パターンです。</p>
+          </div>
+          <div class="card card-hover">
+            <h3>🏗️ 建設・製造業</h3>
+            <p><strong>IT導入補助金 × 経理・給与精算</strong></p>
+            <p style="font-size:0.9rem; color:var(--muted); margin-top:0.5rem">複雑な原価計算や給与計算をマネーフォワード等で一元管理し、属人化を防ぎます。</p>
+          </div>
+          <div class="card card-hover">
+            <h3>🏢 サービス・IT関連</h3>
+            <p><strong>小規模事業者持続化補助金 × 会計ソフト</strong></p>
+            <p style="font-size:0.9rem; color:var(--muted); margin-top:0.5rem">インボイス・電帳法対応のためのクラウド会計（freeeや弥生等）導入のコストを抑える事例が急増中。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </BaseLayout>

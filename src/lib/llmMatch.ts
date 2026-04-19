@@ -115,7 +115,7 @@ ${toolDescriptions}
       toolSlug: m.toolSlug,
       score: m.score,
       reasons: m.reasons
-    }));
+    })).filter((m: any) => m.score >= 50);
 
     return {
       matches,

@@ -7,14 +7,12 @@ const DETAILS_DIR = path.join(RAW_DIR, 'subsidy-details');
 
 async function main() {
   try {
-    // 過去のJSON（モックデータなど）が残っているとビルドに混ざるため、一度ディレクトリをリセットする
     if (fs.existsSync(DETAILS_DIR)) {
       fs.rmSync(DETAILS_DIR, { recursive: true, force: true });
     }
     fs.mkdirSync(DETAILS_DIR, { recursive: true });
 
     console.log('Fetching subsidy list...');
-    // 複数のキーワードで検索して網羅性を高める
     const keywords = ["IT導入補助金", "DX", "デジタル化", "SaaS"];
     let allSubsidies = [];
     const seenIds = new Set();
@@ -24,11 +22,19 @@ async function main() {
       const result = await fetchSubsidyList(kw);
       const items = result.result || result.subsidies || result.items || [];
       
-      // 各キーワードごとに最大10件ずつ取得し、重複を排除して追加
       let count = 0;
       for (const item of items) {
         if (count >= 10) break; // キーワードあたり最大10件
         const id = item.subsidy_id || item.id;
+        const maxLimit = item.subsidy_max_limit || item.max_limit || 0;
+        const name = item.subsidy_name || item.title || "";
+        
+        // フィルタリング: 上限額0円は除外、50億円以上は除外
+        if (maxLimit === 0 || maxLimit > 5000000000) continue;
+        
+        // フィルタリング: 無関係な補助金を弾く
+        if (name.includes("ウクライナ") || name.includes("木育") || name.includes("次世代革新炉") || name.includes("子育て") || name.includes("グリーン") || name.includes("トラック")) continue;
+
         if (id && !seenIds.has(id)) {
           seenIds.add(id);
           allSubsidies.push(item);
