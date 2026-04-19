@@ -116,46 +116,48 @@ try {
       </div>
 
       <aside class="sidebar-col">
-        <div class="glass-card summary-card">
-          <h3 class="summary-title">要項サマリー</h3>
-          <ul class="summary-list">
-            <li>
-              <span class="l-label">上限額</span>
-              <span class="l-value text-gradient">
-                {formatCurrency(subsidy.max_limit)}
-              </span>
-            </li>
-            <li>
-              <span class="l-label">補助率</span>
-              <span class="l-value">{subsidy.rate || '-'}</span>
-            </li>
-            <li>
-              <span class="l-label">対象地域</span>
-              <span class="l-value">{subsidy.target_area?.join(', ') || '全国'}</span>
-            </li>
-          </ul>
-        </div>
+        <div style="position: sticky; top: 100px; display: flex; flex-direction: column; gap: 2rem;">
+          <div class="glass-card summary-card">
+            <h3 class="summary-title">要項サマリー</h3>
+            <ul class="summary-list">
+              <li>
+                <span class="l-label">上限額</span>
+                <span class="l-value text-gradient">
+                  {formatCurrency(subsidy.max_limit)}
+                </span>
+              </li>
+              <li>
+                <span class="l-label">補助率</span>
+                <span class="l-value">{subsidy.rate || '-'}</span>
+              </li>
+              <li>
+                <span class="l-label">対象地域</span>
+                <span class="l-value">{subsidy.target_area?.join(', ') || '全国'}</span>
+              </li>
+            </ul>
+          </div>
 
-        <div class="tools-matching-card">
-          <h2 class="sidebar-title">相性の良いツール</h2>
-          {matchedTools.length > 0 ? (
-            <div class="tool-list">
-              {matchedTools.map(t => (
-                <div class="glass-card t-mini-card">
-                  <div class="score-badge">Match: {Math.round(t.matchScore)}%</div>
-                  <div class="t-cat">{t.category}</div>
-                  <h4><a href={`${base}tools/${t.slug}/`}>{t.name}</a></h4>
-                  <p>{t.strengths?.substring(0, 40)}...</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div class="glass-card empty-state" style="border-left: 4px solid var(--primary);">
-              <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem;">汎用おすすめツール</h4>
-              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">どの補助金事業であっても、事業ベースとなる「会計・労務のDX」は必須です。</p>
-              <a href={`${base}tools/freee-accounting/`} class="btn btn-primary btn-block" style="font-size:0.9rem; padding:0.6rem;">DX基礎ツールを見る</a>
-            </div>
-          )}
+          <div class="tools-matching-card">
+            <h2 class="sidebar-title">相性の良いツール</h2>
+            {matchedTools.length > 0 ? (
+              <div class="tool-list">
+                {matchedTools.map(t => (
+                  <div class="glass-card t-mini-card">
+                    <div class="score-badge">Match: {Math.round(t.matchScore)}%</div>
+                    <div class="t-cat">{t.category}</div>
+                    <h4><a href={`${base}tools/${t.slug}/`}>{t.name}</a></h4>
+                    <p>{t.strengths?.substring(0, 40)}...</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div class="glass-card empty-state" style="border-left: 4px solid var(--primary);">
+                <h4 style="margin-top:0; color:var(--primary); font-size:1.05rem;">汎用おすすめツール</h4>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">どの補助金事業であっても、事業ベースとなる「会計・労務のDX」は必須です。</p>
+                <a href={`${base}tools/freee-accounting/`} class="btn btn-primary btn-block" style="font-size:0.9rem; padding:0.6rem;">DX基礎ツールを見る</a>
+              </div>
+            )}
+          </div>
         </div>
       </aside>
     </div>
@@ -341,7 +343,7 @@ try {
   .btn-large { font-size: 1.1rem; padding: 1rem; }
   .btn-block { width: 100%; }
 
-  .summary-card { padding: 2rem; margin-bottom: 2.5rem; position: sticky; top: 100px;}
+  .summary-card { padding: 2rem; }
   .summary-title { font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800;}
   .summary-list { list-style: none; padding: 0; margin: 0; }
   .summary-list li { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; border-bottom: 1px dashed rgba(15, 23, 42, 0.1); }
