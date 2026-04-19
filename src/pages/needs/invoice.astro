@@ -18,16 +18,103 @@ try {
 const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
 ---
 
-<BaseLayout title="インボイス・電帳法対応 | 補助金SaaSマッチャー">
-  <div class="container py-12">
-    <h1 class="text-3xl font-bold mb-8">インボイス・電帳法DXに使える補助金</h1>
-    <div class="grid gap-6">
-      {categorySubsidies.map(s => (
-        <div class="glass-card">
-          <h3><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
-          <p>{formatCurrency(s.max_limit)}</p>
-        </div>
-      ))}
+<BaseLayout title="インボイス・電帳法対応に使える補助金 | 補助金SaaSマッチャー"
+            description="インボイス制度・電子帳簿保存法への対応費用を補助金で賄う方法を解説。KANBEI SIGNやfreeeを補助金と組み合わせて導入する方法をご案内します。">
+
+  <div class="container" style="max-width:860px; margin:0 auto; padding:2.5rem 1.5rem 4rem;">
+
+    <div style="margin-bottom:2rem;">
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+        <a href={base} style="color:var(--accent);">TOP</a> &rsaquo; インボイス・電帳法対応
+      </p>
+      <span class="tag" style="margin-bottom:0.75rem; display:inline-block;">ニーズ別ガイド</span>
+      <h1 style="font-size:1.75rem; font-weight:800; color:var(--primary); margin:0 0 0.75rem; line-height:1.3;">
+        インボイス・電帳法対応を<br/>補助金でコストゼロに
+      </h1>
+      <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+        令和5年10月スタートのインボイス制度、令和6年1月完全施行の電子帳簿保存法。これらへの対応コストは補助金で抑えられます。
+      </p>
     </div>
+
+    <!-- 解説 -->
+    <div class="glass-card" style="margin-bottom:2rem; border-left:4px solid var(--accent); padding:1.5rem;">
+      <h2 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.75rem;">💡 インボイス対応に補助金が使える理由</h2>
+      <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.7; margin:0;">
+        IT導入補助金の「インボイス枠」では、インボイス制度に対応した会計・請求書ソフトの導入費用が補助対象です。
+        補助率は最大3/4、補助上限は350,000円。電子帳簿保存法に対応した文書管理システムも対象になるケースがあります。
+      </p>
+    </div>
+
+    <!-- おすすめツール -->
+    <h2 style="font-size:1.25rem; font-weight:800; color:var(--primary); margin:0 0 1rem;">インボイス対応におすすめのツール</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-bottom:2.5rem;">
+      <div class="glass-card" style="padding:1.25rem;">
+        <div style="margin-bottom:0.75rem;">
+          <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Top Tool</span>
+        </div>
+        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">KANBEI SIGN</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">【IT導入補助金対応】電子契約・請求書のデジタル化で印紙代・郵送費を削減。法務業務を時短化。</p>
+        <a href={`https://px.a8.net/svt/ejp?a8mat=4B1O1Q+88HWT6+3SPO+BETB4I&utm_source=needs_invoice&utm_medium=affiliate&utm_content=kanbei`}
+           target="_blank" rel="sponsored noopener"
+           style="display:inline-block; padding:0.5rem 1rem; background:var(--accent); color:white; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.85rem;">
+          公式サイトで見る
+        </a>
+      </div>
+      <div class="glass-card" style="padding:1.25rem;">
+        <div style="margin-bottom:0.75rem;">
+          <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Top Tool</span>
+        </div>
+        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">freee会計</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">【補助金プラン対応】インボイス・電帳法に完全対応。銀行連携で仕訳を自動生成。</p>
+        <a href={`https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF&utm_source=needs_invoice&utm_medium=affiliate&utm_content=freee`}
+           target="_blank" rel="sponsored noopener"
+           style="display:inline-block; padding:0.5rem 1rem; background:var(--accent); color:white; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.85rem;">
+          公式サイトで見る
+        </a>
+      </div>
+    </div>
+
+    <!-- 補助金一覧 -->
+    <h2 style="font-size:1.25rem; font-weight:800; color:var(--primary); margin:0 0 1rem;">使える可能性がある補助金</h2>
+
+    {categorySubsidies.length > 0 ? (
+      <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:2.5rem;">
+        {categorySubsidies.map(s => (
+          <a href={`${base}subsidies/${s.id}/`} style="display:block; text-decoration:none;" class="subsidy-row-link">
+            <div class="glass-card" style="padding:1rem 1.25rem; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+              <div style="flex:1; min-width:0;">
+                <h3 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem; line-height:1.4;">{s.title}</h3>
+                {s.prefecture && <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">{s.prefecture}</p>}
+              </div>
+              <div style="text-align:right; flex-shrink:0;">
+                <div style="font-size:1rem; font-weight:800; color:var(--accent);">{formatCurrency(s.max_limit)}</div>
+                <div style="font-size:0.75rem; color:var(--accent); margin-top:0.25rem; font-weight:600;">詳細 →</div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="glass-card" style="text-align:center; padding:2rem; color:var(--text-muted); margin-bottom:2.5rem;">
+        <p>現在この条件に合う補助金情報はありません。データは毎日更新されます。</p>
+      </div>
+    )}
+
+    <!-- CTA -->
+    <div class="glass-card" style="text-align:center; background:linear-gradient(135deg,#0f1f3d,#1e3a6e); color:white;">
+      <p style="font-size:1rem; font-weight:700; margin:0 0 0.5rem; color:white;">💴 資金繰り・補助金申請をプロに相談</p>
+      <p style="font-size:0.85rem; color:rgba(255,255,255,0.75); margin:0 0 1.25rem;">インボイス対応の補助金申請は専門家への相談が採択への近道です。今なら無料で相談できます。</p>
+      <a href={`https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=needs_invoice&utm_medium=cta&utm_content=consult`}
+         target="_blank" rel="sponsored noopener"
+         style="display:inline-block; padding:0.75rem 2rem; background:white; color:#0f1f3d; border-radius:999px; font-weight:800; text-decoration:none; font-size:0.95rem;">
+        無料で専門家に相談する →
+      </a>
+    </div>
+
   </div>
 </BaseLayout>
+
+<style>
+  .subsidy-row-link .glass-card { transition: transform 0.2s, box-shadow 0.2s; }
+  .subsidy-row-link:hover .glass-card { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(15,31,61,0.1); }
+</style>

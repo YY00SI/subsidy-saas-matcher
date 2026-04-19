@@ -18,16 +18,116 @@ try {
 const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
 ---
 
-<BaseLayout title="経理・会計ソフト導入 | 補助金SaaSマッチャー">
-  <div class="container py-12">
-    <h1 class="text-3xl font-bold mb-8">経理・会計DXに使える補助金</h1>
-    <div class="grid gap-6">
-      {categorySubsidies.map(s => (
-        <div class="glass-card">
-          <h3><a href={`${base}subsidies/${s.id}/`}>{s.title}</a></h3>
-          <p>{formatCurrency(s.max_limit)}</p>
-        </div>
-      ))}
+<BaseLayout title="経理・会計DXに使える補助金 | 補助金SaaSマッチャー"
+            description="クラウド会計・インボイス対応に使える補助金を一覧で紹介。freee・マネーフォワード等のSaaS導入費用を補助金で賄う方法をご案内します。">
+
+  <div class="container" style="max-width:860px; margin:0 auto; padding:2.5rem 1.5rem 4rem;">
+
+    <div style="margin-bottom:2rem;">
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">
+        <a href={base} style="color:var(--accent);">TOP</a> &rsaquo; 経理・会計DX
+      </p>
+      <span class="tag" style="margin-bottom:0.75rem; display:inline-block;">ニーズ別ガイド</span>
+      <h1 style="font-size:1.75rem; font-weight:800; color:var(--primary); margin:0 0 0.75rem; line-height:1.3;">
+        会計・経理ソフト導入を<br/>補助金でもっと前へ
+      </h1>
+      <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+        クラウド会計の導入費用は補助金で補填できる可能性があります。インボイス・電帳法対応も補助対象になるケースが多く、今が最大のチャンスです。
+      </p>
     </div>
+
+    <!-- なぜ補助金が使えるか -->
+    <div class="glass-card" style="margin-bottom:2rem; border-left:4px solid var(--accent); padding:1.5rem;">
+      <h2 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.75rem;">💡 なぜ会計ソフト導入に補助金が使えるの？</h2>
+      <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.7; margin:0;">
+        政府は中小企業の「デジタル化・DX」を強力に推進しています。
+        クラウド会計ソフトは経営状況の可視化や生産性向上に直結するため、多くの補助金において「ITツール」として認定されています。
+        インボイス制度や電子帳簿保存法への対応も、補助金活用の大きな理由になります。
+      </p>
+    </div>
+
+    <!-- おすすめツール -->
+    <h2 style="font-size:1.25rem; font-weight:800; color:var(--primary); margin:0 0 1rem;">おすすめの会計ソフト</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-bottom:2.5rem;">
+      <div class="glass-card" style="padding:1.25rem;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+          <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Top Tool</span>
+        </div>
+        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">freee会計</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">【補助金プラン対応】銀行口座・カード自動連携で仕訳を自動化。インボイス・電帳法にも完全対応。</p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <a href={`https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF&utm_source=needs_accounting&utm_medium=affiliate&utm_content=freee`}
+             target="_blank" rel="sponsored noopener"
+             style="display:inline-block; padding:0.5rem 1rem; background:var(--accent); color:white; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.85rem;">
+            公式サイトで見る
+          </a>
+          <a href={`${base}tools/freee-accounting/`}
+             style="display:inline-block; padding:0.5rem 1rem; border:1px solid var(--accent); color:var(--accent); border-radius:8px; font-weight:600; text-decoration:none; font-size:0.85rem;">
+            詳しく解説 →
+          </a>
+        </div>
+      </div>
+      <div class="glass-card" style="padding:1.25rem;">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+          <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Top Tool</span>
+        </div>
+        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">マネーフォワード クラウド確定申告</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">充実した機能と他社連携の豊富さ。給与・勤怠・経費と一元管理できる統合型クラウド。</p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <a href={`https://px.a8.net/svt/ejp?a8mat=4AZS0X+6J68QA+4JGQ+BWVTE&utm_source=needs_accounting&utm_medium=affiliate&utm_content=mf`}
+             target="_blank" rel="sponsored noopener"
+             style="display:inline-block; padding:0.5rem 1rem; background:var(--accent); color:white; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.85rem;">
+            公式サイトで見る
+          </a>
+          <a href={`${base}tools/moneyforward-tax/`}
+             style="display:inline-block; padding:0.5rem 1rem; border:1px solid var(--accent); color:var(--accent); border-radius:8px; font-weight:600; text-decoration:none; font-size:0.85rem;">
+            詳しく解説 →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 補助金一覧 -->
+    <h2 style="font-size:1.25rem; font-weight:800; color:var(--primary); margin:0 0 1rem;">使える可能性がある補助金</h2>
+
+    {categorySubsidies.length > 0 ? (
+      <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:2.5rem;">
+        {categorySubsidies.map(s => (
+          <a href={`${base}subsidies/${s.id}/`} style="display:block; text-decoration:none;" class="subsidy-row-link">
+            <div class="glass-card" style="padding:1rem 1.25rem; display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+              <div style="flex:1; min-width:0;">
+                <h3 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin:0 0 0.2rem; line-height:1.4;">{s.title}</h3>
+                {s.prefecture && <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">{s.prefecture}</p>}
+              </div>
+              <div style="text-align:right; flex-shrink:0;">
+                <div style="font-size:1rem; font-weight:800; color:var(--accent);">{formatCurrency(s.max_limit)}</div>
+                <div style="font-size:0.75rem; color:var(--accent); margin-top:0.25rem; font-weight:600;">詳細 →</div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div class="glass-card" style="text-align:center; padding:2rem; color:var(--text-muted); margin-bottom:2.5rem;">
+        <p>現在この条件に合う補助金情報はありません。データは毎日更新されます。</p>
+      </div>
+    )}
+
+    <!-- CTA -->
+    <div class="glass-card" style="text-align:center; background:linear-gradient(135deg,#0f1f3d,#1e3a6e); color:white;">
+      <p style="font-size:1rem; font-weight:700; margin:0 0 0.5rem; color:white;">💴 補助金申請、プロに相談しませんか？</p>
+      <p style="font-size:0.85rem; color:rgba(255,255,255,0.75); margin:0 0 1.25rem;">申請手続きは複雑です。専門家に相談すれば採択率が大幅にアップします。</p>
+      <a href={`https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=needs_accounting&utm_medium=cta&utm_content=consult`}
+         target="_blank" rel="sponsored noopener"
+         style="display:inline-block; padding:0.75rem 2rem; background:white; color:#0f1f3d; border-radius:999px; font-weight:800; text-decoration:none; font-size:0.95rem;">
+        無料で専門家に相談する →
+      </a>
+    </div>
+
   </div>
 </BaseLayout>
+
+<style>
+  .subsidy-row-link .glass-card { transition: transform 0.2s, box-shadow 0.2s; }
+  .subsidy-row-link:hover .glass-card { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(15,31,61,0.1); }
+</style>
