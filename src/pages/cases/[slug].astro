@@ -83,16 +83,16 @@ const matchedTool = tools.find(t => t.slug === caseData.tool_slug);
 
     <!-- 関連ツールの訴求 -->
     {matchedTool && (
-      <div class="glass-card" style="padding:2rem; text-align:center; background:linear-gradient(to right, #f8fafc, #eff6ff);">
+      <div class="glass-card" style="padding:2rem; text-align:center; background:linear-gradient(to right, #f8fafc, #eff6ff); margin-bottom: 2rem;">
         <p style="font-size:0.85rem; font-weight:700; color:var(--accent); margin:0 0 0.5rem;">本事例で活用されたソリューション</p>
         <h3 style="font-size:1.4rem; color:var(--primary); margin:0 0 1rem;">{matchedTool.name}</h3>
         <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.6; max-width:600px; margin:0 auto 1.5rem;">{matchedTool.strengths}</p>
         
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-          <a href={matchedTool.affiliate_url} target="_blank" rel="sponsored noopener" class="btn btn-primary" style="padding:0.8rem 2rem; font-size:1rem;">
+          <a href={matchedTool.affiliate_url} target="_blank" rel="sponsored noopener" class="btn btn-primary" style="padding:0.8rem 2rem; font-size:1rem; border-radius: 999px;">
             公式サイトを見る・無料で試す
           </a>
-          <a href={`${base}tools/${matchedTool.slug}/`} class="btn btn-secondary" style="background:white; color:var(--primary); border:1px solid #cbd5e1; padding:0.8rem 2rem; font-size:1rem;">
+          <a href={`${base}tools/${matchedTool.slug}/`} class="btn btn-secondary" style="background:white; color:var(--primary); border:1px solid #cbd5e1; padding:0.8rem 2rem; font-size:1rem; border-radius: 999px; text-decoration: none;">
             ツールの詳細解説を読む
           </a>
         </div>
@@ -101,6 +101,24 @@ const matchedTool = tools.find(t => t.slug === caseData.tool_slug);
         )}
       </div>
     )}
+
+    <!-- サイト回遊用の内部導線 -->
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+      <a href={`${base}diagnose/`} style="display:block; text-decoration:none;">
+        <div class="glass-card" style="padding:1.5rem; text-align:center; border:1px solid #e2e8f0; transition:transform 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+          <h4 style="color:var(--primary); margin:0 0 0.5rem; font-size:1.05rem;">自社に合うツールと補助金を診断</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">1分で終わる無料診断ウィザードへ進む</p>
+        </div>
+      </a>
+      <a href={`${base}subsidies/`} style="display:block; text-decoration:none;">
+        <div class="glass-card" style="padding:1.5rem; text-align:center; border:1px solid #e2e8f0; transition:transform 0.2s;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">📑</div>
+          <h4 style="color:var(--primary); margin:0 0 0.5rem; font-size:1.05rem;">すべての補助金一覧を見る</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">利用可能な支援制度を直接検索する</p>
+        </div>
+      </a>
+    </div>
   </div>
 </BaseLayout>
 
