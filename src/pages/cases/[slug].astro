@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const casesPath = path.join(process.cwd(), 'data', 'cases.json');
+  let cases = [];
+  try {
+    cases = JSON.parse(fs.readFileSync(casesPath, 'utf8'));
+  } catch (e) {
+    console.warn("getStaticPaths failed in cases/[slug].astro", e);
+  }
+  
+  return cases.map((c) => ({
+    params: { slug: c.slug },
+    props: { caseData: c },
+  }));
+}
+
+const { slug } = Astro.params;
+const { caseData } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+// 相性の良いツール情報を取得
+const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+let tools = [];
+try {
+  tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
+} catch (e) { }
+
+const matchedTool = tools.find(t => t.slug === caseData.tool_slug);
+
+---
+
+<BaseLayout 
+  title={`${caseData.title} | 補助金SaaSマッチャー`} 
+  description={`${caseData.industry}における${caseData.target_subsidy_name}を活用したDX・資金繰り改善の具体事例です。解決策やツールの導入メリットを解説します。`}
+>
+  <div class="case-header">
+    <div class="container" style="max-width:860px; margin:0 auto; padding:3rem 1.5rem;">
+      <nav class="breadcrumb" style="font-size:0.85rem; margin-bottom:1rem; color:rgba(255,255,255,0.7);">
+        <a href={base} style="color:#93c5fd; text-decoration:none;">TOP</a> &gt; <span>導入事例</span> &gt; <span>{caseData.industry}</span>
+      </nav>
+      <span style="display:inline-block; padding:0.3rem 0.8rem; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); border-radius:999px; font-size:0.75rem; font-weight:700; color:white; margin-bottom:1rem;">
+        {caseData.industry} の事例
+      </span>
+      <h1 style="font-size:1.8rem; font-weight:800; line-height:1.4; color:white; margin:0 0 1rem;">
+        {caseData.title}
+      </h1>
+      <p style="color:rgba(255,255,255,0.8); font-size:0.95rem; line-height:1.6; margin:0;">
+        関連する支援: <strong style="color:white;">{caseData.target_subsidy_name}</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="container" style="max-width:860px; margin:0 auto; padding:2rem 1.5rem 4rem;">
+    
+    <div class="glass-card" style="padding:2rem; margin-top:-4rem; position:relative; z-index:10; border-radius:16px; margin-bottom:2.5rem; border-top: 4px solid var(--accent);">
+      <h2 style="font-size:1.2rem; color:var(--primary); margin-top:0; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;"><span style="font-size:1.5rem;">📊</span> BEFORE / AFTER</h2>
+      
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; margin-bottom:1rem;" class="ba-grid">
+        <div style="background:#fff1f2; border:1px solid #ffe4e6; padding:1.25rem; border-radius:12px;">
+          <h3 style="color:#be123c; font-size:0.9rem; margin:0 0 0.5rem; font-weight:800;">【課題】Before</h3>
+          <p style="font-size:0.9rem; line-height:1.6; color:#4c1d95; margin:0;">{caseData.problem}</p>
+        </div>
+        <div style="background:#f0fdf4; border:1px solid #dcfce7; padding:1.25rem; border-radius:12px;">
+          <h3 style="color:#15803d; font-size:0.9rem; margin:0 0 0.5rem; font-weight:800;">【解決・効果】After</h3>
+          <p style="font-size:0.9rem; line-height:1.6; color:#064e3b; margin:0;">{caseData.result}</p>
+        </div>
+      </div>
+      
+      <div style="background:var(--bg-light); padding:1rem; border-radius:8px; font-size:0.9rem; font-weight:700; color:var(--primary); display:flex; align-items:center; gap:0.5rem;">
+        <span style="background:var(--accent); color:white; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem;">導入した仕組み</span>
+        {caseData.solution}
+      </div>
+    </div>
+
+    <!-- コンテンツ本体 (SEO対策の長文) -->
+    <div class="article-content glass-card" style="padding:2rem; margin-bottom:2.5rem;">
+      <article set:html={caseData.content} />
+    </div>
+
+    <!-- 関連ツールの訴求 -->
+    {matchedTool && (
+      <div class="glass-card" style="padding:2rem; text-align:center; background:linear-gradient(to right, #f8fafc, #eff6ff);">
+        <p style="font-size:0.85rem; font-weight:700; color:var(--accent); margin:0 0 0.5rem;">本事例で活用されたソリューション</p>
+        <h3 style="font-size:1.4rem; color:var(--primary); margin:0 0 1rem;">{matchedTool.name}</h3>
+        <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.6; max-width:600px; margin:0 auto 1.5rem;">{matchedTool.strengths}</p>
+        
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href={matchedTool.affiliate_url} target="_blank" rel="sponsored noopener" class="btn btn-primary" style="padding:0.8rem 2rem; font-size:1rem;">
+            公式サイトを見る・無料で試す
+          </a>
+          <a href={`${base}tools/${matchedTool.slug}/`} class="btn btn-secondary" style="background:white; color:var(--primary); border:1px solid #cbd5e1; padding:0.8rem 2rem; font-size:1rem;">
+            ツールの詳細解説を読む
+          </a>
+        </div>
+        {matchedTool.impression_url && (
+            <img src={matchedTool.impression_url} width="1" height="1" alt="" style="border:none; margin:0; padding:0;" />
+        )}
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .case-header {
+    background: linear-gradient(135deg, #0f1f3d 0%, #1e3a6e 100%);
+    padding-bottom: 3rem;
+  }
+  @media (max-width: 640px) {
+    .ba-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .article-content h2 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  .article-content h2:first-child {
+    margin-top: 0;
+  }
+  .article-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.5rem;
+  }
+  .article-content strong {
+    color: #0f1f3d;
+    background: linear-gradient(transparent 60%, rgba(37,99,235,0.2) 60%);
+  }
+</style>
