@@ -22,6 +22,18 @@ export async function getStaticPaths() {
 const { subsidy } = Astro.props;
 const base = import.meta.env.BASE_URL;
 
+const tagMap: Record<string, string> = {
+  'accounting': '経理・会計',
+  'invoice': 'インボイス・請求',
+  'expense': '経費精算',
+  'payroll': '給与・労務',
+  'pos': 'POSレジ'
+};
+
+function translateTag(tag: string) {
+  return tagMap[tag] || tag;
+}
+
 // 対象補助金と相性の良いツールを読み込み
 const matchesPath = path.join(process.cwd(), 'data', 'processed', 'matches.json');
 const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
@@ -72,7 +84,7 @@ try {
           
           {subsidy.tags && subsidy.tags.length > 0 && (
             <div class="tags-row">
-              {subsidy.tags.map(t => <span class="tag tag-accent">{t}</span>)}
+              {subsidy.tags.map(t => <span class="tag tag-accent">{translateTag(t)}</span>)}
             </div>
           )}
 

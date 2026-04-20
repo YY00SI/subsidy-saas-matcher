@@ -13,6 +13,18 @@ try {
 } catch (e) {
   console.warn("Failed to load subsidies", e);
 }
+
+const tagMap: Record<string, string> = {
+  'accounting': '経理・会計',
+  'invoice': 'インボイス・請求',
+  'expense': '経費精算',
+  'payroll': '給与・労務',
+  'pos': 'POSレジ'
+};
+
+function translateTag(tag: string) {
+  return tagMap[tag] || tag;
+}
 ---
 
 <BaseLayout title="補助金一覧 | 補助金SaaSマッチャー">
@@ -33,7 +45,7 @@ try {
             <div style="flex:1; min-width:0;">
               <div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.5rem;">
                 {s.tags?.map((tag: string) => (
-                  <span class="tag" style="font-size:0.7rem; padding:0.2rem 0.6rem;">{tag}</span>
+                  <span class="tag" style="font-size:0.7rem; padding:0.2rem 0.6rem;">{translateTag(tag)}</span>
                 ))}
                 {s.prefecture && (
                   <span style="font-size:0.7rem; padding:0.2rem 0.6rem; background:rgba(100,116,139,0.1); border-radius:999px; color:var(--text-muted); font-weight:600;">{s.prefecture}</span>
