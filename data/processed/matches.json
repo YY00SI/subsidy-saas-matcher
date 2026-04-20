@@ -1,5 +1,14 @@
 [
   {
+    "subsidyId": "a0WJ200000CDPL5MAP",
+    "toolSlug": "consulting",
+    "score": 75,
+    "reasons": [
+      "本補助金は専門的な解説集やマニュアル作成を対象としており、複雑なガバナンス要件の整理に税理士等の専門家の知見が不可欠です。",
+      "申請手続きにおいて、専門家に相談することで採択率の向上が見込めます。"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDX8NMAX",
     "toolSlug": "kanbei-sign",
     "score": 69,
@@ -24,59 +33,94 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
+    "subsidyId": "a0WJ200000CDXrDMAX",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDXrDMAX",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDXrDMAX",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDY8wMAH",
     "toolSlug": "consulting",
-    "score": 85,
+    "score": 90,
     "reasons": [
-      "本補助金は申請手続きが複雑であり、DXリスキリング関連など要件が多岐にわたるため、専門家のサポートが不可欠なため。"
+      "ジェトロの補助金申請は要件が複雑で専門性が高いため、補助金に強い専門家への相談は採択率を劇的に向上させる極めて有効な手段であるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "freee-accounting",
-    "score": 70,
+    "subsidyId": "a0WJ200000CDYBOMA5",
+    "toolSlug": "freee会計",
+    "score": 60,
     "reasons": [
-      "accountingカテゴリ一致"
+      "本補助金は生産性向上や付加価値額の向上を成果指標として求めるため、経営数値の可視化が不可欠です。",
+      "バックオフィスのDX化による業務効率化は、研究開発事業に注力するためのリソース確保に直結します。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "subsidyId": "a0WJ200000CDYBOMA5",
+    "toolSlug": "マネーフォワード クラウド確定申告",
+    "score": 60,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助事業実施後の定量的報告（付加価値額の算出など）において、正確な会計データ管理が求められるため親和性が高いです。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
+    "subsidyId": "a0WJ200000CDYBOMA5",
+    "toolSlug": "弥生会計 Next / 弥生シリーズ",
+    "score": 60,
     "reasons": [
-      "accountingカテゴリ一致"
+      "事業終了後の企業化状況報告において、会計情報の統合的な管理体制が整っていることは大きな強みとなります。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "freee-accounting",
-    "score": 70,
+    "subsidyId": "a0WJ200000CDYBOMA5",
+    "toolSlug": "税理士ドットコム",
+    "score": 75,
     "reasons": [
-      "accountingカテゴリ一致"
+      "革新的な技術開発やビジネスモデル構築を伴う申請書作成は専門性が高く、プロの知見を借りることで採択率の向上が見込めます。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "subsidyId": "a0WJ200000CDYBOMA5",
+    "toolSlug": "住信SBIネット銀行 法人口座",
+    "score": 50,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助金専用の管理口座として利用することで、資金使途の明確化と管理コストの削減が可能になります。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
+    "subsidyId": "a0WJ200000CDYCCMA5",
+    "toolSlug": "accounting",
+    "score": 60,
     "reasons": [
-      "accountingカテゴリ一致"
+      "研究開発事業では厳格な経理管理が求められるため、クラウド会計ソフトは必須の管理ツールとなる",
+      "事業終了後の企業化状況報告に役立つ財務データの可視化が可能"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYCCMA5",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "技術革新チャレンジ補助金は専門的な事業計画書の作成が求められるため、プロのサポートが採択率を劇的に引き上げる",
+      "申請書類の不備を回避し、経営者が本来の研究開発に集中するために有効"
     ]
   },
   {
