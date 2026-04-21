@@ -110,17 +110,6 @@
     "institution_name": null
   },
   {
-    "id": "a0WJ200000CDX8NMAX",
-    "name": "S-00007911",
-    "title": "人手不足対策設備導入等支援補助金（第2期）",
-    "target_area_search": "岡山県",
-    "subsidy_max_limit": 20000000,
-    "acceptance_start_datetime": "2026-02-24T01:00:00.000Z",
-    "acceptance_end_datetime": "2026-04-21T08:00:00.000Z",
-    "target_number_of_employees": "900名以下",
-    "institution_name": null
-  },
-  {
     "id": "a0WJ200000CDPL5MAP",
     "name": "S-00006768",
     "title": "フィンテック産業における協業基盤整備支援事業補助金",
