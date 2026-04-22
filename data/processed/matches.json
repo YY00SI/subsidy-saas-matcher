@@ -1,21 +1,5 @@
 [
   {
-    "subsidyId": "a0WJ200000CDPL5MAP",
-    "toolSlug": "consulting",
-    "score": 50,
-    "reasons": [
-      "補助金申請書類の作成には高い専門性が求められるため、税理士等の専門家の知見を借りることは採択率向上のための有効な手段となり得るため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 90,
-    "reasons": [
-      "スキルアップ支援事業は申請書類の作成や研修カリキュラムの設計が必要であり、税理士等の専門家を通じた適切な経営支援を受けることで採択率が飛躍的に高まるため。"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -41,72 +25,119 @@
   },
   {
     "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "cashflow",
-    "score": 50,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助金は原則として後払いであり、PoC（概念実証）にかかる先行投資負担を補うためのキャッシュフロー対策として活用可能です。"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "consulting",
-    "score": 85,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "JETROが管轄する高度な申請書類とプレゼン審査が必要な案件であり、専門家による戦略的な事業計画書作成支援が採択確率を大きく左右するため。"
+      "accountingカテゴリ一致"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee会計",
+    "subsidyId": "a0WJ200000CDY8wMAH",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "accounting",
     "score": 95,
     "reasons": [
-      "本補助金の経理業務効率化事業（会計システム導入）に完全合致",
-      "インボイス対応や自動連携機能が小規模事業者の事務負担を劇的に軽減する"
+      "賃上げ環境整備にはバックオフィスの生産性向上が不可欠であり、会計ソフトによる自動化が業務効率化の核心となるため。",
+      "収益力向上を目指す経営基盤として、正確な財務把握が補助金活用と連動して経営改善を加速させるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "マネーフォワード クラウド確定申告",
-    "score": 95,
-    "reasons": [
-      "経理業務効率化事業の対象として最適",
-      "クラウド連携による効率化が小規模事業者の人手不足解消に直結する"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "弥生会計 Next / 弥生シリーズ",
-    "score": 95,
-    "reasons": [
-      "定番ソフトとして経理DXの導入効果が高く、補助金の目的と合致",
-      "給与連携等でバックオフィス全体の効率化が狙える"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "Misoca（ミソカ）",
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "invoice",
     "score": 90,
     "reasons": [
-      "インボイス対応システムとして補助対象業務に合致",
-      "請求業務のデジタル化は小規模事業者の工数削減に即効性がある"
+      "販路拡大や収益力向上には迅速な取引対応が必須であり、インボイス対応ソフトによる請求業務のDXが不可欠であるため。",
+      "バックオフィス効率化は、本補助金の目的である「成長のための労働環境改善」に直結するため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "税理士ドットコム",
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "cost-reduction",
     "score": 85,
     "reasons": [
-      "申請前に必要な「事前相談」や事業計画策定において専門家のサポートは採択率向上に寄与する",
-      "慣れない補助金申請を安全に進めるための強力なパートナー"
+      "通信費や通信環境の最適化は、固定費削減を通じて直接的な収益力向上に貢献するため。",
+      "リモートワークやデジタル化による働き方の見直しは、職場環境改善の取り組みとして補助対象と親和性が高いため。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "consulting",
+    "score": 90,
+    "reasons": [
+      "補助金申請には高い専門知識が必要であり、特に賃上げ等の計画策定において税理士のサポートは採択率を大きく左右するため。",
+      "法人口座開設などは事業運営の透明性と効率性を高める準備として推奨されるため。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "cashflow",
+    "score": 70,
+    "reasons": [
+      "補助金交付までのキャッシュフローを補完し、事業投資の停滞を防ぐ役割として限定的に有用であるため。",
+      "直接的な収益力向上ツールではないが、経営の安定化という意味で補助金活用の期間を支える。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "AirPAY (エアペイ)",
-    "score": 80,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "店舗における決済DXを推進し、業務効率化を実現できる",
-      "補助金対象経費として導入しやすい"
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   }
 ]
