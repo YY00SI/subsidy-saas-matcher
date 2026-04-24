@@ -99,6 +99,17 @@
     "institution_name": null
   },
   {
+    "id": "a0WJ200000CDVyTMAX",
+    "name": "S-00007490",
+    "title": "令和8年度 宮崎県産業DX推進事業費補助金（導入タイプ）",
+    "target_area_search": "宮崎県",
+    "subsidy_max_limit": 2500000,
+    "acceptance_start_datetime": "2026-04-24T00:00:00.000Z",
+    "acceptance_end_datetime": "2026-06-12T14:59:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
     "id": "a0WJ200000CDYEIMA5",
     "name": "S-00008596",
     "title": "令和8年度神奈川県小規模事業者デジタル化支援推進事業費補助金",
