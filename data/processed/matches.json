@@ -25,26 +25,72 @@
   },
   {
     "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "freee-accounting",
+    "toolSlug": "tax-consultant",
+    "score": 95,
+    "reasons": [
+      "本補助金は審査が厳格なため、実績豊富な税理士や専門家のサポートを受けることで採択率が飛躍的に高まるため。",
+      "複雑な申請書類や事業計画の策定を専門家に依頼することで、ミスを最小限に抑えられます。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDY8wMAH",
+    "toolSlug": "accounting",
     "score": 70,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助事業実施後の適切な経理処理や、採択審査時に必要な財務諸表の管理において、クラウド会計ツールの導入は経営管理体制の証明として有効であるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "accountingカテゴリ一致"
+      "賃上げ環境整備にはバックオフィスの生産性向上が不可欠であり、会計ソフトによるDX化は補助金申請の核心的取り組みとして評価されやすい",
+      "収益力向上のための財務データ可視化において、freeeや弥生といったSaaSは必要不可欠なツールである"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "accountingカテゴリ一致"
+      "販路拡大や収益力向上には請求業務のDX化が必須であり、インボイス対応と効率化の両立が可能",
+      "KANBEI SIGNのようにIT導入補助金連携を前提としたツールは、事業のIT化を推進する要件と極めて親和性が高い"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "cost-reduction",
+    "score": 80,
+    "reasons": [
+      "通信環境の整備は職場環境改善の一環として認められる可能性が高く、リモートワークやデジタル活用を推進する際の基盤となる",
+      "経費削減による収益力向上という補助金の目的に直結する"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "税理士ドットコム等の専門家紹介サービスは、複雑な公募要領への対応や採択確率向上において非常に有効な投資となる",
+      "補助金受給後の適切な会計処理や資金計画の立案には専門家の知見が必須である"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "cashflow",
+    "score": 70,
+    "reasons": [
+      "補助金の性質上、入金までの資金ショートリスクを回避する手段としてファクタリングは事業継続の安全網となる",
+      "成長投資を加速させるための資金調達手段として評価できる"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYC2MAP",
+    "toolSlug": "incorporation",
+    "score": 60,
+    "reasons": [
+      "新たな事業展開に伴う拠点設置や法務環境の整備において、バーチャルオフィスはコスト低減の選択肢として有用"
     ]
   },
   {

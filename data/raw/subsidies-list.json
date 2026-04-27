@@ -110,6 +110,17 @@
     "institution_name": null
   },
   {
+    "id": "a0WJ200000CDYZ2MAP",
+    "name": "S-00008831",
+    "title": "令和8年度中堅・中小企業輸出支援エコシステム形成事業費補助金",
+    "target_area_search": "全国",
+    "subsidy_max_limit": 20000000,
+    "acceptance_start_datetime": "2026-04-27T06:00:00.000Z",
+    "acceptance_end_datetime": "2026-05-25T06:00:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
     "id": "a0WJ200000CDYEIMA5",
     "name": "S-00008596",
     "title": "令和8年度神奈川県小規模事業者デジタル化支援推進事業費補助金",
