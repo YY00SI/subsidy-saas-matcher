@@ -1,11 +1,45 @@
 [
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
+    "subsidyId": "a0WJ200000CDPL5MAP",
     "toolSlug": "consulting",
+    "score": 50,
+    "reasons": [
+      "補助金申請書類の作成には高い専門性が求められるため、税理士等の専門家への相談は採択率を高めるために有効な手段となり得ます。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDVyTMAX",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "補助金の目的である既存業務の効率化に合致するバックオフィスDXの核となるため",
+      "給与管理や会計システムは本補助金の対象例として明記されており、採択されやすい"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDVyTMAX",
+    "toolSlug": "invoice",
     "score": 90,
     "reasons": [
-      "助成金の申請は書類作成や研修計画の策定が煩雑であり、専門家のサポートが採択率を劇的に高めるため。",
-      "特にDXリスキリング助成金など、制度ごとの要件を正確に満たすためにプロの知見が不可欠であるため。"
+      "請求書や契約書のクラウド化は業務の省力化に直結し、DX推進の要件を満たす",
+      "IT導入補助金と同様の選定基準において、導入によるコスト削減効果が極めて高い"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDVyTMAX",
+    "toolSlug": "cost-reduction",
+    "score": 75,
+    "reasons": [
+      "クラウドフォンなどは業務の効率化・DX推進ツールとして補助金対象範囲内であるため",
+      "通信環境の整備はリモートワーク対応など現代のDX推進に必須の基盤であるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDVyTMAX",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "申請要件やデジタル実装の専門的な知見が必要な場合、税理士等の専門家活用が成功率を高めるため"
     ]
   },
   {
@@ -30,15 +64,6 @@
     "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "tax-consultant-search",
-    "score": 90,
-    "reasons": [
-      "医療DX人材育成支援事業は専門的な申請書類が求められるため、補助金に精通した税理士のサポートは採択率を劇的に高めます",
-      "医療機関特有の会計・税務対応と補助金活用をセットで相談できるメリットがあります"
     ]
   },
   {
@@ -111,14 +136,6 @@
     "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYZ2MAP",
-    "toolSlug": "consulting",
-    "score": 80,
-    "reasons": [
-      "本補助金は公募要領が複雑なコンソーシアム形式であり、専門家による組成支援や申請サポートの需要が極めて高いため。"
     ]
   }
 ]
