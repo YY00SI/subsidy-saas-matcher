@@ -1,48 +1,5 @@
 [
   {
-    "subsidyId": "a0WJ200000CDPL5MAP",
-    "toolSlug": "consulting",
-    "score": 50,
-    "reasons": [
-      "補助金申請書類の作成には高い専門性が求められるため、税理士等の専門家への相談は採択率を高めるために有効な手段となり得ます。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "補助金の目的である既存業務の効率化に合致するバックオフィスDXの核となるため",
-      "給与管理や会計システムは本補助金の対象例として明記されており、採択されやすい"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "請求書や契約書のクラウド化は業務の省力化に直結し、DX推進の要件を満たす",
-      "IT導入補助金と同様の選定基準において、導入によるコスト削減効果が極めて高い"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "cost-reduction",
-    "score": 75,
-    "reasons": [
-      "クラウドフォンなどは業務の効率化・DX推進ツールとして補助金対象範囲内であるため",
-      "通信環境の整備はリモートワーク対応など現代のDX推進に必須の基盤であるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "consulting",
-    "score": 80,
-    "reasons": [
-      "申請要件やデジタル実装の専門的な知見が必要な場合、税理士等の専門家活用が成功率を高めるため"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -64,6 +21,15 @@
     "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDXvUMAX",
+    "toolSlug": "consulting",
+    "score": 60,
+    "reasons": [
+      "医療機関は複雑な申請手続きが必要な場合が多く、申請サポートや専門家の知見を活用することが採択率向上に寄与するため。",
+      "補助金申請のノウハウ提供という観点で、税理士等の専門家紹介サービスは医療機関にとって有効な手段となり得る。"
     ]
   },
   {
@@ -136,6 +102,50 @@
     "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYZ2MAP",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "補助金申請には複雑なコンソーシアム組成や連携体の要件定義が必須です。専門家によるサポートは採択の確実性を高めるための有効な投資となります。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "本補助金の対象事業において必須となる『収益による自律的な継続』を管理する上で、クラウド会計は不可欠な基盤ツールです。",
+      "正確な記帳と経営状況の可視化は、補助金活用の報告業務を円滑に進めるためにも極めて重要です。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "デジタル技術による生産性向上が要件に含まれており、請求書ソフトの導入は最も導入効果が分かりやすいDX手段です。",
+      "インボイス対応を含む請求業務の自動化は、地域課題解決という本業に注力するためのコスト削減に直結します。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "cost-reduction",
+    "score": 85,
+    "reasons": [
+      "起業時の固定費削減は、事業の安定継続において極めて重要です。",
+      "電話業務や通信環境の最適化は、デジタル活用を要件とする本補助金の主旨に適合します。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "consulting",
+    "score": 95,
+    "reasons": [
+      "補助金申請には『社会的事業』としての事業計画の妥当性が厳しく問われます。",
+      "プロの知見を活用することで、採択率を劇的に高めることが期待できるためです。"
     ]
   }
 ]
