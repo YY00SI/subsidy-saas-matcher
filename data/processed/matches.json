@@ -1,41 +1,5 @@
 [
   {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "補助金詳細に給与管理等のクラウドシステムが例示されており、会計・給与ソフトの導入が本補助金の目的に極めて合致する",
-      "バックオフィスのデジタル化はDXの第一歩であり、採択において非常に評価されやすい領域である"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "インボイス制度対応や請求書作成のデジタル化は、業務効率化・省力化という本補助金の目的を直接達成できる手段である",
-      "クラウドサービスのため、IT導入補助金と同様にデジタル技術の実装事例としてアピールしやすい"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "cost-reduction",
-    "score": 75,
-    "reasons": [
-      "クラウド環境への移行やスマホでの電話業務効率化は、本補助金が推奨するサーバーのクラウド化やデジタル技術実装と親和性が高い",
-      "社内の働き方改革やリモートワーク環境の構築として説得力がある"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDVyTMAX",
-    "toolSlug": "consulting",
-    "score": 70,
-    "reasons": [
-      "専門家のサポートを受けることは、補助金申請における採択率向上に直結し、経営者のリソースをDX推進へ集中させるために有効である",
-      "補助金事務局との調整や正確な書類作成が必要なため、外部の知見を借りることは合理的である"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -60,75 +24,35 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDY8wMAH",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYBOMA5",
-    "toolSlug": "freee会計",
-    "score": 70,
-    "reasons": [
-      "研究開発の経費管理や予実管理において、クラウド会計による可視化は補助事業の定量的成果報告に不可欠なため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYBOMA5",
-    "toolSlug": "マネーフォワード クラウド確定申告",
-    "score": 70,
-    "reasons": [
-      "補助事業における複雑な会計処理を効率化し、生産性向上という補助金の目的達成をバックオフィスから支援できるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYBOMA5",
-    "toolSlug": "弥生会計 Next / 弥生シリーズ",
-    "score": 70,
-    "reasons": [
-      "事業運営の基盤となる正確な会計データの蓄積は、DX推進枠における企業価値向上の証明において非常に重要であるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYBOMA5",
+    "subsidyId": "a0WJ200000CDXvUMAX",
     "toolSlug": "税理士ドットコム",
-    "score": 90,
-    "reasons": [
-      "「ぐんまDX技術革新補助金」は専門性が高く申請書類も複雑なため、プロの知見を得ることで採択率を飛躍的に高められるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYBOMA5",
-    "toolSlug": "オンライン即日振込ファクタリング (株式会社No.1)",
     "score": 60,
     "reasons": [
-      "補助金は基本的に後払いであるため、研究開発期間中のキャッシュフローを確保して事業を停滞させない手段として有効であるため"
+      "医療機関が補助金を申請する際、専門的な書類作成や管理において税理士のサポートは非常に有益であり、採択率を高めるために有効です。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYBOMA5",
-    "toolSlug": "住信SBIネット銀行 法人口座",
-    "score": 50,
+    "subsidyId": "a0WJ200000CDY8wMAH",
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助金受給用として事業専用口座を切り分けることは、経理の透明性を高め、監査対応をスムーズにするために推奨されるため"
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDY8wMAH",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDY8wMAH",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
