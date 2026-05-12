@@ -99,6 +99,28 @@
     "institution_name": null
   },
   {
+    "id": "a0WJ200000CDM1EMAX",
+    "name": "S-00006413",
+    "title": "令和８年度_事業化可能性調査事業",
+    "target_area_search": "石川県",
+    "subsidy_max_limit": 2000000,
+    "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
+    "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
+    "id": "a0W5h00000Zud9xEAB",
+    "name": "S-00004681",
+    "title": "令和８年度_国プロジェクトステップアップ支援事業",
+    "target_area_search": "石川県",
+    "subsidy_max_limit": 5000000,
+    "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
+    "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
     "id": "a0WJ200000CDYirMAH",
     "name": "S-00008990",
     "title": "2026年度「地域課題解決型起業支援事業」",
