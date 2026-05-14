@@ -154,6 +154,17 @@
     "institution_name": null
   },
   {
+    "id": "a0WJ200000CDYU0MAP",
+    "name": "S-00008710",
+    "title": "デジタル化による生産性向上等支援補助金",
+    "target_area_search": "岡山県",
+    "subsidy_max_limit": 2000000,
+    "acceptance_start_datetime": "2026-05-14T15:00:00.000Z",
+    "acceptance_end_datetime": "2026-07-15T08:00:00.000Z",
+    "target_number_of_employees": "900名以下",
+    "institution_name": null
+  },
+  {
     "id": "a0WJ200000CDYEIMA5",
     "name": "S-00008596",
     "title": "令和8年度神奈川県小規模事業者デジタル化支援推進事業費補助金",
