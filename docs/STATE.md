@@ -4,6 +4,8 @@
 収益化導線・コンテンツ拡充フェーズ
 
 ## 完了済み
+- 2026-05-24: 生成済みサイト監査 `npm run audit` を追加。45ページ全体のcanonical/OG URL、meta description、sitemap掲載、外部リンクの `noopener noreferrer`、A8リンクの `sponsored` を検査する。GitHub Actionsにも監査ステップを追加し、公開前に品質ゲートを通す構成へ更新。
+- 2026-05-24: ページ共通SEOを改善。`SeoHead.astro` でページごとのcanonical/OG/Twitter URLとrobots metaを出力し、診断ページにも同等のSEOタグを追加。補助金詳細ページは短すぎる説明文を補完し、データ由来HTML内の外部リンクにも `rel="noopener noreferrer"` を付与。
 - 2026-05-24: AstroビルドがCドライブへテレメトリ設定を書こうとして失敗していたため、`scripts/astro-cli.mjs` を追加し、Astro実行時の設定保存先をプロジェクト内に固定。`npm run build` がDドライブ内で完結する状態に修正。
 - 2026-05-24: 収益導線の `rel` を `sponsored noopener noreferrer` に統一。
 - 2026-05-24: 高意図の悩み別ページ `/needs/cashflow/` と `/needs/startup/` を追加。補助金後払いの資金ショート対策、創業直後の口座・登記住所・請求書準備からA8案件へ誘導。

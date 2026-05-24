@@ -47,6 +47,9 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Audit generated website
+        run: npm run audit
+
       - name: Commit updated data
         run: |
           git config --global user.name "github-actions[bot]"

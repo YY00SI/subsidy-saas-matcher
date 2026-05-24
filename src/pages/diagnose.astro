@@ -1,6 +1,10 @@
 ---
 // src/pages/diagnose.astro
 // 補助金SaaSマッチャー 診断ウィザード
+
+const canonicalUrl = 'https://yy00si.github.io/subsidy-saas-matcher/diagnose/';
+const pageTitle = '無料診断 - あなたに最適なSaaSと補助金を診断 | 補助金SaaSマッチャー';
+const pageDescription = '業種・従業員数・お困りごとを選ぶだけ。AIが最適な会計・経費SaaSと使える補助金を無料でご提案します。';
 ---
 
 <!DOCTYPE html>
@@ -8,8 +12,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>無料診断 ─ あなたに最適なSaaSと補助金を診断 | 補助金SaaSマッチャー</title>
-  <meta name="description" content="業種・従業員数・お困りごとを選ぶだけ。AIが最適な会計・経費SaaSと使える補助金を無料でご提案します。" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalUrl} />
+  <meta property="twitter:title" content={pageTitle} />
+  <meta property="twitter:description" content={pageDescription} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <style>
