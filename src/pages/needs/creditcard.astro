@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+// A8.net 提携済みの法人カード案件などに置き換えて運用します
+const creditcardUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+88HWT6+3SPO+BETB4I&utm_source=needs_creditcard&utm_medium=affiliate&utm_content=card';
+---
+
+<BaseLayout
+  title="補助金申請前に知っておきたい法人カードの活用 | 補助金SaaSマッチャー"
+  description="補助金は原則「後払い」です。自己資金の一時的な目減りを防ぐため、支払時期を遅らせる法人カードの活用と、審査に通りやすいカード選びを解説します。"
+>
+  <main class="container startup-page">
+    <p class="breadcrumb"><a href={base}>TOP</a> &rsaquo; 法人カード</p>
+
+    <section class="hero">
+      <span class="tag">資金繰り対策</span>
+      <h1>補助金の「後払い」を乗り切る、法人カード活用術</h1>
+      <p>
+        補助金は採択されてもすぐには入金されません。事業を実施し、経費を全額自腹で立て替えてから数ヶ月後に還元される「後払い」が原則です。法人カードを活用することで、手元のキャッシュアウトを遅らせる防衛策を解説します。
+      </p>
+    </section>
+
+    <section class="checklist">
+      <article class="glass-card">
+        <span class="num">1</span>
+        <h2>支払いの先延ばし（キャッシュアウト抑制）</h2>
+        <p>法人カード決済なら、実際の現金引き落としを1〜2ヶ月先延ばしにできます。補助金入金までの資金ショートリスクを減らす最も手軽な方法です。</p>
+        <a href={creditcardUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">法人カードを確認する</a>
+      </article>
+      <article class="glass-card">
+        <span class="num">2</span>
+        <h2>経費証憑（明細）のデジタル化</h2>
+        <p>補助金の実績報告では、いつ・何に・いくら使ったかの証明（証憑）が必須です。法人カードのWeb明細と会計ソフトを連携すれば、漏れなく記録できます。</p>
+      </article>
+      <article class="glass-card">
+        <span class="num">3</span>
+        <h2>限度額の確認と引き上げ</h2>
+        <p>IT導入補助金などで高額なSaaSを一括契約する場合、カードの利用限度額が足りないことがあります。創業初期でも限度額が柔軟なカード選びが重要です。</p>
+      </article>
+    </section>
+
+    <section class="glass-card guide">
+      <h2>法人カード選びで気をつけるポイント</h2>
+      <div class="guide-grid">
+        <div>
+          <h3>創業直後の審査</h3>
+          <p>決算書不要で、代表者個人の信用情報で審査されるカード（スタートアップ向け）を選ぶとスムーズです。</p>
+        </div>
+        <div>
+          <h3>年会費とポイント還元</h3>
+          <p>初年度無料や、利用額に応じたポイント還元率を確認します。SaaSのサブスク支払いでポイントが貯まりやすくなります。</p>
+        </div>
+        <div>
+          <h3>会計ソフトとの連携</h3>
+          <p>freeeやマネーフォワードなど、利用中の会計ソフトとAPI連携できるカードを選ぶと、経理の手間が劇的に減ります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card cta">
+      <h2>補助金とSaaSの相性診断</h2>
+      <p>業種・規模・困りごとを選ぶだけで、使える可能性がある補助金と導入候補のSaaSを確認できます。</p>
+      <a href={`${base}diagnose/`} class="btn btn-primary">無料診断へ進む</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .startup-page { max-width: 960px; padding: 2.5rem 1.5rem 5rem; }
+  .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .hero { padding: 2rem 0 2.5rem; }
+  .hero h1 { max-width: 820px; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; margin: 1rem 0; color: var(--primary); }
+  .hero p { max-width: 760px; color: var(--text-muted); line-height: 1.8; }
+  .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .glass-card { padding: 1.75rem; }
+  .num { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: white; font-weight: 800; }
+  h2 { color: var(--primary); font-size: 1.25rem; }
+  p { color: var(--text-muted); line-height: 1.75; }
+  .guide { margin: 1.5rem 0; }
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .guide h3 { color: var(--primary); margin-bottom: 0.4rem; }
+  .cta { text-align: center; background: linear-gradient(135deg, #f8fafc, #eff6ff); }
+</style>

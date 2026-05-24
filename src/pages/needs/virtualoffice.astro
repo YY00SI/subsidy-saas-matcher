@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+// A8.net 提携済みのバーチャルオフィス案件などに置き換えて運用します
+const officeUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1JDO+23M2LU+4V0U+NV9N5&utm_source=needs_virtualoffice&utm_medium=affiliate&utm_content=kyoto_suzaku';
+---
+
+<BaseLayout
+  title="補助金申請とバーチャルオフィス登記の注意点 | 補助金SaaSマッチャー"
+  description="創業補助金や小規模事業者持続化補助金を申請する際、バーチャルオフィスでも問題ないのか？審査を通すためのポイントと注意点を解説します。"
+>
+  <main class="container startup-page">
+    <p class="breadcrumb"><a href={base}>TOP</a> &rsaquo; バーチャルオフィス</p>
+
+    <section class="hero">
+      <span class="tag">創業・法人登記</span>
+      <h1>バーチャルオフィスで補助金は通る？審査対策と選び方</h1>
+      <p>
+        自宅住所を公開したくない、または都心の一等地に本店を置きたい創業初期に便利な「バーチャルオフィス」。しかし、実体がないと見なされて補助金の審査に落ちるリスクもあります。安全なオフィスの選び方と注意点を解説します。
+      </p>
+    </section>
+
+    <section class="checklist">
+      <article class="glass-card">
+        <span class="num">1</span>
+        <h2>郵便物の受け取りと転送</h2>
+        <p>補助金事務局からの重要書類（交付決定通知など）が確実に届く必要があります。週1回以上の転送や、簡易書留の受け取りに対応しているオフィスを選びましょう。</p>
+        <a href={officeUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">バーチャルオフィスを見る</a>
+      </article>
+      <article class="glass-card">
+        <span class="num">2</span>
+        <h2>銀行口座の開設しやすさ</h2>
+        <p>補助金の受け取りには法人口座が必須です。審査が厳しいバーチャルオフィス（犯罪歴のある企業を排除しているか等）の方が、結果的にメガバンク等の法人口座を開設しやすくなります。</p>
+      </article>
+      <article class="glass-card">
+        <span class="num">3</span>
+        <h2>「事業の実態」の証明</h2>
+        <p>補助金審査では、そこで本当に事業を行っているか（実態）が問われます。必要に応じて会議室を利用できたり、HPに記載できる専用の電話番号があるオフィスが有利です。</p>
+      </article>
+    </section>
+
+    <section class="glass-card guide">
+      <h2>補助金申請でNGになりやすいパターン</h2>
+      <div class="guide-grid">
+        <div>
+          <h3>格安すぎる住所貸し</h3>
+          <p>月額数百円の住所貸しのみで、郵便転送や電話対応が全くない場合、事務局からの連絡がつかず審査で不利になることがあります。</p>
+        </div>
+        <div>
+          <h3>許認可が必要な事業</h3>
+          <p>人材派遣業、建設業、不動産業など、法令で「独立した実体のある専用スペース」が求められる業種は、バーチャルオフィスでは許認可が下りず、結果として補助金も申請できません。</p>
+        </div>
+        <div>
+          <h3>管轄の変更による影響</h3>
+          <p>自治体独自の補助金（例：東京都の創業助成金）は、その自治体内に登記があることが条件です。補助金のために登記場所を選ぶ戦略も有効です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card cta">
+      <h2>まずは補助金とSaaSの相性を診断</h2>
+      <p>業種・規模・困りごとを選ぶだけで、使える可能性がある補助金と導入候補のSaaSを確認できます。</p>
+      <a href={`${base}diagnose/`} class="btn btn-primary">無料診断へ進む</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .startup-page { max-width: 960px; padding: 2.5rem 1.5rem 5rem; }
+  .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .hero { padding: 2rem 0 2.5rem; }
+  .hero h1 { max-width: 820px; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; margin: 1rem 0; color: var(--primary); }
+  .hero p { max-width: 760px; color: var(--text-muted); line-height: 1.8; }
+  .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .glass-card { padding: 1.75rem; }
+  .num { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: white; font-weight: 800; }
+  h2 { color: var(--primary); font-size: 1.25rem; }
+  p { color: var(--text-muted); line-height: 1.75; }
+  .guide { margin: 1.5rem 0; }
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .guide h3 { color: var(--primary); margin-bottom: 0.4rem; }
+  .cta { text-align: center; background: linear-gradient(135deg, #f8fafc, #eff6ff); }
+</style>
