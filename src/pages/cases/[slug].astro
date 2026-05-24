@@ -89,7 +89,7 @@ const matchedTool = tools.find(t => t.slug === caseData.tool_slug);
         <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.6; max-width:600px; margin:0 auto 1.5rem;">{matchedTool.strengths}</p>
         
         <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-          <a href={matchedTool.affiliate_url} target="_blank" rel="sponsored noopener" class="btn btn-primary" style="padding:0.8rem 2rem; font-size:1rem; border-radius: 999px;">
+          <a href={matchedTool.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary" style="padding:0.8rem 2rem; font-size:1rem; border-radius: 999px;">
             公式サイトを見る・無料で試す
           </a>
           <a href={`${base}tools/${matchedTool.slug}/`} class="btn btn-secondary" style="background:white; color:var(--primary); border:1px solid #cbd5e1; padding:0.8rem 2rem; font-size:1rem; border-radius: 999px; text-decoration: none;">

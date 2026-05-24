@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const no1Url = 'https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=needs_cashflow&utm_medium=affiliate&utm_content=no1_factoring';
+const accountingUrl = 'https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF&utm_source=needs_cashflow&utm_medium=affiliate&utm_content=freee_accounting';
+---
+
+<BaseLayout
+  title="補助金は後払い。採択後の資金ショート対策 | 補助金SaaSマッチャー"
+  description="補助金は採択されても入金まで自己資金で立て替える必要があります。外注費・システム導入費の支払いに詰まる前に、ファクタリングや会計管理で資金繰りを整える方法を解説します。"
+>
+  <main class="container cashflow-page">
+    <p class="breadcrumb"><a href={base}>TOP</a> &rsaquo; 資金繰り対策</p>
+
+    <section class="hero">
+      <span class="tag">補助金の落とし穴</span>
+      <h1>補助金は「採択されたら終わり」ではありません。入金までの立替資金が必要です。</h1>
+      <p>
+        多くの補助金は後払いです。先にシステム導入費、外注費、広告費を支払い、実績報告を終えてから入金されます。
+        ここを見落とすと、採択後に資金ショートして事業を進められません。
+      </p>
+      <div class="hero-actions">
+        <a href={no1Url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">最短即日の資金化を確認する</a>
+        <a href={`${base}cases/all-cashflow-improvement/`} class="btn btn-secondary">資金繰り事例を読む</a>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="glass-card">
+        <h2>補助金で詰まりやすい支払い</h2>
+        <ul class="check-list">
+          <li>ITツールの初期費用・年額利用料</li>
+          <li>ホームページ制作・広告運用費</li>
+          <li>外注先への着手金・中間金</li>
+          <li>設備購入費や導入支援費</li>
+        </ul>
+        <p>
+          補助金の対象経費でも、支払いのタイミングは先に来ます。入金予定額ではなく、手元資金で支払えるかを先に確認する必要があります。
+        </p>
+      </article>
+
+      <article class="glass-card accent-card">
+        <h2>相性が良い対策</h2>
+        <p>
+          既に売掛金や請求書がある事業者なら、ファクタリングで入金待ちを短縮できます。融資ではなく売掛金の売却なので、急ぎの支払いに使いやすいのが特徴です。
+        </p>
+        <a href={no1Url} target="_blank" rel="sponsored noopener noreferrer" class="text-link">株式会社No.1の無料見積を確認する →</a>
+      </article>
+    </section>
+
+    <section class="glass-card flow">
+      <h2>補助金活用前に決めるべき3つのこと</h2>
+      <div class="steps">
+        <div>
+          <span>1</span>
+          <h3>支払日を並べる</h3>
+          <p>導入費、外注費、広告費、専門家報酬を月ごとに並べ、いつ現金が必要かを確認します。</p>
+        </div>
+        <div>
+          <span>2</span>
+          <h3>入金見込みを保守的に置く</h3>
+          <p>補助金入金は遅れる前提で、最低3か月から6か月の余裕を見ます。</p>
+        </div>
+        <div>
+          <span>3</span>
+          <h3>資金化手段を先に確保する</h3>
+          <p>銀行融資、ファクタリング、法人カード、自己資金のどれで立て替えるかを決めます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card compare">
+      <h2>ファクタリングと会計管理を同時に見る</h2>
+      <p>
+        資金ショート対策だけでなく、補助金対象経費の証憑管理も重要です。請求書、領収書、振込履歴が整理されていないと、実績報告で時間を失います。
+      </p>
+      <div class="cta-row">
+        <a href={no1Url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">資金化を相談する</a>
+        <a href={accountingUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">会計管理を整える</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .cashflow-page { max-width: 960px; padding: 2.5rem 1.5rem 5rem; }
+  .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .hero { padding: 2rem 0 2.5rem; }
+  .hero h1 { max-width: 820px; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; margin: 1rem 0; color: var(--primary); }
+  .hero p { max-width: 760px; color: var(--text-muted); line-height: 1.8; font-size: 1rem; }
+  .hero-actions, .cta-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.5rem; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
+  .glass-card { padding: 1.75rem; }
+  .accent-card { border-left: 4px solid var(--accent); }
+  h2 { color: var(--primary); font-size: 1.35rem; margin-top: 0; }
+  p, li { color: var(--text-muted); line-height: 1.75; }
+  .check-list { padding-left: 1.2rem; }
+  .text-link { color: var(--accent); font-weight: 800; text-decoration: none; }
+  .flow { margin: 1.5rem 0; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .steps span { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: white; font-weight: 800; }
+  .steps h3 { margin: 0.8rem 0 0.4rem; color: var(--primary); }
+  .compare { margin-top: 1.5rem; background: linear-gradient(135deg, #f8fafc, #eff6ff); }
+</style>

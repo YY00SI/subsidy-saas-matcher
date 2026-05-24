@@ -11,6 +11,8 @@ const base = import.meta.env.BASE_URL;
       <a href={`${base}subsidies/`}>補助金を探す</a>
       <a href={`${base}needs/accounting/`}>経理・会計</a>
       <a href={`${base}needs/invoice/`}>インボイス</a>
+      <a href={`${base}needs/cashflow/`}>資金繰り</a>
+      <a href={`${base}tools/`}>サービス一覧</a>
     </nav>
   </div>
 </header>
@@ -53,7 +55,9 @@ const base = import.meta.env.BASE_URL;
 
   .nav {
     display: flex;
-    gap: 2rem;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .nav a {

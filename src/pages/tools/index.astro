@@ -25,7 +25,7 @@ const sortedTools = tools.sort((a, b) => (b.priority_score || 0) - (a.priority_s
           <span class="category-tag">{t.category}</span>
           <h3 class="mt-4 mb-2"><a href={`${base}tools/${t.slug}/`}>{t.name}</a></h3>
           <p class="text-sm text-secondary mb-4">{t.strengths}</p>
-          <a href={t.affiliate_url} target="_blank" rel="sponsored noopener" class="btn btn-primary btn-sm w-full">公式サイト</a>
+          <a href={t.affiliate_url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary btn-sm w-full">公式サイト</a>
         </div>
       ))}
     </div>

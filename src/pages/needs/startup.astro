@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+const bankUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+88HWT6+3SPO+BETB4I&utm_source=needs_startup&utm_medium=affiliate&utm_content=sbi_bank';
+const officeUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1JDO+23M2LU+4V0U+NV9N5&utm_source=needs_startup&utm_medium=affiliate&utm_content=kyoto_suzaku';
+const invoiceUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+7BR1RM+35XE+609HU&utm_source=needs_startup&utm_medium=affiliate&utm_content=misoca';
+---
+
+<BaseLayout
+  title="創業直後に補助金を使う前の準備リスト | 補助金SaaSマッチャー"
+  description="創業直後に補助金を使うなら、法人口座、登記住所、請求書、会計管理を先に整える必要があります。補助金申請前に詰まりやすい準備を解説します。"
+>
+  <main class="container startup-page">
+    <p class="breadcrumb"><a href={base}>TOP</a> &rsaquo; 創業準備</p>
+
+    <section class="hero">
+      <span class="tag">創業・個人事業主向け</span>
+      <h1>補助金を探す前に、口座・住所・請求書の土台を整える。</h1>
+      <p>
+        補助金の申請や入金では、事業実態を示す情報が必要になります。
+        創業直後は、法人口座、登記住所、請求書、会計記録を先に揃えるだけで、申請時の手戻りを減らせます。
+      </p>
+    </section>
+
+    <section class="checklist">
+      <article class="glass-card">
+        <span class="num">1</span>
+        <h2>事業用口座</h2>
+        <p>補助金や売上の入金口座を事業用に分けると、経費証憑と資金移動を説明しやすくなります。</p>
+        <a href={bankUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">法人口座を確認する</a>
+      </article>
+      <article class="glass-card">
+        <span class="num">2</span>
+        <h2>登記・事業住所</h2>
+        <p>自宅住所を出したくない場合は、登記可能なバーチャルオフィスを検討します。郵便受取や信用面も確認が必要です。</p>
+        <a href={officeUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">登記住所を確認する</a>
+      </article>
+      <article class="glass-card">
+        <span class="num">3</span>
+        <h2>請求書・インボイス</h2>
+        <p>補助金の実績報告では、請求書・領収書・振込記録の整合が重要です。最初からクラウド管理に寄せると後が楽です。</p>
+        <a href={invoiceUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">請求書ソフトを見る</a>
+      </article>
+    </section>
+
+    <section class="glass-card guide">
+      <h2>創業初期に補助金で失敗しやすいポイント</h2>
+      <div class="guide-grid">
+        <div>
+          <h3>見積と発注の順番</h3>
+          <p>交付決定前の発注が対象外になる制度があります。必ず公募要領で発注可能日を確認してください。</p>
+        </div>
+        <div>
+          <h3>入金までの資金</h3>
+          <p>採択されても後払いです。支払いを先に済ませられる資金計画が必要です。</p>
+        </div>
+        <div>
+          <h3>証憑の保管</h3>
+          <p>請求書、契約書、納品書、振込明細を残せないと、実績報告で詰まります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card cta">
+      <h2>まずは補助金とSaaSの相性を診断</h2>
+      <p>業種・規模・困りごとを選ぶだけで、使える可能性がある補助金と導入候補のSaaSを確認できます。</p>
+      <a href={`${base}diagnose/`} class="btn btn-primary">無料診断へ進む</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .startup-page { max-width: 960px; padding: 2.5rem 1.5rem 5rem; }
+  .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  .hero { padding: 2rem 0 2.5rem; }
+  .hero h1 { max-width: 820px; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; margin: 1rem 0; color: var(--primary); }
+  .hero p { max-width: 760px; color: var(--text-muted); line-height: 1.8; }
+  .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+  .glass-card { padding: 1.75rem; }
+  .num { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: white; font-weight: 800; }
+  h2 { color: var(--primary); font-size: 1.25rem; }
+  p { color: var(--text-muted); line-height: 1.75; }
+  .guide { margin: 1.5rem 0; }
+  .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .guide h3 { color: var(--primary); margin-bottom: 0.4rem; }
+  .cta { text-align: center; background: linear-gradient(135deg, #f8fafc, #eff6ff); }
+</style>
