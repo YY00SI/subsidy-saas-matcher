@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const projectRoot = process.cwd();
 const distDir = path.join(projectRoot, 'dist');
-const publicBase = 'https://yy00si.github.io/subsidy-saas-matcher';
+const publicBase = 'https://YY00SI.github.io/subsidy-saas-matcher';
 const issues = [];
 
 async function walk(dir) {
@@ -49,12 +49,15 @@ for (const file of htmlFiles) {
   const route = routeFor(file);
   const expectedUrl = `${publicBase}${route}`;
 
+  const lowerHtml = html.toLowerCase();
+  const lowerExpectedUrl = expectedUrl.toLowerCase();
+
   if (!/<html lang="ja"/.test(html)) report(file, 'missing lang="ja"');
   if (!/<title>[^<]{8,}<\/title>/.test(html)) report(file, 'missing useful title');
   if (!/<meta name="description" content="[^"]{40,}"/.test(html)) report(file, 'missing useful meta description');
-  if (!html.includes(`<link rel="canonical" href="${expectedUrl}">`)) report(file, `canonical does not match ${expectedUrl}`);
-  if (!html.includes(`<meta property="og:url" content="${expectedUrl}">`)) report(file, `og:url does not match ${expectedUrl}`);
-  if (!sitemapText.includes(`<loc>${expectedUrl}</loc>`)) report(file, `not listed in sitemap as ${expectedUrl}`);
+  if (!lowerHtml.includes(`<link rel="canonical" href="${lowerExpectedUrl}">`)) report(file, `canonical does not match ${expectedUrl}`);
+  if (!lowerHtml.includes(`<meta property="og:url" content="${lowerExpectedUrl}">`)) report(file, `og:url does not match ${expectedUrl}`);
+  if (!sitemapText.toLowerCase().includes(`<loc>${lowerExpectedUrl}</loc>`)) report(file, `not listed in sitemap as ${expectedUrl}`);
 
   const targetBlankLinks = [...html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g)].map((match) => match[0]);
   for (const anchor of targetBlankLinks) {
