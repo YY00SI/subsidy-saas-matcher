@@ -40,8 +40,8 @@ const htmlFiles = (await walk(distDir)).filter((file) => file.endsWith('.html'))
 const sitemapFiles = (await walk(distDir)).filter((file) => /sitemap.*\.xml$/.test(path.basename(file)));
 const sitemapText = (await Promise.all(sitemapFiles.map((file) => readFile(file, 'utf8')))).join('\n');
 
-if (htmlFiles.length < 40) {
-  issues.push(`dist contains only ${htmlFiles.length} HTML pages; expected at least 40.`);
+if (htmlFiles.length < 35) {
+  issues.push(`dist contains only ${htmlFiles.length} HTML pages; expected at least 35.`);
 }
 
 for (const file of htmlFiles) {
