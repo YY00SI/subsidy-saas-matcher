@@ -1,23 +1,5 @@
 [
   {
-    "subsidyId": "a0W5h00000Zud9xEAB",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "研究開発事業では厳格な経理管理が求められるため、クラウド会計ソフトによる透明性の高い収支管理は不可欠である。",
-      "採択後の複雑な報告・監査業務の効率化に寄与する。"
-    ]
-  },
-  {
-    "subsidyId": "a0W5h00000Zud9xEAB",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "本補助金は国レベルのプロジェクトへ挑戦するためのF/S事業であり、専門的な申請書類作成の重要度が高い。",
-      "専門家のノウハウを活用することで採択率を劇的に引き上げる可能性があるため、非常に相性が良い。"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -43,36 +25,50 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助金の公募要領で『経理業務効率化事業』が明記されており、会計ソフト導入が最も合致する",
-      "クラウド会計はインボイス対応や業務効率化に直結するため採択後の評価も高い"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "請求書発行・管理のDXは本補助金の重点支援対象である『営業・経理業務効率化』に完全合致する",
-      "インボイス対応などの法対応コストを削減できるため投資対効果が明確"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 80,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "通信や電話環境のDXは『その他業務効率化』の枠組みで申請可能であり、業務のモバイル化を促進できる"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 75,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "申請に際して商工会議所等での事前相談が必須要件となっており、専門家のサポートは採択の確度を高めるために有効"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
