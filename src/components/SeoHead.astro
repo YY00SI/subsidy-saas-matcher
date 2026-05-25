@@ -36,3 +36,17 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? siteUrl).toString
 <meta property="twitter:url" content={canonicalUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="_-l2L3a9sescPeoitkfmbJZCmVDDmYZCFmE6k3Dcv0E" />
+
+<!-- Google Analytics (GA4) -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
