@@ -36,7 +36,7 @@ try {
   throw new Error('dist directory is missing. Run npm run build before npm run audit.');
 }
 
-const htmlFiles = (await walk(distDir)).filter((file) => file.endsWith('.html'));
+const htmlFiles = (await walk(distDir)).filter((file) => file.endsWith('.html') && !path.basename(file).startsWith('google'));
 const sitemapFiles = (await walk(distDir)).filter((file) => /sitemap.*\.xml$/.test(path.basename(file)));
 const sitemapText = (await Promise.all(sitemapFiles.map((file) => readFile(file, 'utf8')))).join('\n');
 
