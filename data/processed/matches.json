@@ -1,5 +1,13 @@
 [
   {
+    "subsidyId": "a0W5h00000Zud9OEAR",
+    "toolSlug": "consulting",
+    "score": 70,
+    "reasons": [
+      "研究開発支援事業は事業計画書の作成難易度が高く、専門家の知見が採択率を左右するため。"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -25,38 +33,50 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助金募集要項にある『経理業務効率化事業』に合致する",
-      "会計ソフトの導入はDX推進の第一歩として最も推奨される項目の一つである"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "インボイス対応システム等の導入が補助対象として明記されている",
-      "請求・受発注管理の効率化に直結し、小規模事業者の事務負担を大幅に軽減できる"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 75,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "グループウェアやその他業務効率化ツールとしての側面がある",
-      "固定電話のDX化などは、募集要項にある『その他業務効率化事業』の枠内で提案可能である"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 80,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "補助金申請には『専門家による事前相談』が強く推奨されており、申請を成功させるための重要なサポートとなる",
-      "税理士への相談は、採択後の導入支援においても有効である"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
