@@ -1,10 +1,10 @@
 [
   {
-    "subsidyId": "a0W5h00000Zud9OEAR",
+    "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "consulting",
     "score": 70,
     "reasons": [
-      "研究開発支援事業は事業計画書の作成難易度が高く、専門家の知見が採択率を左右するため。"
+      "申請書類の作成や研修計画の策定にあたり、専門家の助言を得ることで採択率を高められる可能性が高いため。"
     ]
   },
   {
@@ -33,74 +33,81 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助金募集要項にある『経理業務効率化事業』に直接該当する",
+      "クラウド会計の導入はバックオフィスDXの最優先事項であり、採択時の説得力が高い"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "インボイス対応や請求書作成のデジタル化は補助金の対象範囲内であり、即効性のある業務効率化が可能",
+      "多くの事業者が手作業で行っている請求書発行をシステム化することで人手不足解消に直結する"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "toolSlug": "cost-reduction",
+    "score": 80,
     "reasons": [
-      "accountingカテゴリ一致"
+      "グループウェアや通信環境整備として、業務効率化の観点から合致する",
+      "IT導入による固定費削減は経営改善の指標として評価されやすい"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "consulting",
+    "score": 75,
     "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
+      "申請にあたり専門家による事前相談が推奨されているため、外部専門家の活用は成功率を大きく左右する",
+      "特に税理士などの専門家を通すことで、事業計画の策定がより強固になる"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "デジタル化による生産性向上という目的に直結する必須ツールであるため",
+      "業務効率化が審査における加点要素や実績報告の作成効率化に直結するため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "販路拡大に伴う請求業務の効率化は、生産性向上として高く評価されやすいため",
+      "インボイス対応などデジタル化の第一歩として最適だから"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "airpay",
-    "score": 63,
+    "toolSlug": "cost-reduction",
+    "score": 80,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "IT導入を促進する本補助金の趣旨に合致し、コスト削減による生産性向上が明確だから"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "補助金申請の複雑な要件をクリアし、採択率を最大化するための専門的知見が得られるため",
+      "経営革新計画などの加点項目に対するアドバイスを受けられるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "cashflow",
+    "score": 60,
+    "reasons": [
+      "補助金は後払いであるため、一時的な資金繰りが必要なケースにおいて有用だから"
     ]
   }
 ]
