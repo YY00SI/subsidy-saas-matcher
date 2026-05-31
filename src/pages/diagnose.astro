@@ -667,6 +667,13 @@ const pageDescription = '業種・従業員数・お困りごとを選ぶだけ�
     }
     const CONSULT_URL = 'https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=diagnose&utm_medium=cta&utm_content=consult';
     const SUBSIDY_LIST_URL = '/subsidy-saas-matcher/subsidies/?utm_source=diagnose&utm_medium=cta&utm_content=subsidy_list';
+    const NEEDS_GUIDE = {
+      accounting: '/subsidy-saas-matcher/needs/accounting/?utm_source=diagnose&utm_medium=result&utm_content=needs_accounting',
+      invoice: '/subsidy-saas-matcher/needs/invoice/?utm_source=diagnose&utm_medium=result&utm_content=needs_invoice',
+      expense: '/subsidy-saas-matcher/needs/cashflow/?utm_source=diagnose&utm_medium=result&utm_content=needs_cashflow',
+      payroll: '/subsidy-saas-matcher/subsidies/?tag=payroll&utm_source=diagnose&utm_medium=result&utm_content=needs_payroll',
+      cashflow: '/subsidy-saas-matcher/needs/cashflow/?utm_source=diagnose&utm_medium=result&utm_content=needs_cashflow'
+    };
 
     function select(btn, step) {
       btn.closest('.card').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
@@ -747,6 +754,15 @@ const pageDescription = '業種・従業員数・お困りごとを選ぶだけ�
           accounting: '使い慣れた弥生のインターフェースで、クラウド移行のハードルを最小化できます。',
           invoice: 'インボイス・電帳法対応も完備。弥生の豊富なサポートで安心して移行できます。',
           default: '30年以上の実績を持つ弥生のクラウド版。初めての会計ソフトにも最適です。'
+        },
+        'misoca-invoice': {
+          invoice: '見積書・納品書・請求書をまとめて管理でき、インボイス対応の手戻りを減らせます。',
+          default: '請求書発行を軽くし、実績報告に必要な証憑整理も進めやすくなります。'
+        },
+        'cloudphone': {
+          cashflow: '補助金で営業窓口を整える場合に、固定電話対応を低コストで始めやすい候補です。',
+          expense: '電話窓口の外注・設備費を抑えながら、問い合わせ対応の機会損失を減らせます。',
+          default: 'スマホで固定電話を扱えるため、創業直後や小規模チームの営業窓口に向いています。'
         }
       };
 
@@ -789,6 +805,15 @@ const pageDescription = '業種・従業員数・お困りごとを選ぶだけ�
         reason: '老舗会計ソフトのクラウド版。初めての会計ソフトにも最適。',
       },
       {
+        slug: 'misoca-invoice',
+        name: 'Misoca',
+        icon: '🧾',
+        tags: ['請求書', 'インボイス', '見積書'],
+        concerns: ['invoice', 'accounting'],
+        baseUrl: 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+7BR1RM+35XE+609HU',
+        reason: '請求書・見積書をクラウドで作成。インボイス対応と証憑整理を進めやすくします。',
+      },
+      {
         slug: 'no1-factoring',
         name: '株式会社No.1 ファクタリング',
         icon: '💳',
@@ -796,6 +821,15 @@ const pageDescription = '業種・従業員数・お困りごとを選ぶだけ�
         concerns: ['cashflow', 'expense'],
         baseUrl: 'https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6',
         reason: '補助金入金までの立替資金を、お手元の請求書で即日現金化。資金ショートを防ぎます。',
+      },
+      {
+        slug: 'cloudphone',
+        name: 'CLOUDPHONE',
+        icon: '☎️',
+        tags: ['固定電話', '営業窓口', 'IT導入補助金'],
+        concerns: ['cashflow', 'expense'],
+        baseUrl: 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+86PLZU+3SPO+9RATHU',
+        reason: 'スマホで固定電話対応を始められ、補助金導入後の問い合わせ窓口を整えやすいサービスです。',
       },
     ];
 
@@ -868,6 +902,28 @@ const pageDescription = '業種・従業員数・お困りごとを選ぶだけ�
             </div>
           `;
         });
+      }
+
+      const guideLinks = answers.concerns
+        .map(c => NEEDS_GUIDE[c] ? { concern: c, url: NEEDS_GUIDE[c] } : null)
+        .filter(Boolean)
+        .filter((item, index, array) => array.findIndex(other => other.url === item.url) === index)
+        .slice(0, 3);
+
+      if (guideLinks.length > 0) {
+        const labels = {
+          accounting: '会計ソフト導入ページを見る',
+          invoice: '請求書・インボイス対策を見る',
+          expense: '資金繰り対策ページを見る',
+          payroll: '給与・勤怠に近い補助金を見る',
+          cashflow: '補助金の後払い資金対策を見る'
+        };
+        html += `
+          <div class="section-label" style="margin-top:28px">次に読むべき導線</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            ${guideLinks.map(link => `<a href="${link.url}" style="display:inline-flex;padding:10px 14px;border-radius:10px;background:#eff6ff;color:#1e40af;font-weight:700;text-decoration:none;font-size:14px;">${labels[link.concern]}</a>`).join('')}
+          </div>
+        `;
       }
 
       html += `

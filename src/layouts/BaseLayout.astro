@@ -25,5 +25,17 @@ const { title, description } = Astro.props;
     </div>
     
     <Footer />
+    <script is:inline>
+      document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href*="px.a8.net"]');
+        if (!link || typeof gtag !== 'function') return;
+        gtag('event', 'a8_affiliate_click', {
+          affiliate_network: 'a8',
+          link_url: link.href,
+          link_text: link.textContent.trim().slice(0, 80),
+          page_path: location.pathname
+        });
+      });
+    </script>
   </body>
 </html>

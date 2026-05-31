@@ -22,8 +22,12 @@ const cloudphoneUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+86PLZU+3SPO+9RATHU
         ここを見落とすと、採択後に資金ショートして事業を進められません。
       </p>
       <div class="hero-actions">
-        <a href={no1Url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">最短即日の資金化を確認する</a>
-        <a href={`${base}cases/all-cashflow-improvement/`} class="btn btn-secondary">資金繰り事例を読む</a>
+        <a href={no1Url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">請求書を最短即日で現金化できるか確認</a>
+        <a href={`${base}cases/all-cashflow-improvement/`} class="btn btn-secondary">支払日から逆算した資金繰り事例を読む</a>
+      </div>
+      <div class="hero-note">
+        <strong>先に確認する順番</strong>
+        <span>支払日 → 入金予定月 → 不足額 → 資金化手段。補助金の採択前でも、この4点を決めておくと実績報告前の資金ショートを避けやすくなります。</span>
       </div>
     </section>
 
@@ -94,6 +98,9 @@ const cloudphoneUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+86PLZU+3SPO+9RATHU
   .hero h1 { max-width: 820px; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; margin: 1rem 0; color: var(--primary); }
   .hero p { max-width: 760px; color: var(--text-muted); line-height: 1.8; font-size: 1rem; }
   .hero-actions, .cta-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 1.5rem; }
+  .hero-note { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: start; max-width: 760px; margin-top: 1.25rem; padding: 1rem; border: 1px solid #bfdbfe; border-radius: 10px; background: #eff6ff; }
+  .hero-note strong { color: var(--primary); white-space: nowrap; }
+  .hero-note span { color: var(--text-muted); line-height: 1.7; font-size: 0.9rem; }
   .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem; }
   .glass-card { padding: 1.75rem; }
   .accent-card { border-left: 4px solid var(--accent); }
@@ -106,4 +113,7 @@ const cloudphoneUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+86PLZU+3SPO+9RATHU
   .steps span { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: white; font-weight: 800; }
   .steps h3 { margin: 0.8rem 0 0.4rem; color: var(--primary); }
   .compare { margin-top: 1.5rem; background: linear-gradient(135deg, #f8fafc, #eff6ff); }
+  @media (max-width: 640px) {
+    .hero-note { grid-template-columns: 1fr; }
+  }
 </style>
