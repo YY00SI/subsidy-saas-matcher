@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
 const no1Url = 'https://px.a8.net/svt/ejp?a8mat=4B1DXN+ADAT2Q+4EKW+BX3J6&utm_source=needs_cashflow&utm_medium=affiliate&utm_content=no1_factoring';
 const accountingUrl = 'https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF&utm_source=needs_cashflow&utm_medium=affiliate&utm_content=freee_accounting';
+const cloudphoneUrl = 'https://px.a8.net/svt/ejp?a8mat=4B1O1Q+86PLZU+3SPO+9RATHU&utm_source=needs_cashflow&utm_medium=affiliate&utm_content=cloudphone';
 ---
 
 <BaseLayout
@@ -31,6 +32,7 @@ const accountingUrl = 'https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF
         <h2>補助金で詰まりやすい支払い</h2>
         <ul class="check-list">
           <li>ITツールの初期費用・年額利用料</li>
+          <li>電話・問い合わせ窓口などの営業インフラ費</li>
           <li>ホームページ制作・広告運用費</li>
           <li>外注先への着手金・中間金</li>
           <li>設備購入費や導入支援費</li>
@@ -65,19 +67,20 @@ const accountingUrl = 'https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF
         <div>
           <span>3</span>
           <h3>資金化手段を先に確保する</h3>
-          <p>銀行融資、ファクタリング、法人カード、自己資金のどれで立て替えるかを決めます。</p>
+          <p>銀行融資、ファクタリング、法人カード、自己資金のどれで立て替えるかを決め、IT導入補助金対応ツールは補助金プランの有無も確認します。</p>
         </div>
       </div>
     </section>
 
     <section class="glass-card compare">
-      <h2>ファクタリングと会計管理を同時に見る</h2>
+      <h2>資金化・会計管理・営業インフラを同時に見る</h2>
       <p>
-        資金ショート対策だけでなく、補助金対象経費の証憑管理も重要です。請求書、領収書、振込履歴が整理されていないと、実績報告で時間を失います。
+        資金ショート対策だけでなく、補助金対象経費の証憑管理と、導入後に売上を受ける営業窓口も重要です。請求書、領収書、振込履歴が整理されていないと、実績報告で時間を失います。
       </p>
       <div class="cta-row">
         <a href={no1Url} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-primary">資金化を相談する</a>
         <a href={accountingUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">会計管理を整える</a>
+        <a href={cloudphoneUrl} target="_blank" rel="sponsored noopener noreferrer" class="btn btn-secondary">クラウド電話を確認する</a>
       </div>
     </section>
   </main>

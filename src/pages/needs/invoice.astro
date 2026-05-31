@@ -19,7 +19,7 @@ const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
 ---
 
 <BaseLayout title="インボイス・電帳法対応に使える補助金 | 補助金SaaSマッチャー"
-            description="インボイス制度・電子帳簿保存法への対応費用を補助金で賄う方法を解説。KANBEI SIGNやfreeeを補助金と組み合わせて導入する方法をご案内します。">
+            description="インボイス制度・電子帳簿保存法への対応費用を補助金で賄う方法を解説。Misoca、KANBEI SIGN、会計ソフトを補助金と組み合わせて導入する方法をご案内します。">
 
   <div class="container" style="max-width:860px; margin:0 auto; padding:2.5rem 1.5rem 4rem;">
 
@@ -47,7 +47,19 @@ const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
 
     <!-- おすすめツール -->
     <h2 style="font-size:1.25rem; font-weight:800; color:var(--primary); margin:0 0 1rem;">インボイス対応におすすめのツール</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; margin-bottom:2.5rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-bottom:2.5rem;">
+      <div class="glass-card" style="padding:1.25rem;">
+        <div style="margin-bottom:0.75rem;">
+          <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Invoice</span>
+        </div>
+        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">Misoca</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">見積書・納品書・請求書を一気通貫で作成。インボイス対応と郵送代行までまとめたい事業者向け。</p>
+        <a href={`https://px.a8.net/svt/ejp?a8mat=4B1O1Q+7BR1RM+35XE+609HU&utm_source=needs_invoice&utm_medium=affiliate&utm_content=misoca`}
+           target="_blank" rel="sponsored noopener noreferrer"
+           style="display:inline-block; padding:0.5rem 1rem; background:var(--accent); color:white; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.85rem;">
+          公式サイトで見る
+        </a>
+      </div>
       <div class="glass-card" style="padding:1.25rem;">
         <div style="margin-bottom:0.75rem;">
           <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Top Tool</span>
@@ -64,9 +76,9 @@ const categorySubsidies = subsidies.filter(s => s.tags?.includes(category));
         <div style="margin-bottom:0.75rem;">
           <span style="font-size:0.7rem; font-weight:700; color:white; background:var(--accent); padding:0.2rem 0.6rem; border-radius:999px;">Top Tool</span>
         </div>
-        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">freee会計</h3>
-        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">【補助金プラン対応】インボイス・電帳法に完全対応。銀行連携で仕訳を自動生成。</p>
-        <a href={`https://px.a8.net/svt/ejp?a8mat=4AZS0X+6GSIB6+3SPO+9FGXPF&utm_source=needs_invoice&utm_medium=affiliate&utm_content=freee`}
+        <h3 style="font-size:1rem; font-weight:700; color:var(--primary); margin:0 0 0.5rem;">弥生シリーズ</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0 0 1rem; line-height:1.6;">会計・給与・請求書を弥生ブランドで揃えたい事業者向け。無料体験から移行しやすく、実績報告の証憑整理にも向きます。</p>
+        <a href={`https://px.a8.net/svt/ejp?a8mat=4B1O1Q+7BR1RM+35XE+609HU&utm_source=needs_invoice&utm_medium=affiliate&utm_content=yayoi`}
            target="_blank" rel="sponsored noopener noreferrer"
            style="display:inline-block; padding:0.5rem 1rem; background:var(--accent); color:white; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.85rem;">
           公式サイトで見る
