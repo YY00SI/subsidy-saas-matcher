@@ -1,0 +1,14 @@
+{
+  "id": "gen-9",
+  "subsidy_name": "サイバーセキュリティ対策促進助成金",
+  "use_purpose": "セキュリティソフト、ネットワーク監視ツールの導入",
+  "target_area_search": "東京都",
+  "content": "企業へのサイバー攻撃リスクを低減するため、UTM（統合脅威管理）やエンドポイントセキュリティ（EDR等のSaaS）の導入を支援します。",
+  "target_person": "都内中小企業",
+  "target_number_of_employees": "規定なし",
+  "max_limit": "1500万円",
+  "subsidy_rate": "1/2",
+  "acceptance_start_datetime": "2024-06-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2024-12-31T23:59:59.000Z",
+  "office": "東京都中小企業振興公社"
+}

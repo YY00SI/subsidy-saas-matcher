@@ -1,0 +1,14 @@
+{
+  "id": "gen-6",
+  "subsidy_name": "業務改善助成金",
+  "use_purpose": "最低賃金引き上げ、生産性向上機器・ソフト導入",
+  "target_area_search": "全国",
+  "content": "事業場内の最低賃金を引き上げ、設備投資（機械設備、POSシステム等の導入）などを行った場合に、その費用の一部を助成します。POSレジや労務管理SaaSなどを導入し、作業効率を上げる場合に最適です。",
+  "target_person": "中小企業、小規模事業者",
+  "target_number_of_employees": "100名以下",
+  "max_limit": "600万円",
+  "subsidy_rate": "3/4 〜 9/10",
+  "acceptance_start_datetime": "2024-04-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2025-01-31T23:59:59.000Z",
+  "office": "厚生労働省"
+}

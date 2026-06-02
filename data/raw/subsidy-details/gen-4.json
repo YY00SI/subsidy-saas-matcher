@@ -1,0 +1,14 @@
+{
+  "id": "gen-4",
+  "subsidy_name": "事業再構築補助金",
+  "use_purpose": "業態転換、新分野展開に伴うシステム構築",
+  "target_area_search": "全国",
+  "content": "新しいビジネスモデルへの転換期において、バックオフィスのSaaS導入を含めた大規模なシステム投資を支援します。新事業展開時の顧客管理や売上管理システムの刷新に最適です。",
+  "target_person": "中小企業等",
+  "target_number_of_employees": "中小企業等",
+  "max_limit": "2000万円",
+  "subsidy_rate": "1/2 または 2/3",
+  "acceptance_start_datetime": "2024-04-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2025-03-31T23:59:59.000Z",
+  "office": "事業再構築補助金事務局"
+}

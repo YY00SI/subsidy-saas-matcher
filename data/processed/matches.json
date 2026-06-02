@@ -1,146 +1,170 @@
 [
   {
-    "subsidyId": "a0WJ200000CDM1EMAX",
-    "toolSlug": "consulting",
-    "score": 70,
+    "subsidyId": "gen-1",
+    "toolSlug": "accounting",
+    "score": 98,
     "reasons": [
-      "研究開発型の補助金は公募要領が複雑かつ専門的です。申請書類の精度を上げ、採択率を高めるためには専門家の助言が不可欠であり、親和性が高いです。"
+      "IT導入補助金の主目的であるDX推進、インボイス対応、電帳法対応に直結する基幹システムであるため。",
+      "クラウド会計は補助対象ツールの筆頭であり、採択後の業務改善効果が極めて高いため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 85,
+    "subsidyId": "gen-1",
+    "toolSlug": "invoice",
+    "score": 95,
     "reasons": [
-      "複雑な助成金の申請手続きや研修計画の策定において、専門家の知見を借りることは採択率向上に直結するため。"
+      "インボイス制度対応を強力にサポートするツールであり、補助金の目的と完全に一致しているため。",
+      "導入による事務作業の効率化という明確な投資対効果が見込めるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXvUMAX",
+    "subsidyId": "gen-1",
     "toolSlug": "consulting",
     "score": 90,
     "reasons": [
-      "東京都医療DX人材育成支援事業のような専門的な要件がある補助金では、申請ノウハウを持つ専門家のサポートが採択率を劇的に向上させるため。"
+      "補助金申請には専門的な知識が必要であり、プロのサポートを受けることで採択率を劇的に向上できるため。",
+      "申請手続きの複雑さを解消し、経営者が本業に集中するための有効な投資となるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
+    "subsidyId": "gen-1",
+    "toolSlug": "cashflow",
+    "score": 75,
+    "reasons": [
+      "補助金の性質上、入金までのタイムラグによる資金繰り悪化を防ぐためのつなぎ資金として極めて有効なため。",
+      "事業継続という経営の基盤を安定させるために必要不可欠なサービスであるため。"
+    ]
+  },
+  {
+    "subsidyId": "gen-1",
+    "toolSlug": "cost-reduction",
     "score": 70,
     "reasons": [
-      "accountingカテゴリ一致"
+      "通信インフラの刷新はDXの土台であり、コスト削減を通じた利益体質への転換に寄与するため。",
+      "リモートワーク環境の整備という観点から、生産性向上に資すると判断できるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "subsidyId": "gen-10",
+    "toolSlug": "cashflow",
+    "score": 60,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "助成金は後払いであるため、正社員化に伴う給与支払い原資の確保において、即時資金化が経営的な安定に寄与する可能性がある。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "subsidyId": "gen-10",
+    "toolSlug": "consulting",
+    "score": 95,
     "reasons": [
-      "accountingカテゴリ一致"
+      "助成金の申請には複雑な労務規定の整備が必要であり、専門家のサポートを受けることが採択および確実な受給への最短ルートとなる。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "subsidyId": "gen-2",
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "インボイス制度対応が必須課題であるため会計ソフトとの相性が極めて高い",
+      "持続化補助金の目的であるバックオフィス効率化に直結する"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
+    "subsidyId": "gen-2",
+    "toolSlug": "invoice",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "インボイス制度対応を強力にサポートするため補助金の趣旨と完璧に合致する",
+      "請求業務のデジタル化は販路開拓と同等に優先度が高い"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDZzBMAX",
-    "toolSlug": "freee-accounting",
+    "subsidyId": "gen-2",
+    "toolSlug": "cashflow",
     "score": 70,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助金の後払い特性による資金ショートを補うため、経営の継続性を守るという観点で有用"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDZzBMAX",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "subsidyId": "gen-2",
+    "toolSlug": "cost-reduction",
+    "score": 60,
     "reasons": [
-      "accountingカテゴリ一致"
+      "業務インフラのデジタル化において、通信環境の整備やスマホ内線化は不可欠なDX投資であるため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDZzBMAX",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
+    "subsidyId": "gen-2",
+    "toolSlug": "consulting",
+    "score": 80,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助金申請には専門的知識が必要であり、税理士紹介による採択率の向上が見込めるため"
+    ]
+  },
+  {
+    "subsidyId": "gen-3",
+    "toolSlug": "accounting",
+    "score": 90,
+    "reasons": [
+      "ものづくり補助金のDX推進要件に対し、高度な会計管理は生産性向上に直結する必須インフラであるため。",
+      "バックオフィス業務の大幅な改善という補助金の目的と完全に合致している。"
+    ]
+  },
+  {
+    "subsidyId": "gen-3",
+    "toolSlug": "invoice",
+    "score": 85,
+    "reasons": [
+      "請求書や契約書のデジタル化は『業務システムの大幅な改善』に該当し、補助金の採択要件を満たしやすいカテゴリーであるため。"
+    ]
+  },
+  {
+    "subsidyId": "gen-3",
+    "toolSlug": "consulting",
+    "score": 95,
+    "reasons": [
+      "ものづくり補助金は要件が複雑であり、専門家のコンサルティングを受けることは採択率を劇的に向上させる戦略的投資となるため。"
+    ]
+  },
+  {
+    "subsidyId": "gen-7",
+    "toolSlug": "accounting",
+    "score": 75,
+    "reasons": [
+      "勤怠管理や業務効率化ツールとの連携により、労働時間の可視化とバックオフィスDXを同時に推進できるため。"
+    ]
+  },
+  {
+    "subsidyId": "gen-7",
+    "toolSlug": "cashflow",
+    "score": 60,
+    "reasons": [
+      "補助金は後払いであるため、テレワーク環境構築等の先行投資資金を補填する目的で一定の有用性がある。"
+    ]
+  },
+  {
+    "subsidyId": "gen-7",
+    "toolSlug": "cost-reduction",
+    "score": 90,
+    "reasons": [
+      "テレワーク導入に必須となる通信環境の整備や、場所を選ばない電話環境構築は本助成金の対象項目と極めて親和性が高いため。"
+    ]
+  },
+  {
+    "subsidyId": "gen-7",
+    "toolSlug": "invoice",
+    "score": 50,
+    "reasons": [
+      "請求書業務の効率化は労働時間削減に寄与するが、本助成金の主目的であるテレワークや労働時間短縮の直接的なソリューションとはやや距離がある。"
+    ]
+  },
+  {
+    "subsidyId": "gen-7",
+    "toolSlug": "consulting",
+    "score": 95,
+    "reasons": [
+      "複雑な申請要件を満たし、確実な採択と助成金受給を目指すためには、専門家のサポートが不可欠であるため。"
     ]
   }
 ]

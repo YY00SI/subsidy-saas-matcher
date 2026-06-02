@@ -1,0 +1,14 @@
+{
+  "id": "gen-10",
+  "subsidy_name": "キャリアアップ助成金（正社員化コース）",
+  "use_purpose": "非正規雇用の正社員化、労務管理改善",
+  "target_area_search": "全国",
+  "content": "有期雇用労働者などの多様な働き方をする労働者の企業内でのキャリアアップを促進するため、正社員化や処遇改善を実施した事業主を助成します。評価制度システム機能を持つ人事労務SaaSとの親和性が高い助成金です。",
+  "target_person": "中小企業",
+  "target_number_of_employees": "要件あり",
+  "max_limit": "80万円（1人あたり）",
+  "subsidy_rate": "定額",
+  "acceptance_start_datetime": "2024-04-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2025-03-31T23:59:59.000Z",
+  "office": "厚生労働省"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "gen-7",
+  "subsidy_name": "働き方改革推進支援助成金（労働時間短縮事例）",
+  "use_purpose": "労働時間削減、テレワークシステム導入",
+  "target_area_search": "全国",
+  "content": "時間外労働の削減や、有給休暇の取得促進に向けた環境整備（クラウド勤怠管理システムやWeb会議ツールの導入など）を行う中小企業を支援します。",
+  "target_person": "中小企業",
+  "target_number_of_employees": "労働者災害補償保険の適用事業主",
+  "max_limit": "250万円",
+  "subsidy_rate": "3/4",
+  "acceptance_start_datetime": "2024-04-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2024-11-30T23:59:59.000Z",
+  "office": "都道府県労働局"
+}
