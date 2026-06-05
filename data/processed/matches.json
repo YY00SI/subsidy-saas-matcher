@@ -1,13 +1,5 @@
 [
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 70,
-    "reasons": [
-      "補助金申請書類の作成サポートや、適切な研修計画の立案において、税理士等の専門家の知見が大きな力になるためです。"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -32,46 +24,11 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "賃上げ環境整備にはバックオフィスの生産性向上が不可欠であり、会計ソフトによる自動化が直接的な貢献をするため",
-      "経営数値の可視化が収益力向上という補助金の目的に合致するため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "販路拡大や取引業務の効率化にはインボイス対応等の請求書ツールが最適であるため",
-      "インボイス対応による管理コストの削減は、収益力向上の基盤となるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "cost-reduction",
-    "score": 80,
-    "reasons": [
-      "固定費削減は即座に利益率を向上させ、賃上げの原資を生み出す戦略的経営に直結するため",
-      "通信環境の整備はリモートワーク対応など働き方改革の一環として評価されるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
+    "subsidyId": "a0WJ200000CDXvUMAX",
     "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "補助金の採択には事業計画のブラッシュアップが重要であり、税理士による専門的な助言は非常に有効であるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "cashflow",
     "score": 60,
     "reasons": [
-      "補助金入金までのキャッシュフローを安定させることは成長投資を継続する上で重要だが、直接的な経営改善ツールではないため"
+      "補助金申請のプロセス自体や、医療DXの専門的知見を持つパートナー選定において専門家のサポートは有益である可能性があります。"
     ]
   },
   {
