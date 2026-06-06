@@ -24,14 +24,6 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "consulting",
-    "score": 60,
-    "reasons": [
-      "補助金申請のプロセス自体や、医療DXの専門的知見を持つパートナー選定において専門家のサポートは有益である可能性があります。"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -81,26 +73,97 @@
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "freee会計",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "デジタル化による生産性向上の目的に直結するバックオフィスDXツールであるため",
+      "補助金対象となるシステム利用料として認められやすく、日々の経営効率化に必須のため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "弥生会計 Next / 弥生シリーズ",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "高いシェアと実績があり、経営の見える化を実現できるため",
+      "生産性向上という本補助金のメインテーマに対して即効性が高いため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "airpay",
-    "score": 63,
+    "toolSlug": "マネーフォワード クラウド確定申告",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "クラウド型会計ソフトは本補助金の導入推奨対象として極めて相性が良いため",
+      "自動化による工数削減効果が明確であり、採択時の説得力を強められるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "税理士ドットコム",
+    "score": 90,
+    "reasons": [
+      "補助金の申請書類作成や経営革新計画の策定において専門家のサポートが不可欠なため",
+      "確実な採択を目指す経営者にとってリスクヘッジの観点から推奨度が高いため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "Misoca（ミソカ）",
+    "score": 85,
+    "reasons": [
+      "請求業務のデジタル化は販路拡大に伴う事務コスト削減に直結するため",
+      "インボイス対応など法改正対応を含めたDX推進として評価されやすいため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "CLOUDPHONE (クラウドフォン)",
+    "score": 85,
+    "reasons": [
+      "通信環境のDX化により柔軟な働き方と業務効率化を支援できるため",
+      "IT導入補助金対応ツールであり、生産性向上という要件をクリアしやすいため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "AirPAY (エアペイ)",
+    "score": 80,
+    "reasons": [
+      "店舗における決済DXとして販路拡大と生産性向上に寄与するため",
+      "IT導入補助金の枠組みと親和性が高く、導入コストを抑えて設備投資ができるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "KANBEI SIGN",
+    "score": 80,
+    "reasons": [
+      "電子契約の導入による印紙代削減と契約業務の効率化は、本補助金の生産性向上要件に合致するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "住信SBIネット銀行 法人口座",
+    "score": 70,
+    "reasons": [
+      "補助金受給のための管理口座として、手数料効率化とDXの基盤構築に役立つため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "オンライン即日振込ファクタリング (株式会社No.1)",
+    "score": 60,
+    "reasons": [
+      "補助金の入金までの資金繰り支援として活用価値はあるが、DXツールとしての直接的な補助対象性には確認が必要なため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "法人通信＜ソフトバンク正規取扱店＞",
+    "score": 50,
+    "reasons": [
+      "通信環境の整備は基盤改善として有効だが、本補助金のメインであるシステム導入と比較すると優先度がやや下がるため"
     ]
   },
   {
