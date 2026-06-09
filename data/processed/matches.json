@@ -1,92 +1,15 @@
 [
   {
-    "subsidyId": "a0W5h00000Zud9xEAB",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "研究開発の経費管理を適正に行うための基盤となるため",
-      "国プロジェクト等の公的な審査においてクリアな財務会計が求められるため"
-    ]
-  },
-  {
-    "subsidyId": "a0W5h00000Zud9xEAB",
-    "toolSlug": "consulting",
-    "score": 90,
-    "reasons": [
-      "国プロジェクトへの申請は高度な専門性が求められ、外部の税理士・専門家のサポートが採択率を劇的に向上させるため",
-      "補助金の活用だけでなく事業計画自体のブラッシュアップが可能になるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXrDMAX",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "賃上げ環境整備には精緻な経営数値の把握が不可欠であり、会計ソフトによるDX化は補助金の目的と直結するため。",
-      "バックオフィスの効率化による生産性向上が、賃上げの原資を生み出す根拠となるため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "販路拡大や収益力向上には、請求・契約業務のデジタル化による事務コストの削減が強く求められるため。",
-      "インボイス対応や電子契約化は、現代の中小企業が最優先で取り組むべきDXの基本であるため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
+    "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "consulting",
     "score": 85,
     "reasons": [
-      "本補助金は事業計画の策定が重要であり、税理士や専門家のサポートを受けることで採択率を劇的に高めることが可能なため。",
-      "複雑な申請プロセスをプロに委託することで、経営者は本来の事業成長に集中できるため。"
+      "人材育成に関連する補助金は要件が細かく、プロの助言が採択率を大きく左右するため。",
+      "申請から報告までの複雑な手続きを専門家に任せることで本来の事業に集中できるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "cost-reduction",
-    "score": 70,
-    "reasons": [
-      "通信環境の整備はテレワークや効率的な営業活動の基盤となり、収益性向上に寄与するため。",
-      "固定費削減による利益率の改善は、補助金の主目的である『賃上げ環境の整備』に直結するため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYC2MAP",
-    "toolSlug": "cashflow",
-    "score": 60,
-    "reasons": [
-      "補助金受給までのキャッシュフローの隙間を埋める手段として、事業継続性を高めるという点で一定の評価ができるため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
@@ -94,15 +17,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "yayoi-accounting-next",
     "score": 68,
     "reasons": [
@@ -110,27 +25,46 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDXrDMAX",
     "toolSlug": "moneyforward-tax",
     "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "補助対象事業として経理業務効率化が明記されており、インボイス対応も含むため最適です。",
+      "クラウド会計の導入はデジタル化支援の王道であり、採択の妥当性が非常に高いです。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "受発注管理や請求業務効率化は本補助金の対象項目に直結します。",
+      "インボイス制度への対応はデジタル化の主要目的の一つであり、高い評価が期待できます。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "cost-reduction",
+    "score": 80,
+    "reasons": [
+      "グループウェアやその他業務効率化ツールとして、リモートワークや通信環境のDX化を推進できます。",
+      "経費削減と効率化を両立できるため、事業目標との親和性が高いです。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "申請の際は事前相談が必須であり、専門家のサポートを得ることで採択率を劇的に高めることができます。"
     ]
   },
   {
