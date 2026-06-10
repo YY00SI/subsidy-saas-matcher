@@ -77,28 +77,6 @@
     "institution_name": null
   },
   {
-    "id": "a0WJ200000CDXrDMAX",
-    "name": "S-00008264",
-    "title": "【令和7年度補正予算】DX型CO2削減対策実行支援事業",
-    "target_area_search": "全国",
-    "subsidy_max_limit": 2000000,
-    "acceptance_start_datetime": "2026-03-19T03:00:00.000Z",
-    "acceptance_end_datetime": "2026-06-10T03:00:00.000Z",
-    "target_number_of_employees": "従業員数の制約なし",
-    "institution_name": null
-  },
-  {
-    "id": "a0WJ200000CDXr3MAH",
-    "name": "S-00008262",
-    "title": "【令和7年度補正予算】省CO2型システムへの改修支援事業",
-    "target_area_search": "全国",
-    "subsidy_max_limit": 500000000,
-    "acceptance_start_datetime": "2026-03-19T03:00:00.000Z",
-    "acceptance_end_datetime": "2026-06-10T03:00:00.000Z",
-    "target_number_of_employees": "従業員数の制約なし",
-    "institution_name": null
-  },
-  {
     "id": "a0WJ200000CDXEmMAP",
     "name": "S-00007945",
     "title": "令和８年度スキルアップ支援事業",
@@ -137,6 +115,17 @@
     "title": "令和８年度_国プロジェクトステップアップ支援事業",
     "target_area_search": "石川県",
     "subsidy_max_limit": 5000000,
+    "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
+    "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
+    "id": "a0W5h00000Zud9OEAR",
+    "name": "S-00004678",
+    "title": "令和８年度_研究開発支援事業",
+    "target_area_search": "石川県",
+    "subsidy_max_limit": 30000000,
     "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
     "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
     "target_number_of_employees": "従業員数の制約なし",

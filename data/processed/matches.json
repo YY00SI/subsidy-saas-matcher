@@ -1,15 +1,6 @@
 [
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "人材育成に関連する補助金は要件が細かく、プロの助言が採択率を大きく左右するため。",
-      "申請から報告までの複雑な手続きを専門家に任せることで本来の事業に集中できるため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXrDMAX",
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
@@ -17,7 +8,15 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXrDMAX",
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "yayoi-accounting-next",
     "score": 68,
     "reasons": [
@@ -25,46 +24,27 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXrDMAX",
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "moneyforward-tax",
     "score": 59.5,
     "reasons": [
       "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "補助対象事業として経理業務効率化が明記されており、インボイス対応も含むため最適です。",
-      "クラウド会計の導入はデジタル化支援の王道であり、採択の妥当性が非常に高いです。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "受発注管理や請求業務効率化は本補助金の対象項目に直結します。",
-      "インボイス制度への対応はデジタル化の主要目的の一つであり、高い評価が期待できます。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 80,
-    "reasons": [
-      "グループウェアやその他業務効率化ツールとして、リモートワークや通信環境のDX化を推進できます。",
-      "経費削減と効率化を両立できるため、事業目標との親和性が高いです。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "申請の際は事前相談が必須であり、専門家のサポートを得ることで採択率を劇的に高めることができます。"
     ]
   },
   {
