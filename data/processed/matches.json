@@ -1,64 +1,58 @@
 [
   {
-    "subsidyId": "a0W5h00000Zud9xEAB",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "研究開発・実証事業における財務管理の適正化のため必要",
-      "補助金受給後の適切な会計処理と経理業務の効率化に貢献"
-    ]
-  },
-  {
-    "subsidyId": "a0W5h00000Zud9xEAB",
+    "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "consulting",
     "score": 80,
     "reasons": [
-      "本補助金は国プロジェクトへの参画を前提とした高度な申請内容が求められるため、専門家の支援が採択率向上に寄与する",
-      "書類作成や事業計画の論理構築において外部専門家のノウハウが有用"
+      "助成金の申請手続きは煩雑であり、税理士や専門家のサポートを受けることで採択率を劇的に高めることが可能です。研修計画の策定相談においても有効です。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "tax-consultant-search",
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
-      "医療DX人材育成支援事業は専門的な要件が多く、申請や報告で専門家のサポートが不可欠であるため",
-      "補助金受給後の経理処理や税務アドバイスを併せて受けることが、経営の安定化に直結するため"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "補助金の公募要領で『経理業務効率化事業』が明記されており、会計ソフト導入は本補助金の中心的な対象であるため",
-      "バックオフィス業務のDX化は本補助金の目的である人手不足解消に直結する"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "インボイス対応システムや受発注管理の効率化は補助対象として具体的に挙げられている",
-      "小規模事業者の事務負担を直接的に軽減できるツールであり、採択時の説得力が高い"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 75,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "業務効率化に資するシステム導入として、通信環境の整備やクラウド電話の導入は認められる可能性があるため",
-      "コスト削減による経営体質強化は本補助金の趣旨に適う"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 70,
+    "toolSlug": "airpay",
+    "score": 63,
     "reasons": [
-      "公募要領に『認定支援機関での事前相談』が強く推奨されており、専門家による伴走支援は採択率を大きく向上させるため"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
@@ -127,6 +121,30 @@
   },
   {
     "subsidyId": "a0WJ200000CDZzBMAX",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
     "toolSlug": "moneyforward-tax",
     "score": 59.5,
     "reasons": [

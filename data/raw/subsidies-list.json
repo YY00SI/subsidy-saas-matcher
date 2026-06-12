@@ -33,6 +33,28 @@
     "institution_name": null
   },
   {
+    "id": "a0WJ200000CDaMQMA1",
+    "name": "S-00009298",
+    "title": "【令和8年度】省CO2型システムへの改修支援事業",
+    "target_area_search": "全国",
+    "subsidy_max_limit": 500000000,
+    "acceptance_start_datetime": "2026-06-12T03:00:00.000Z",
+    "acceptance_end_datetime": "2026-08-26T03:00:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
+    "id": "a0WJ200000CDaMLMA1",
+    "name": "S-00009297",
+    "title": "【令和8年度】DX型CO2削減対策実行支援事業",
+    "target_area_search": "全国",
+    "subsidy_max_limit": 2000000,
+    "acceptance_start_datetime": "2026-06-12T03:00:00.000Z",
+    "acceptance_end_datetime": "2026-08-26T03:00:00.000Z",
+    "target_number_of_employees": "従業員数の制約なし",
+    "institution_name": null
+  },
+  {
     "id": "a0WJ200000CDZXRMA5",
     "name": "S-00009219",
     "title": "令和7年度補正グローバルサウス未来志向型共創等事業（大型実証　ASEAN加盟国）",
@@ -84,50 +106,6 @@
     "subsidy_max_limit": 2500000,
     "acceptance_start_datetime": "2026-02-28T15:00:00.000Z",
     "acceptance_end_datetime": "2027-02-28T15:00:00.000Z",
-    "target_number_of_employees": "従業員数の制約なし",
-    "institution_name": null
-  },
-  {
-    "id": "a0WJ200000CDVyTMAX",
-    "name": "S-00007490",
-    "title": "令和8年度 宮崎県産業DX推進事業費補助金（導入タイプ）",
-    "target_area_search": "宮崎県",
-    "subsidy_max_limit": 2500000,
-    "acceptance_start_datetime": "2026-04-24T00:00:00.000Z",
-    "acceptance_end_datetime": "2026-06-12T14:59:00.000Z",
-    "target_number_of_employees": "従業員数の制約なし",
-    "institution_name": null
-  },
-  {
-    "id": "a0WJ200000CDM1EMAX",
-    "name": "S-00006413",
-    "title": "令和８年度_事業化可能性調査事業",
-    "target_area_search": "石川県",
-    "subsidy_max_limit": 2000000,
-    "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
-    "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
-    "target_number_of_employees": "従業員数の制約なし",
-    "institution_name": null
-  },
-  {
-    "id": "a0W5h00000Zud9xEAB",
-    "name": "S-00004681",
-    "title": "令和８年度_国プロジェクトステップアップ支援事業",
-    "target_area_search": "石川県",
-    "subsidy_max_limit": 5000000,
-    "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
-    "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
-    "target_number_of_employees": "従業員数の制約なし",
-    "institution_name": null
-  },
-  {
-    "id": "a0W5h00000Zud9OEAR",
-    "name": "S-00004678",
-    "title": "令和８年度_研究開発支援事業",
-    "target_area_search": "石川県",
-    "subsidy_max_limit": 30000000,
-    "acceptance_start_datetime": "2026-04-19T23:30:00.000Z",
-    "acceptance_end_datetime": "2026-06-12T07:00:00.000Z",
     "target_number_of_employees": "従業員数の制約なし",
     "institution_name": null
   },
