@@ -49,26 +49,47 @@
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "デジタル化による生産性向上という目的に直結する必須ツールであるため",
+      "バックオフィスの自動化は補助金の評価項目である『生産性向上』を直接的に証明できるため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "販路拡大・取引効率化の観点から請求書業務のデジタル化は最優先のDX施策であるため",
+      "IT導入補助金等のコンセプトと親和性が高く、採択に有利な業務改善ツールであるため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "airpay",
-    "score": 63,
+    "toolSlug": "consulting",
+    "score": 85,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "申請書類の品質が採択率を左右するため、専門家のサポートは投資対効果が高い",
+      "加点項目（経営革新計画等）の策定サポートを受けられる可能性があり、合格率が飛躍的に高まるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "cost-reduction",
+    "score": 75,
+    "reasons": [
+      "デジタル化に必要なインフラ整備として通信環境の最適化は重要であるため",
+      "固定費削減は経営体質の強化につながり、補助金の目的に合致する"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYU0MAP",
+    "toolSlug": "cashflow",
+    "score": 60,
+    "reasons": [
+      "補助金は後払い精算であるため、一時的なキャッシュフロー対策として経営上の安心材料になるため",
+      "事業継続性を高めるという点で一定の重要性がある"
     ]
   },
   {
@@ -97,29 +118,26 @@
   },
   {
     "subsidyId": "a0WJ200000CDZzBMAX",
-    "toolSlug": "accounting",
+    "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
-      "DXの基盤となるバックオフィス効率化に必須",
-      "労働生産性向上の観点でDX推進計画に組み込みやすい"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDZzBMAX",
-    "toolSlug": "invoice",
-    "score": 75,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "デジタル技術活用による業務効率化という補助目的と合致",
-      "インボイス対応や請求業務のDXはDXモデル創出に直結するため"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDZzBMAX",
-    "toolSlug": "consulting",
-    "score": 90,
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
     "reasons": [
-      "本補助金は産業支援機関の支援が必須条件であるため、税理士等の専門家による計画書策定支援が極めて重要",
-      "採択率を最大化させるためのDX推進計画書作成において強力なアドバイザーとなるため"
+      "accountingカテゴリ一致"
     ]
   },
   {
