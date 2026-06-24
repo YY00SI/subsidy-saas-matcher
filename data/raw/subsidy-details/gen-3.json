@@ -1,0 +1,14 @@
+{
+  "id": "gen-3",
+  "subsidy_name": "ものづくり・商業・サービス生産性向上促進補助金",
+  "use_purpose": "抜本的な業務改善、新サービス開発",
+  "target_area_search": "全国",
+  "content": "革新的な製品・サービス開発や、生産プロセス・業務システムの大幅な改善（DX化）に取り組むための設備投資・システム投資を補助します。高度なERPやAI搭載SaaSなどの導入にも対応します。",
+  "target_person": "中小企業等の法人",
+  "target_number_of_employees": "中小企業・小規模事業者",
+  "max_limit": "1250万円",
+  "subsidy_rate": "1/2",
+  "acceptance_start_datetime": "2024-01-01T00:00:00.000Z",
+  "acceptance_end_datetime": "2024-12-31T23:59:59.000Z",
+  "office": "ものづくり補助金事務局"
+}

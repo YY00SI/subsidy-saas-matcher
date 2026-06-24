@@ -1,6 +1,6 @@
 [
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "gen-1",
     "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
@@ -8,7 +8,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "gen-1",
     "toolSlug": "kanbei-sign",
     "score": 69,
     "reasons": [
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "gen-1",
     "toolSlug": "yayoi-accounting-next",
     "score": 68,
     "reasons": [
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "gen-1",
     "toolSlug": "misoca-invoice",
     "score": 65,
     "reasons": [
@@ -32,7 +32,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "gen-1",
     "toolSlug": "airpay",
     "score": 63,
     "reasons": [
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "gen-1",
     "toolSlug": "moneyforward-tax",
     "score": 59.5,
     "reasons": [
@@ -48,265 +48,77 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYU0MAP",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDZxtMAH",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDZxtMAH",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDZxtMAH",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaphMAD",
-    "toolSlug": "accounting",
+    "subsidyId": "gen-10",
+    "toolSlug": "consulting",
     "score": 90,
     "reasons": [
-      "再チャレンジに向けた事業計画作成において、正確な財務データの可視化は不可欠です。",
-      "経営分析機能が充実しており、収益性向上を目指す新たな事業の基盤構築に直結します。"
+      "キャリアアップ助成金は就業規則の改定や複雑な申請書類の作成が必須であり、専門家のサポートが採択を左右する",
+      "労務に強い税理士や社労士と繋がることで、ミスのない申請と事業の適正化を同時に進められるため最高評価"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDaphMAD",
+    "subsidyId": "gen-2",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "gen-2",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "gen-2",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "gen-4",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "業態転換に伴うバックオフィスの刷新において、会計の自動化は必須要件であるため",
+      "事業再構築補助金のシステム導入要件との親和性が非常に高い"
+    ]
+  },
+  {
+    "subsidyId": "gen-4",
     "toolSlug": "cashflow",
+    "score": 90,
+    "reasons": [
+      "事業再構築補助金は後払い精算であるため、新事業開始時の資金ショートを即座に解消できる点は経営継続の命綱となるため"
+    ]
+  },
+  {
+    "subsidyId": "gen-4",
+    "toolSlug": "invoice",
     "score": 85,
     "reasons": [
-      "廃業・再チャレンジの過程では一時的なキャッシュフローの悪化が伴いやすいため、即日の資金化は事業継続の生命線となります。",
-      "補助金交付までのタイムラグを埋める実用的なソリューションです。"
+      "新事業展開時の売上管理や請求業務のデジタル化は、業務効率化の観点から補助対象となるシステム投資として適しているため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDaphMAD",
-    "toolSlug": "consulting",
-    "score": 95,
-    "reasons": [
-      "本補助金は認定支援機関の確認が必須要件となっており、専門家のサポートが採択率を劇的に引き上げます。",
-      "申請書類の不備は不採択の最大要因であるため、プロの知見は不可欠です。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaphMAD",
-    "toolSlug": "invoice",
-    "score": 70,
-    "reasons": [
-      "再スタートする事業において、バックオフィス業務をクラウド化し、最初から生産性を最大化する環境構築に貢献します。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaphMAD",
+    "subsidyId": "gen-4",
     "toolSlug": "cost-reduction",
-    "score": 60,
+    "score": 75,
     "reasons": [
-      "新たな事業基盤を作る際の固定費削減として有効ですが、本補助金の直接的な目的とはやや優先順位が異なります。"
+      "新拠点やリモートワーク構築を伴う事業転換において、通信インフラの刷新はDX基盤の整備として有効であるため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDapiMAD",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "事業承継後の経営管理の適正化には必須の基盤ツールとなる",
-      "統合後の財務状況を迅速に把握することで、補助金の事業化状況報告もスムーズに行える"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapiMAD",
-    "toolSlug": "invoice",
-    "score": 50,
-    "reasons": [
-      "M&Aによって新たに発生した取引先との請求業務を効率化できる",
-      "インボイス制度対応を確実にし、会社組織としての信頼性を引き継ぐために重要"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapiMAD",
+    "subsidyId": "gen-4",
     "toolSlug": "consulting",
     "score": 95,
     "reasons": [
-      "本補助金は申請手続きが複雑であり、税理士による専門的なサポートが成功率を劇的に高める",
-      "特に有償での申請代行依頼には行政書士等の専門家が必須であり、その選定にも有効"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapjMAD",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapjMAD",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapjMAD",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapkMAD",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapkMAD",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapkMAD",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaplMAD",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaplMAD",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaplMAD",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapmMAD",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapmMAD",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapmMAD",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
+      "専門家のサポートは採択率を飛躍的に高めるため、数千万円規模の投資を行う再構築補助金においては最も優先すべき投資であるため"
     ]
   }
 ]
