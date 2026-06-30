@@ -132,17 +132,6 @@
     "title": "【令和8年度】DX型CO2削減対策実行支援事業"
   },
   {
-    "acceptance_end_datetime": "2026-06-30T03:00:00.000Z",
-    "acceptance_start_datetime": "2026-06-01T03:00:00.000Z",
-    "id": "a0WJ200000CDZXRMA5",
-    "institution_name": null,
-    "name": "S-00009219",
-    "subsidy_max_limit": 4000000000,
-    "target_area_search": "全国",
-    "target_number_of_employees": "従業員数の制約なし",
-    "title": "令和7年度補正グローバルサウス未来志向型共創等事業（大型実証　ASEAN加盟国）"
-  },
-  {
     "acceptance_end_datetime": "2026-07-03T08:00:00.000Z",
     "acceptance_start_datetime": "2026-06-03T15:00:00.000Z",
     "id": "a0WJ200000CDZWsMAP",
@@ -152,28 +141,6 @@
     "target_area_search": "東京都",
     "target_number_of_employees": "従業員数の制約なし",
     "title": "令和８年度第１回募集　課題解決型技術開発促進事業（試作品開発・改良助成）"
-  },
-  {
-    "acceptance_end_datetime": "2026-06-30T03:00:00.000Z",
-    "acceptance_start_datetime": "2026-06-01T03:00:00.000Z",
-    "id": "a0WJ200000CDZCFMA5",
-    "institution_name": null,
-    "name": "S-00009193",
-    "subsidy_max_limit": 4000000000,
-    "target_area_search": "全国",
-    "target_number_of_employees": "従業員数の制約なし",
-    "title": "令和７年度補正グローバルサウス未来志向型共創等事業費補助金（大型実証 非ＡＳＥＡＮ加盟国）"
-  },
-  {
-    "acceptance_end_datetime": "2026-06-30T08:00:00.000Z",
-    "acceptance_start_datetime": "2026-06-01T01:00:00.000Z",
-    "id": "a0WJ200000CDYC2MAP",
-    "institution_name": null,
-    "name": "S-00008544",
-    "subsidy_max_limit": 10000000,
-    "target_area_search": "静岡県",
-    "target_number_of_employees": "900名以下",
-    "title": "中小企業等収益力向上（賃上げ環境整備）事業費補助金"
   },
   {
     "acceptance_end_datetime": "2027-02-28T15:00:00.000Z",
