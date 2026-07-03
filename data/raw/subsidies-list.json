@@ -99,17 +99,6 @@
     "title": "【久留米市】久留米市小規模事業者デジタル化支援補助金（令和８年度）"
   },
   {
-    "acceptance_end_datetime": "2026-07-03T08:00:00.000Z",
-    "acceptance_start_datetime": "2026-06-19T08:00:00.000Z",
-    "id": "a0WJ200000CDapxMAD",
-    "institution_name": null,
-    "name": "S-00009350",
-    "subsidy_max_limit": 300000000,
-    "target_area_search": "全国",
-    "target_number_of_employees": "従業員数の制約なし",
-    "title": "令和7年度補正 デジタルライフライン整備加速事業（地下埋設物等の設備データ整備事業）"
-  },
-  {
     "acceptance_end_datetime": "2026-08-26T03:00:00.000Z",
     "acceptance_start_datetime": "2026-06-12T03:00:00.000Z",
     "id": "a0WJ200000CDaMQMA1",
@@ -130,17 +119,6 @@
     "target_area_search": "全国",
     "target_number_of_employees": "従業員数の制約なし",
     "title": "【令和8年度】DX型CO2削減対策実行支援事業"
-  },
-  {
-    "acceptance_end_datetime": "2026-07-03T08:00:00.000Z",
-    "acceptance_start_datetime": "2026-06-03T15:00:00.000Z",
-    "id": "a0WJ200000CDZWsMAP",
-    "institution_name": null,
-    "name": "S-00009210",
-    "subsidy_max_limit": 20000000,
-    "target_area_search": "東京都",
-    "target_number_of_employees": "従業員数の制約なし",
-    "title": "令和８年度第１回募集　課題解決型技術開発促進事業（試作品開発・改良助成）"
   },
   {
     "acceptance_end_datetime": "2027-02-28T15:00:00.000Z",
