@@ -88,6 +88,17 @@
     "title": "令和８年度東京都医療ＤＸ人材育成支援事業"
   },
   {
+    "acceptance_end_datetime": "2026-08-07T15:00:00.000Z",
+    "acceptance_start_datetime": "2026-07-09T00:00:00.000Z",
+    "id": "a0WJ200000CDcQsMAL",
+    "institution_name": null,
+    "name": "S-00009439",
+    "subsidy_max_limit": 5000000,
+    "target_area_search": "全国 / 宮崎県",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "物価高騰対策ＤＸ推進事業費補助金（戦略的DX推進事業）"
+  },
+  {
     "acceptance_end_datetime": "2026-12-28T08:15:00.000Z",
     "acceptance_start_datetime": "2026-06-23T23:30:00.000Z",
     "id": "a0WJ200000CDbpCMAT",
@@ -130,17 +141,6 @@
     "target_area_search": "東京都",
     "target_number_of_employees": "従業員数の制約なし",
     "title": "令和８年度スキルアップ支援事業"
-  },
-  {
-    "acceptance_end_datetime": "2026-07-09T03:00:00.000Z",
-    "acceptance_start_datetime": "2026-06-19T03:00:00.000Z",
-    "id": "a0WJ200000CDbFwMAL",
-    "institution_name": null,
-    "name": "S-00009374",
-    "subsidy_max_limit": 200000000,
-    "target_area_search": "全国",
-    "target_number_of_employees": "従業員数の制約なし",
-    "title": "令和８年度「原子力産業基盤強化事業補助金」（二次公募）"
   },
   {
     "acceptance_end_datetime": "2026-07-21T03:00:00.000Z",
