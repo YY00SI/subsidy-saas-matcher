@@ -165,6 +165,28 @@
     "title": "令和８年度スキルアップ支援事業"
   },
   {
+    "acceptance_end_datetime": "2027-03-31T14:59:00.000Z",
+    "acceptance_start_datetime": "2025-07-25T00:00:00.000Z",
+    "id": "a0WJ200000CDRArMAP",
+    "institution_name": null,
+    "name": "S-00006978",
+    "subsidy_max_limit": 141000,
+    "target_area_search": "東京都",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "令和７年度こどもDX推進に向けた医療機関等におけるマイナンバーカード利活用推進事業補助金"
+  },
+  {
+    "acceptance_end_datetime": "2027-03-31T14:59:00.000Z",
+    "acceptance_start_datetime": "2024-09-27T00:00:00.000Z",
+    "id": "a0WJ20000087jeOMAQ",
+    "institution_name": null,
+    "name": "S-00005217",
+    "subsidy_max_limit": 141000,
+    "target_area_search": "東京都",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "令和６年度こどもDX推進に向けた医療機関等におけるマイナンバーカード利活用推進事業補助金"
+  },
+  {
     "acceptance_end_datetime": "2026-08-19T08:00:00.000Z",
     "acceptance_start_datetime": "2026-07-14T00:00:00.000Z",
     "id": "a0WJ200000CDYirMAH",

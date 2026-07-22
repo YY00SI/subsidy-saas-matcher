@@ -1,14 +1,6 @@
 [
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ20000087jeOMAQ",
     "toolSlug": "kanbei-sign",
     "score": 69,
     "reasons": [
@@ -16,15 +8,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ20000087jeOMAQ",
     "toolSlug": "misoca-invoice",
     "score": 65,
     "reasons": [
@@ -32,7 +16,31 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ20000087jeOMAQ",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDRArMAP",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDRArMAP",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDRArMAP",
     "toolSlug": "airpay",
     "score": 63,
     "reasons": [
@@ -41,64 +49,128 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "補助金事業の『経理業務効率化事業』と完全合致し、IT導入の恩恵が最も大きいツールであるため",
+      "インボイス制度対応など、補助目的である業務効率化に直結するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "請求業務のDXは補助金の主要対象であり、導入コストと効率化のバランスが良いため",
+      "営業・経理業務の効率化という目的を最短で達成できるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "cost-reduction",
+    "score": 75,
+    "reasons": [
+      "通信環境の整備は業務効率化の一部として認められやすく、固定費削減の側面からも評価が高いため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "本補助金は専門家による事前相談が推奨されているため、税理士等の専門家紹介は採択成功の要となるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "補助金要件である『生産性向上』に必須のバックオフィス効率化ツール",
+      "起業直後の個人事業主や法人の経理業務をデジタル化し、経営判断を迅速化するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "デジタル技術活用による『利便性向上』という補助金要件に直結する",
+      "インボイス対応や見積請求の効率化は、事業立ち上げ時の事務負荷軽減に極めて有効"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "cashflow",
+    "score": 85,
+    "reasons": [
+      "補助金受領までのタイムラグを埋める資金繰り改善策として、起業家の生存率を高める",
+      "創業時のキャッシュフロー安定化は、地域課題解決という長期プロジェクトにおいて非常に重要"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "補助金申請書類には『事業の実現可能性』と『デジタル技術活用計画』の高度な記述が必要であり、専門家の助言が採択率を左右する",
+      "特に起業家にとって、申請業務のサポートは貴重な時間をコア事業に集中させるために必要"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "cost-reduction",
+    "score": 75,
+    "reasons": [
+      "固定電話のクラウド化や法人通信環境の整備は、小規模・地域密着の事業運営においてDX基盤として機能する"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
       "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "税理士ドットコム",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDapgMAD",
+    "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
-      "本補助金は公募要領が複雑であり、専門的な知見を持つ税理士によるサポートが採択率向上に直結する",
-      "申請書類の適正化において高い付加価値がある"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "accounting",
-    "score": 90,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "事業承継やM&A後の新体制では、財務の透明性と効率化が不可欠です。",
-      "会計ソフトはバックオフィス統合の核であり、生産性向上を証明するDXツールとして最適です。"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "invoice",
-    "score": 85,
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
     "reasons": [
-      "事業統合時の請求書業務の統一化は、経営効率を劇的に高めます。",
-      "デジタル化によるインボイス対応は、生産性向上を掲げる本補助金の目的と合致しています。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "consulting",
-    "score": 95,
-    "reasons": [
-      "事業承継という複雑なプロセスにおいて、専門家のサポートは採択率を左右する最重要事項です。",
-      "税理士等の専門家は、申請における正確性や経営資源引継ぎの適正な計画策定に寄与します。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "cashflow",
-    "score": 60,
-    "reasons": [
-      "M&Aや事業承継後の初期段階における一時的な運転資金確保の手段として有効です。",
-      "補助金の入金までの期間を繋ぐキャッシュフロー改善策として、経営の安定化に寄与します。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDapgMAD",
-    "toolSlug": "cost-reduction",
-    "score": 50,
-    "reasons": [
-      "統合後の拠点の通信環境整備や電話インフラの刷新は、管理コスト削減に直結します。",
-      "あくまで経営基盤の改善項目としての必要性が認められる範囲内での導入となります。"
+      "accountingカテゴリ一致"
     ]
   },
   {
@@ -127,20 +199,26 @@
   },
   {
     "subsidyId": "a0WJ200000CDapiMAD",
-    "toolSlug": "accounting",
-    "score": 60,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "事業承継やM&A後の新体制において、会計基盤の統合や可視化は経営効率化の第一歩であるため一定の相性がある。",
-      "ただし、本補助金の主目的である『専門家活用によるM&A実施』と直接的なツール連携はない。"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDapiMAD",
-    "toolSlug": "consulting",
-    "score": 95,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "本補助金は行政書士等の専門家活用が申請要件やサポートの鍵を握っており、税理士等の紹介サービスは極めて親和性が高い。",
-      "申請内容の不備による不採択を防ぐため、専門家の知見を借りることは事業承継成功に向けた最良の選択肢である。"
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDapiMAD",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
@@ -285,42 +363,6 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDcQsMAL",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "労働生産性の向上という補助金目的に対し、バックオフィスの効率化は直結する。",
-      "デジタル化によるデータ活用が推奨されており、クラウド会計はDXの第一歩として最適。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDcQsMAL",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "請求・管理業務の自動化は、生産性向上要件をクリアするための即効性の高いDX施策である。",
-      "インボイス制度対応なども含め、小規模事業者の事務負担を劇的に軽減できる。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDcQsMAL",
-    "toolSlug": "cost-reduction",
-    "score": 80,
-    "reasons": [
-      "物価高騰対策としてコスト削減は重要であり、DXによる通信環境改善は補助対象事業として親和性が高い。",
-      "労働環境の改善（リモートワーク推進等）を目的とする場合に有効。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDcQsMAL",
-    "toolSlug": "consulting",
-    "score": 75,
-    "reasons": [
-      "申請要件が具体的かつ厳格（セキュリティアクション★★の取得等）であり、専門家のサポートは採択率向上に寄与する。",
-      "補助金の計画策定を伴うDX推進において、専門的な知見が経営基盤強化に繋がる。"
     ]
   }
 ]
