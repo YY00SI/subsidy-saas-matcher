@@ -96,6 +96,42 @@
     ]
   },
   {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "起業時の経営管理には会計ソフトの導入が必須であり、本補助金のデジタル技術活用要件に合致する",
+      "事業の自律的な継続を目指す上で、正確な会計基盤は最優先で整えるべき経営要素である"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "インボイス制度への対応や請求業務のデジタル化は、本事業が求める『生産性向上・顧客の利便性向上』に直結する",
+      "開業直後からペーパーレスかつ効率的な請求フローを構築できる"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "cashflow",
+    "score": 80,
+    "reasons": [
+      "補助金は後払いが基本であるため、起業初期のキャッシュフロー対策は事業の存続に直結する",
+      "地域課題解決という社会的意義のある事業を安定して継続させるための強力な支えとなる"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "起業・補助金申請に不慣れな場合、専門家のサポートが採択率を劇的に向上させる",
+      "事業計画の精査において第三者の客観的な視点を得ることは、自律的な事業継続の可能性を高める"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDaMLMA1",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -145,44 +181,26 @@
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "デジタル化支援の核心であるバックオフィス業務効率化に最適",
-      "クラウド利用料として本補助金の対象経費に合致しやすい"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "インボイス制度対応を含む業務効率化はデジタル化の必須要件",
-      "ウェブサイト・システム開発費との併用で高い導入効果が見込める"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cost-reduction",
-    "score": 85,
+    "toolSlug": "airpay",
+    "score": 63,
     "reasons": [
-      "店舗や拠点のデジタル環境整備に直結し、市の目的であるDX推進と親和性が高い"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "consulting",
-    "score": 80,
-    "reasons": [
-      "補助金申請にはアドバイザーの提案が必要であり、専門家の助言を得ることで採択率向上が期待できる"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cashflow",
-    "score": 60,
-    "reasons": [
-      "補助金の入金までの資金繰り確保として有用だが、今回の補助金の直接的対象外のため補完的役割に留まる"
+      "invoiceカテゴリ一致"
     ]
   }
 ]
