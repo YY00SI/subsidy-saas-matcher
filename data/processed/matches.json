@@ -49,110 +49,46 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYirMAH",
     "toolSlug": "accounting",
     "score": 95,
     "reasons": [
-      "起業時の経営管理には会計ソフトの導入が必須であり、本補助金のデジタル技術活用要件に合致する",
-      "事業の自律的な継続を目指す上で、正確な会計基盤は最優先で整えるべき経営要素である"
+      "補助対象事業として『経理業務効率化』が明記されており、会計ソフトの導入は本補助金の目的と完全合致するため。",
+      "小規模事業者のインボイス対応や業務効率化において、即効性の高いDXツールであるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYirMAH",
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "invoice",
     "score": 90,
     "reasons": [
-      "インボイス制度への対応や請求業務のデジタル化は、本事業が求める『生産性向上・顧客の利便性向上』に直結する",
-      "開業直後からペーパーレスかつ効率的な請求フローを構築できる"
+      "インボイス制度対応や請求書作成のデジタル化は、本補助金の『営業業務効率化』に直結する項目であるため。",
+      "導入コストを補助金で賄いながら、日常的な事務負担を劇的に軽減できるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYirMAH",
-    "toolSlug": "cashflow",
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "cost-reduction",
     "score": 80,
     "reasons": [
-      "補助金は後払いが基本であるため、起業初期のキャッシュフロー対策は事業の存続に直結する",
-      "地域課題解決という社会的意義のある事業を安定して継続させるための強力な支えとなる"
+      "『その他業務効率化』の枠組みで、グループウェア等の通信環境改善として導入が検討可能であるため。",
+      "DX化の基盤となる通信インフラの最適化は、経営のスマート化に不可欠なステップであるため。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYirMAH",
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "起業・補助金申請に不慣れな場合、専門家のサポートが採択率を劇的に向上させる",
-      "事業計画の精査において第三者の客観的な視点を得ることは、自律的な事業継続の可能性を高める"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
-      "accountingカテゴリ一致"
+      "申請にあたり『専門機関での事前相談』が必須とされており、専門家のサポートを受けることで採択率を高められるため。",
+      "補助金申請の複雑なフローに対する心理的・実務的ハードルを大きく下げられるため。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "toolSlug": "consulting",
+    "score": 60,
     "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
+      "本補助金は専門的な要件が多いため、採択率を高めるための専門家による戦略立案が極めて有効であるため"
     ]
   },
   {
