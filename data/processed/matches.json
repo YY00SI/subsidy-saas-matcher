@@ -48,6 +48,14 @@
     ]
   },
   {
+    "subsidyId": "a0WJ200000CDXvUMAX",
+    "toolSlug": "consulting",
+    "score": 90,
+    "reasons": [
+      "補助金の申請要件が専門的であり、手続きや事業計画の策定を専門家に相談することで、採択後の人材育成プラン作成までスムーズに進められるため"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
