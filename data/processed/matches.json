@@ -96,6 +96,60 @@
     ]
   },
   {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "起業時の正確な会計管理は必須であり、補助金の収支管理にも不可欠です。",
+      "本補助金はデジタル技術の活用を要件としており、クラウド会計の導入は生産性向上という要件に直結します。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "インボイス制度への対応およびペーパーレス化による業務効率化は、事業立ち上げ時の事務負荷軽減に直結します。",
+      "顧客の利便性向上やデジタル活用の具体例として、請求書発行のDX化は審査でもプラス評価されやすい項目です。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "創業支援の実績豊富な税理士との連携は、補助金申請の採択率向上に寄与します。",
+      "事業計画書のブラッシュアップや法人の税務・経営安定化に向けた強力なサポーターとなります。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "cashflow",
+    "score": 75,
+    "reasons": [
+      "補助金は後払い（精算払い）が原則であるため、立ち上げ時のキャッシュフロー改善手段として極めて有用です。",
+      "自己資金が限られる起業家にとって、早期の現金化は事業継続の生命線となります。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "cost-reduction",
+    "score": 70,
+    "reasons": [
+      "固定電話のクラウド化や通信環境の最適化は、低コストで事業の信頼性を高める手段です。",
+      "本補助金の求めるデジタル技術活用による顧客対応の効率化に適しています。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYirMAH",
+    "toolSlug": "incorporation",
+    "score": 60,
+    "reasons": [
+      "法人の登記場所確保は創業時のコストを左右します。",
+      "北海道内に拠点を持つことが要件ですが、登記上の本社機能を整理することで固定費の最適化が可能です。"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDaMLMA1",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -165,6 +219,82 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDcQsMAL",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "労働生産性の向上という本補助金の最重要要件に対し、会計業務の効率化は直結する。",
+      "IT導入によるバックオフィスのDX推進という目的と完全に合致する。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDcQsMAL",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "インボイス制度対応や請求業務の自動化は、生産性向上に即効性がある。",
+      "データ活用を通じた経営基盤強化という目的に合致する。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDcQsMAL",
+    "toolSlug": "cost-reduction",
+    "score": 80,
+    "reasons": [
+      "DX推進に伴うリモートワーク環境の整備や、無駄な通信コストの削減は、収益性強化の第一歩となる。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDcQsMAL",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "本補助金は申請要件（SECURITY ACTION等）が詳細であり、専門家のサポートを受けることが採択率向上の近道となる。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDcQsMAL",
+    "toolSlug": "cashflow",
+    "score": 60,
+    "reasons": [
+      "補助金入金までの資金繰り対策としては有効だが、直接的なDX推進や生産性向上という補助金の主目的からは優先度が下がる。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "accounting",
+    "score": 60,
+    "reasons": [
+      "デジタル化による店舗運営の効率化に貢献する",
+      "補助金申請後の経理処理をスマート化するために有効"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "invoice",
+    "score": 65,
+    "reasons": [
+      "商店街のDXにおいて請求・決済業務の効率化は重要課題",
+      "IT導入補助金の対象となることが多く、デジタル活用の一環として親和性が高い"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "cost-reduction",
+    "score": 50,
+    "reasons": [
+      "店舗の通信環境整備や電話業務のDX化はデジタル推進の一部として認められる可能性がある"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "専門家の活用経費が補助対象となっており、申請を確実にするための税理士紹介と相性が極めて良い"
     ]
   }
 ]
