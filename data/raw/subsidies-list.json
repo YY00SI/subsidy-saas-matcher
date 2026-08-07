@@ -1,5 +1,16 @@
 [
   {
+    "acceptance_end_datetime": "2026-09-04T06:00:00.000Z",
+    "acceptance_start_datetime": "2026-08-07T05:00:00.000Z",
+    "id": "a0WJ200000CDctfMAD",
+    "institution_name": null,
+    "name": "S-00009455",
+    "subsidy_max_limit": 720000000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "令和８年度「蓄電池等の製品の持続可能性向上に向けた基盤整備・実証事業」"
+  },
+  {
     "acceptance_end_datetime": "2026-11-30T14:59:00.000Z",
     "acceptance_start_datetime": "2026-04-14T15:00:00.000Z",
     "id": "a0WJ200000CDXvUMAX",
@@ -9,17 +20,6 @@
     "target_area_search": "東京都",
     "target_number_of_employees": "従業員数の制約なし",
     "title": "令和８年度東京都医療ＤＸ人材育成支援事業"
-  },
-  {
-    "acceptance_end_datetime": "2026-08-07T08:00:00.000Z",
-    "acceptance_start_datetime": "2026-07-08T06:00:00.000Z",
-    "id": "a0WJ200000CDcQsMAL",
-    "institution_name": null,
-    "name": "S-00009439",
-    "subsidy_max_limit": 5000000,
-    "target_area_search": "全国 / 宮崎県",
-    "target_number_of_employees": "従業員数の制約なし",
-    "title": "物価高騰対策ＤＸ推進事業費補助金（戦略的DX推進事業）"
   },
   {
     "acceptance_end_datetime": "2026-12-28T08:15:00.000Z",
