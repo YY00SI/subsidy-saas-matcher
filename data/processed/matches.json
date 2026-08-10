@@ -48,24 +48,6 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 90,
-    "reasons": [
-      "補助金申請書類の作成から研修計画の策定まで専門家のサポートを受けることで、採択率が飛躍的に高まるため",
-      "複雑な助成金要件への適合を支援できるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "consulting",
-    "score": 60,
-    "reasons": [
-      "医療DX人材育成支援事業は申請要件や手続きが専門的であるため、専門家のサポートが採択率向上に寄与する",
-      "補助金申請と医療経営のDX化を包括的に相談できる窓口として活用価値が高い"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
