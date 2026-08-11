@@ -48,6 +48,15 @@
     ]
   },
   {
+    "subsidyId": "a0WJ200000CDXEmMAP",
+    "toolSlug": "tax-accountant",
+    "score": 90,
+    "reasons": [
+      "令和8年度スキルアップ支援事業は申請プロセスが細分化されており、専門家のサポートが採択率を劇的に高める",
+      "研修計画の策定や実施報告など、複雑な事務手続きを専門家に任せることで本業への注力が可能になる"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
