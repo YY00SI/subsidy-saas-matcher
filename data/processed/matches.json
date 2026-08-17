@@ -48,59 +48,47 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXvUMAX",
+    "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "consulting",
-    "score": 70,
+    "score": 90,
     "reasons": [
-      "医療DXの導入には高度な専門知識が必要であり、税理士や専門コンサルタントを介して補助金活用を含めた包括的なDX戦略を練ることは非常に合理的です。"
+      "補助金申請書類の作成や事業計画の策定を専門家に依頼することは採択率を劇的に高めるため極めて重要",
+      "「税理士ドットコム」等は補助金に強い専門家とのマッチングに長けており、申請プロセスに不安を持つ経営者にとって必須のツールである"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助金対象の『経理業務効率化事業』と完全に合致する",
+      "インボイス制度対応が必須の小規模事業者にとって最も優先度の高いツールである"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "見積・納品・請求業務の効率化は、本補助金の対象である営業業務効率化事業として非常に通りやすい",
+      "インボイス対応による経営インパクトが大きく、DXの第一歩として推奨される"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "toolSlug": "cost-reduction",
+    "score": 80,
     "reasons": [
-      "accountingカテゴリ一致"
+      "グループウェアや通信環境の改善は、本補助金の『その他業務効率化事業』として申請対象となり得る",
+      "業務効率化の観点からテレワーク環境等の構築に寄与する"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "consulting",
+    "score": 75,
     "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
+      "本補助金は事前相談が必須であり、専門家のサポートを受けることで採択率を劇的に向上できる可能性がある"
     ]
   },
   {
@@ -129,15 +117,6 @@
   },
   {
     "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "税理士ドットコム",
-    "score": 60,
-    "reasons": [
-      "医療機関の補助金申請は要件が複雑であり、税理士等の専門家によるサポートを受けることで不採択リスクを大幅に低減できるため。",
-      "申請業務に追われる院長や事務長にとって貴重なリソースとなる。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "kanbei-sign",
     "score": 69,
     "reasons": [
@@ -145,7 +124,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDbpCMAT",
+    "subsidyId": "a0WJ200000CDbHxMAL",
     "toolSlug": "misoca-invoice",
     "score": 65,
     "reasons": [
@@ -153,11 +132,61 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDbpCMAT",
+    "subsidyId": "a0WJ200000CDbHxMAL",
     "toolSlug": "airpay",
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "デジタル化による業務効率化という補助金の目的に直結する必須ツールであるため",
+      "バックオフィスのDX化が中小企業支援の要であるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "インボイス制度への対応や請求業務の効率化は、本補助金が推奨するデジタル化の具体例と合致するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "cost-reduction",
+    "score": 80,
+    "reasons": [
+      "通信環境や電話業務のDXは、デジタル化支援の補助対象として極めて親和性が高いため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "補助金申請にはDX診断等の要件があり、専門家のアドバイスが採択率向上に寄与するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "cashflow",
+    "score": 60,
+    "reasons": [
+      "補助金の後払い特性に対する資金繰り対策として一定の有効性があるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdAfMAL",
+    "toolSlug": "consulting",
+    "score": 90,
+    "reasons": [
+      "補助金申請書類の作成や、ICT導入に伴う経営コンサルティングは本補助金において『生産性向上支援』として加点・補助の対象となる",
+      "専門家のサポートを受けることで採択率を劇的に高めることができる"
     ]
   }
 ]
