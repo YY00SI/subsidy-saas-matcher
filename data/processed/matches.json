@@ -48,47 +48,51 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 90,
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助金申請書類の作成や事業計画の策定を専門家に依頼することは採択率を劇的に高めるため極めて重要",
-      "「税理士ドットコム」等は補助金に強い専門家とのマッチングに長けており、申請プロセスに不安を持つ経営者にとって必須のツールである"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "補助金対象の『経理業務効率化事業』と完全に合致する",
-      "インボイス制度対応が必須の小規模事業者にとって最も優先度の高いツールである"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "見積・納品・請求業務の効率化は、本補助金の対象である営業業務効率化事業として非常に通りやすい",
-      "インボイス対応による経営インパクトが大きく、DXの第一歩として推奨される"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 80,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "グループウェアや通信環境の改善は、本補助金の『その他業務効率化事業』として申請対象となり得る",
-      "業務効率化の観点からテレワーク環境等の構築に寄与する"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 75,
+    "toolSlug": "airpay",
+    "score": 63,
     "reasons": [
-      "本補助金は事前相談が必須であり、専門家のサポートを受けることで採択率を劇的に向上できる可能性がある"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
@@ -145,7 +149,7 @@
     "score": 95,
     "reasons": [
       "デジタル化による業務効率化という補助金の目的に直結する必須ツールであるため",
-      "バックオフィスのDX化が中小企業支援の要であるため"
+      "バックオフィスのDX推進において会計ソフトの導入は最も標準的かつ効果的な施策であるため"
     ]
   },
   {
@@ -153,15 +157,8 @@
     "toolSlug": "invoice",
     "score": 90,
     "reasons": [
-      "インボイス制度への対応や請求業務の効率化は、本補助金が推奨するデジタル化の具体例と合致するため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cost-reduction",
-    "score": 80,
-    "reasons": [
-      "通信環境や電話業務のDXは、デジタル化支援の補助対象として極めて親和性が高いため"
+      "インボイス制度対応や請求業務のデジタル化は、本補助金が推奨するDXの典型例であるため",
+      "ソフトウェア利用料が補助対象経費に含まれており、導入ハードルが低いため"
     ]
   },
   {
@@ -169,7 +166,16 @@
     "toolSlug": "consulting",
     "score": 85,
     "reasons": [
-      "補助金申請にはDX診断等の要件があり、専門家のアドバイスが採択率向上に寄与するため"
+      "DX促進診断事業の活用が要件に含まれており、専門家のサポートを受けることと親和性が高いため",
+      "申請プロセス自体に不安がある事業者が専門家と連携することは採択率向上に寄与するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "cost-reduction",
+    "score": 75,
+    "reasons": [
+      "デジタル技術活用の一環として、通信環境の整備や電話業務の効率化は補助対象事業として認められやすいため"
     ]
   },
   {
@@ -177,16 +183,43 @@
     "toolSlug": "cashflow",
     "score": 60,
     "reasons": [
-      "補助金の後払い特性に対する資金繰り対策として一定の有効性があるため"
+      "補助金の後払い特性により発生する資金繰りの問題を解決する手段として、事業継続の観点から一定の重要性があるため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDdAfMAL",
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "accounting",
+    "score": 70,
+    "reasons": [
+      "商店街のデジタル化に伴うバックオフィス効率化に必須",
+      "補助金受給後の経理処理の適正化に貢献する"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "invoice",
+    "score": 65,
+    "reasons": [
+      "商店街における店舗運営・受発注のデジタル化を推進可能",
+      "インボイス制度対応など、デジタル技術活用の第一歩として最適"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "cost-reduction",
+    "score": 60,
+    "reasons": [
+      "商店街のDX推進に伴う通信インフラの整備として整合性が高い",
+      "IT化による運用コスト削減を支援できる"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "consulting",
     "score": 90,
     "reasons": [
-      "補助金申請書類の作成や、ICT導入に伴う経営コンサルティングは本補助金において『生産性向上支援』として加点・補助の対象となる",
-      "専門家のサポートを受けることで採択率を劇的に高めることができる"
+      "専門家の知見を活用する経費も本補助金の対象であるため、高い親和性がある",
+      "申請の採択率向上に直結するため、最も重要な投資となる"
     ]
   }
 ]
