@@ -48,178 +48,177 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "デジタル化による業務効率化という補助金の目的に直結する必須ツールであるため",
-      "バックオフィスのDX推進において会計ソフトの導入は最も標準的かつ効果的な施策であるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "インボイス制度対応や請求業務のデジタル化は、本補助金が推奨するDXの典型例であるため",
-      "ソフトウェア利用料が補助対象経費に含まれており、導入ハードルが低いため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "DX促進診断事業の活用が要件に含まれており、専門家のサポートを受けることと親和性が高いため",
-      "申請プロセス自体に不安がある事業者が専門家と連携することは採択率向上に寄与するため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cost-reduction",
-    "score": 75,
-    "reasons": [
-      "デジタル技術活用の一環として、通信環境の整備や電話業務の効率化は補助対象事業として認められやすいため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
+    "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "cashflow",
     "score": 60,
     "reasons": [
-      "補助金の後払い特性により発生する資金繰りの問題を解決する手段として、事業継続の観点から一定の重要性があるため"
+      "助成金は通常後払いであるため、研修実施に必要な外注費や講師謝金のキャッシュフローを支える手段として有効",
+      "経営の安定化を図り、人材育成に注力するための環境整備として評価できる"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDXEmMAP",
+    "toolSlug": "consulting",
+    "score": 90,
+    "reasons": [
+      "申請要件が細かく研修内容の企画も求められるため、専門家のサポートにより採択率を劇的に向上できる",
+      "申請から実績報告までの煩雑な事務局対応を代行・助言してもらう価値が非常に高い"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "accounting",
-    "score": 70,
+    "score": 60,
     "reasons": [
-      "商店街のデジタル化に伴うバックオフィス効率化に必須",
-      "補助金受給後の経理処理の適正化に貢献する"
+      "デジタル化推進の一環として、会計業務の効率化は基盤となる",
+      "店舗運営における売上管理とデジタル連携に寄与する"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "invoice",
-    "score": 65,
+    "score": 70,
     "reasons": [
-      "商店街における店舗運営・受発注のデジタル化を推進可能",
-      "インボイス制度対応など、デジタル技術活用の第一歩として最適"
+      "商店街のデジタル化に伴う請求書発行業務の最適化に直結する",
+      "インボイス制度対応が求められる小規模事業者にとっての必須ツール"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "cost-reduction",
-    "score": 60,
+    "score": 50,
     "reasons": [
-      "商店街のDX推進に伴う通信インフラの整備として整合性が高い",
-      "IT化による運用コスト削減を支援できる"
+      "通信環境の整備は本補助金の対象となり得るため、DX基盤として有効",
+      "リモートワークやデジタル接客の基盤構築に役立つ"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "consulting",
-    "score": 90,
+    "score": 80,
     "reasons": [
-      "専門家の知見を活用する経費も本補助金の対象であるため、高い親和性がある",
-      "申請の採択率向上に直結するため、最も重要な投資となる"
+      "商店街振興という複雑な申請要件に対し、専門家の知見は採択率を高める",
+      "補助金活用の戦略策定において相談先の確保は最優先事項である"
     ]
   }
 ]
