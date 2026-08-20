@@ -49,176 +49,118 @@
   },
   {
     "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "cashflow",
-    "score": 60,
-    "reasons": [
-      "助成金は通常後払いであるため、研修実施に必要な外注費や講師謝金のキャッシュフローを支える手段として有効",
-      "経営の安定化を図り、人材育成に注力するための環境整備として評価できる"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "consulting",
     "score": 90,
     "reasons": [
-      "申請要件が細かく研修内容の企画も求められるため、専門家のサポートにより採択率を劇的に向上できる",
-      "申請から実績報告までの煩雑な事務局対応を代行・助言してもらう価値が非常に高い"
+      "研修計画の策定や申請書類の作成には専門知識が必要であり、特に税理士や専門家によるサポートは採択率を飛躍的に高めるため、極めて相性が良いです。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDaMLMA1",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "accounting",
-    "score": 60,
+    "score": 95,
     "reasons": [
-      "デジタル化推進の一環として、会計業務の効率化は基盤となる",
-      "店舗運営における売上管理とデジタル連携に寄与する"
+      "補助金の補助対象である経理業務効率化事業（会計システム）と完全に合致する",
+      "インボイス対応や業務自動化による人手不足解消という本補助金の主旨に直結する"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDdgEMAT",
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "invoice",
-    "score": 70,
+    "score": 90,
     "reasons": [
-      "商店街のデジタル化に伴う請求書発行業務の最適化に直結する",
-      "インボイス制度対応が求められる小規模事業者にとっての必須ツール"
+      "インボイス対応や受発注管理システムとして、補助対象事業（2）（3）に最適である",
+      "請求書業務のDXは小規模事業者の事務負担軽減に即効性が高い"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDdgEMAT",
+    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "cost-reduction",
-    "score": 50,
-    "reasons": [
-      "通信環境の整備は本補助金の対象となり得るため、DX基盤として有効",
-      "リモートワークやデジタル接客の基盤構築に役立つ"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
     "score": 80,
     "reasons": [
-      "商店街振興という複雑な申請要件に対し、専門家の知見は採択率を高める",
-      "補助金活用の戦略策定において相談先の確保は最優先事項である"
+      "グループウェアや通信環境の改善など、IT導入による業務効率化という観点から評価できる",
+      "電話業務のDXは店舗や小規模事業者の顧客対応力向上に寄与する"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "本補助金は商工会等での事前相談が必須であり、専門家のサポートを受けることは採択率向上に極めて重要",
+      "複雑な申請プロセスをプロと共に行うことで、機会損失を防ぐ"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDaMLMA1",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
     ]
   }
 ]
