@@ -48,47 +48,59 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
+    "subsidyId": "a0WJ200000CDXvUMAX",
     "toolSlug": "consulting",
-    "score": 90,
+    "score": 60,
     "reasons": [
-      "研修計画の策定や申請書類の作成には専門知識が必要であり、特に税理士や専門家によるサポートは採択率を飛躍的に高めるため、極めて相性が良いです。"
+      "補助金申請の複雑な要件をクリアするために、専門家への相談は非常に有効な手段です。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助金の補助対象である経理業務効率化事業（会計システム）と完全に合致する",
-      "インボイス対応や業務自動化による人手不足解消という本補助金の主旨に直結する"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "インボイス対応や受発注管理システムとして、補助対象事業（2）（3）に最適である",
-      "請求書業務のDXは小規模事業者の事務負担軽減に即効性が高い"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 80,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "グループウェアや通信環境の改善など、IT導入による業務効率化という観点から評価できる",
-      "電話業務のDXは店舗や小規模事業者の顧客対応力向上に寄与する"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 85,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "本補助金は商工会等での事前相談が必須であり、専門家のサポートを受けることは採択率向上に極めて重要",
-      "複雑な申請プロセスをプロと共に行うことで、機会損失を防ぐ"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
