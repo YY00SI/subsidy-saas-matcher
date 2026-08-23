@@ -48,15 +48,6 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "tax-accountant-dot-com",
-    "score": 90,
-    "reasons": [
-      "スキルアップ助成金は申請手続きが複雑であり、税理士等の専門家によるサポートが採択率向上に直結する",
-      "研修カリキュラムの設計や補助要件との適合性確認において専門的アドバイスが有効であるため"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -174,6 +165,42 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "accounting",
+    "score": 60,
+    "reasons": [
+      "商店街の店舗運営におけるバックオフィス効率化に有効であるため",
+      "デジタル化推進の基盤として会計システムの導入は親和性が高い"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "invoice",
+    "score": 65,
+    "reasons": [
+      "インボイス制度対応を含めた店舗のデジタル決済環境や請求管理のDXに合致する",
+      "商店街全体のデジタル化推進という目的に対して即効性の高いツールである"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "cost-reduction",
+    "score": 50,
+    "reasons": [
+      "商店街の店舗運営における通信環境の整備が必要な場合に適している",
+      "補助金の活用範囲であるデジタル導入の一環として通信基盤強化が認められる可能性がある"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "専門家からの支援費用が補助対象であるため、申請サポートや専門家の活用と相性が抜群",
+      "デジタル導入の計画策定を税理士や専門家に委託する際に有効である"
     ]
   }
 ]
