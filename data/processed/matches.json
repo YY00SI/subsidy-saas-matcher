@@ -48,6 +48,15 @@
     ]
   },
   {
+    "subsidyId": "a0WJ200000CDXvUMAX",
+    "toolSlug": "tax-accountant",
+    "score": 90,
+    "reasons": [
+      "医療機関特有の複雑な会計や補助金申請の会計処理をプロに相談することで、採択後の管理業務を効率化できるため",
+      "資格取得に係る経費精算や税務処理において、専門家のサポートが極めて有益であるため"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -141,50 +150,6 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdAkMAL",
-    "toolSlug": "consulting",
-    "score": 70,
-    "reasons": [
-      "専門家による生産性向上のための支援が補助対象となっており、専門家の知見を借りるニーズと合致する。",
-      "複雑な申請要件をプロの手を借りてクリアする選択肢として有効。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "デジタル化推進の一環として、会計業務の効率化は商店街のDXにおいて基礎的な要件となるため。",
-      "補助金活用後の収支管理を円滑にするために必須の基盤ツールであるため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "invoice",
-    "score": 65,
-    "reasons": [
-      "商店街の加盟店舗間や外部との取引をデジタル化する上で、請求書ソフトは導入効果が見えやすいため。",
-      "インボイス対応など、法改正に伴うデジタル基盤整備として商店街のDXと親和性が高いため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "cost-reduction",
-    "score": 50,
-    "reasons": [
-      "商店街の拠点となる店舗や事務所の通信インフラ整備は、デジタル化を促進するための基盤構築として認められる可能性があるため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
-    "score": 80,
-    "reasons": [
-      "本補助金は専門家費用も補助対象に含まれており、申請から導入までをプロに任せることで採択率を高められるため。",
-      "事業計画書の策定やデジタル戦略の構築には、税理士や専門家のサポートが非常に有効であるため。"
     ]
   }
 ]
