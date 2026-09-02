@@ -48,44 +48,51 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "consulting",
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "freee-accounting",
     "score": 70,
     "reasons": [
-      "専門的な補助金申請や、電子カルテ導入に伴うバックオフィスの最適化に関するアドバイスが必要な場合、専門家の支援が非常に有効であるため。"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "補助金の公募要領で『経理業務効率化事業』として会計システムの導入が明記されており、極めて高い合致度を誇る。",
-      "インボイス対応やバックオフィスのデジタル化が目的と完全に合致する。"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "インボイス対応システムや受発注管理システムの導入が補助対象となっており、請求書ソフトの導入は最適なDXの一歩となる。"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 70,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "その他業務効率化事業としてグループウェア等の導入が含まれており、通信・電話環境のDX化は業務効率向上に直結する。"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 85,
+    "toolSlug": "airpay",
+    "score": 63,
     "reasons": [
-      "申請に際して専門機関への事前相談が推奨されており、補助金申請に不慣れな小規模事業者にとって強力な支援となる。"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
@@ -134,42 +141,6 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "accounting",
-    "score": 70,
-    "reasons": [
-      "商店街のデジタル化に伴う会計データの可視化や収支管理の適正化に貢献するため。",
-      "デジタルツール導入による経理の効率化が経営基盤強化に直結するため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "invoice",
-    "score": 75,
-    "reasons": [
-      "商店街のDX推進には、インボイス制度対応の請求書管理や契約のデジタル化が不可欠であるため。",
-      "バックオフィス業務のペーパーレス化により、商店街全体の事務効率が大幅に向上するため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "cost-reduction",
-    "score": 65,
-    "reasons": [
-      "デジタル化に必要な通信環境や電話設備の整備は、本補助金の対象となり得るため。",
-      "固定費削減を通じてデジタル投資の余力を生み出すことが、商店街の活性化に寄与するため。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
-    "score": 90,
-    "reasons": [
-      "補助金申請には専門的な知見が必要であり、税理士や専門家のサポートが採択率を劇的に高めるため。",
-      "本補助金は専門家への相談費用も補助対象として明記されているため、非常に相性が良い。"
     ]
   }
 ]
