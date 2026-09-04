@@ -1,10 +1,26 @@
 [
   {
     "subsidyId": "a0WJ20000087jeOMAQ",
-    "toolSlug": "consulting",
-    "score": 50,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "申請要件が複雑なため、補助金に強い税理士や専門家に相談することは採択率向上に寄与する可能性があるため。"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ20000087jeOMAQ",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ20000087jeOMAQ",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
     ]
   },
   {
@@ -29,15 +45,6 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "consulting",
-    "score": 75,
-    "reasons": [
-      "専門的な補助金申請や医療経営のDX戦略策定において、専門家のサポートは成功率を大きく引き上げます",
-      "複雑な申請要件に対し、医療現場のニーズと合致する専門家を見つける手段として非常に有効です"
     ]
   },
   {
