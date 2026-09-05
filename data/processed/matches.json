@@ -48,6 +48,14 @@
     ]
   },
   {
+    "subsidyId": "a0WJ200000CDXvUMAX",
+    "toolSlug": "consulting",
+    "score": 60,
+    "reasons": [
+      "補助金申請の複雑な要件定義や、専門的な会計管理体制の整備が必要となるため、税理士のサポートは採択率向上に寄与する。"
+    ]
+  },
+  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -121,26 +129,73 @@
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "デジタル化による業務効率化という目的に直結する必須ツールであるため",
+      "バックオフィスDXの基盤として、クラウド利用料が補助対象経費に該当する可能性が非常に高いため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "インボイス制度対応や請求書発行のデジタル化は、本補助金の目的である経営課題解決に合致するため",
+      "ソフトウェア利用料として申請しやすく、採択時の導入効果を実感しやすいツールであるため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "airpay",
-    "score": 63,
+    "toolSlug": "cost-reduction",
+    "score": 80,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "デジタル化に必要な通信環境や電話業務のDX化は、補助対象となるシステム導入の要件を満たすため",
+      "固定費削減は小規模事業者の経営改善の基本であり、DXの第一歩として推奨されるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "consulting",
+    "score": 75,
+    "reasons": [
+      "申請のプロである税理士のアドバイスを得ることで、採択率を劇的に向上できるため",
+      "補助金の活用には適切な会計処理が求められ、プロの知見が不可欠であるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "accounting",
+    "score": 60,
+    "reasons": [
+      "デジタル化推進の第一歩として、商店街等の事務処理効率化に貢献できるため",
+      "補助金申請に伴う会計データの可視化が必要となるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "invoice",
+    "score": 70,
+    "reasons": [
+      "商店街のDXにおいて、インボイス制度対応や請求業務のデジタル化は必須要件となるため",
+      "システム導入経費として補助対象となりやすいカテゴリーであるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "cost-reduction",
+    "score": 55,
+    "reasons": [
+      "商店街の通信環境の整備や店舗運営のDX化に関連するコスト削減として一定の妥当性があるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "「専門家からの支援を受ける経費」が補助対象となっており、専門家への相談が採択率向上に直結するため",
+      "デジタル化推進事業のような複雑な申請において、専門知識を持つパートナーの確保は最優先事項であるため"
     ]
   }
 ]
