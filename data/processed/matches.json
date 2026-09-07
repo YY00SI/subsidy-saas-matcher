@@ -49,50 +49,38 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助対象事業として『経理業務効率化事業』が明記されており、freeeや弥生、マネーフォワードの導入は最適解である",
+      "小規模事業者のインボイス対応やバックオフィスDXに直結するため採択の論拠となりやすい"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "invoice",
+    "score": 90,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "インボイス対応システムとして補助対象に該当し、日々の請求・支払業務の効率化という明確な成果が期待できる",
+      "導入コストが比較的低く、補助金活用により実質的な負担を大幅に削減可能"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
+    "toolSlug": "cost-reduction",
+    "score": 75,
     "reasons": [
-      "accountingカテゴリ一致"
+      "グループウェア等の導入や業務効率化事業の枠組みで、通信環境や電話業務のDXは評価対象となり得る",
+      "固定費削減による経営体質の改善という訴求が審査員に響きやすい"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "toolSlug": "consulting",
+    "score": 85,
     "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
+      "本補助金は申請前に商工会等の相談機関での事前相談が必須であり、税理士によるサポートが採択率向上に寄与する",
+      "申請書類の作成から事業計画の策定までをプロに相談することは有効な投資である"
     ]
   },
   {
