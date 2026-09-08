@@ -1,26 +1,11 @@
 [
   {
     "subsidyId": "a0WJ20000087jeOMAQ",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "consulting",
+    "score": 60,
     "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ20000087jeOMAQ",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ20000087jeOMAQ",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
+      "医療機関向けの公的補助金は要件が複雑かつ専門的であり、申請支援の需要が非常に高い。",
+      "申請漏れや不備を防ぐための専門家によるサポートは、忙しい医師・事務長の業務負担を大幅に削減できる。"
     ]
   },
   {
@@ -49,86 +34,144 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "accounting",
     "score": 95,
     "reasons": [
-      "補助対象事業として『経理業務効率化事業』が明記されており、freeeや弥生、マネーフォワードの導入は最適解である",
-      "小規模事業者のインボイス対応やバックオフィスDXに直結するため採択の論拠となりやすい"
+      "デジタル化による業務効率化という目的に直結するツールであること",
+      "DX促進診断において最も改善効果が見えやすく、導入優先度が高いため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "invoice",
     "score": 90,
     "reasons": [
-      "インボイス対応システムとして補助対象に該当し、日々の請求・支払業務の効率化という明確な成果が期待できる",
-      "導入コストが比較的低く、補助金活用により実質的な負担を大幅に削減可能"
+      "バックオフィスのデジタル化として補助金対象経費の代表格であること",
+      "インボイス制度対応など、小規模事業者の喫緊の課題解決に貢献するため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 75,
-    "reasons": [
-      "グループウェア等の導入や業務効率化事業の枠組みで、通信環境や電話業務のDXは評価対象となり得る",
-      "固定費削減による経営体質の改善という訴求が審査員に響きやすい"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "consulting",
     "score": 85,
     "reasons": [
-      "本補助金は申請前に商工会等の相談機関での事前相談が必須であり、税理士によるサポートが採択率向上に寄与する",
-      "申請書類の作成から事業計画の策定までをプロに相談することは有効な投資である"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
+      "DX促進診断の受診が必須条件であるため、補助金申請の専門知識を持つ税理士によるサポートが採択率を劇的に引き上げるため"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "cost-reduction",
+    "score": 75,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "クラウド環境の整備やシステム活用において、通信インフラの適正化は経営基盤のDXとして有効であるため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "accounting",
+    "score": 60,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "デジタル化推進によりバックオフィスの効率化が求められているため",
+      "商店街の個店がデジタル化を進める際の基盤となるため"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "airpay",
-    "score": 63,
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "invoice",
+    "score": 75,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "商店街の店舗において、デジタル決済やインボイス対応は不可欠なDX要素であるため",
+      "顧客への請求・発行業務のデジタル化は本補助金の対象となり得るため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "cost-reduction",
+    "score": 50,
+    "reasons": [
+      "デジタル環境を整備するための通信基盤強化に合致する可能性があるため",
+      "店舗の運用コストを削減しデジタル化の原資を確保する観点で有効であるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "consulting",
+    "score": 85,
+    "reasons": [
+      "補助金の専門的な申請手続きやデジタル化の計画策定において高い支援効果が期待できるため",
+      "商店街という特殊な環境で専門的なアドバイスを受けることは本補助金の目的と合致するため"
     ]
   }
 ]
