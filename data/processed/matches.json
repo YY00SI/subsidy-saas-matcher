@@ -48,22 +48,6 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 90,
-    "reasons": [
-      "人材育成の計画策定や申請手続きは非常に複雑であり、専門家の知見を借りることで採択率を劇的に高められるため最も推奨される。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "consulting",
-    "score": 75,
-    "reasons": [
-      "補助金申請の複雑な要件を整理し、経営者が本来の業務に集中できるようサポートする税理士等の専門家は、医療機関のDX推進を加速させる有効なリソースとなり得る。"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -137,78 +121,26 @@
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "補助金の目的であるデジタル化とバックオフィス効率化に最適",
-      "クラウド利用料として補助対象経費の要件を確実に満たす"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "インボイス制度対応を含む業務DXに直結するツールであり、採択後の導入効果が非常に高い",
-      "ソフトウェア利用料として申請時の経費項目に含めやすい"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cost-reduction",
-    "score": 80,
-    "reasons": [
-      "デジタル化に伴うインフラ整備として、通信費の最適化は経営改善の第一歩として推奨される"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "補助金申請には専門的なアドバイスが不可欠であり、DX促進診断事業との連携を補完する役割を果たす"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cashflow",
-    "score": 60,
-    "reasons": [
-      "補助金は後払いのため、導入時のキャッシュフロー管理を補完する手段として有効な場合がある"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "デジタル化による店舗運営の効率化という補助目的に対し、会計のデジタル化は基盤となるため有効",
-      "商店街全体のDXの一環としてバックオフィスの統合管理に寄与する"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "invoice",
+    "toolSlug": "misoca-invoice",
     "score": 65,
     "reasons": [
-      "デジタル技術活用による事務作業の効率化という目的に合致",
-      "インボイス対応を含むペーパーレス化が商店街のデジタル化推進事業と親和性が高い"
+      "invoiceカテゴリ一致"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "cost-reduction",
-    "score": 50,
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "airpay",
+    "score": 63,
     "reasons": [
-      "商店街のインフラ整備という観点から、通信環境や電話環境のDX化は補助対象の機器導入に該当する可能性がある"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "専門家からの支援を受ける経費が補助対象となっており、申請支援やDX導入アドバイスのニーズと強く合致する"
+      "invoiceカテゴリ一致"
     ]
   }
 ]
