@@ -48,15 +48,6 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXvUMAX",
-    "toolSlug": "consulting",
-    "score": 80,
-    "reasons": [
-      "補助金申請書類の作成や事業計画の策定を専門家に依頼することで、採択率を劇的に高めることができるため",
-      "特に医療機関特有の複雑な申請プロセスをプロの知見でサポートしてもらえるため"
-    ]
-  },
-  {
     "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "freee-accounting",
     "score": 70,
@@ -130,62 +121,36 @@
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
     "toolSlug": "accounting",
-    "score": 70,
+    "score": 95,
     "reasons": [
-      "商店街の店舗運営におけるバックオフィス効率化に必須",
-      "デジタル化推進の第一歩として会計のクラウド化は最適"
+      "デジタル化による業務効率化という本補助金の目的に直結しており、ソフトウェア購入費・利用料の対象として非常に親和性が高い。",
+      "バックオフィスのDX化は小規模事業者の経営改善における第一歩である。"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDdgEMAT",
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "invoice",
-    "score": 75,
-    "reasons": [
-      "インボイス制度への対応など、商店街事業者のデジタル請求業務に直結",
-      "システム開発の経費対象となり得る業務効率化ツール"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "cost-reduction",
-    "score": 65,
-    "reasons": [
-      "商店街のデジタル基盤構築における通信環境の整備として適合する可能性がある",
-      "店舗のDX化におけるインフラコスト削減に寄与する"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
     "score": 90,
     "reasons": [
-      "補助金の専門的な申請支援や計画策定において高い貢献度が見込める",
-      "デジタル化の導入支援費として対象経費に含まれる専門家支援に該当する"
+      "インボイス制度対応を含む請求業務のデジタル化は、本補助金の趣旨である『デジタル技術を活用した業務効率化』の典型例である。",
+      "導入コストを補助金で賄いやすく、即効性の高いDXを実現できる。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "cost-reduction",
+    "score": 85,
+    "reasons": [
+      "CLOUDPHONE等はIT導入補助金対象にもなりやすく、物理機器からの脱却というデジタル化の文脈に完全に合致している。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "consulting",
+    "score": 80,
+    "reasons": [
+      "『久留米市中小企業DX促進診断事業』の活用が必須要件であるため、専門家のサポートを受けつつ申請を確実に進める体制構築として税理士相談は極めて有効である。"
     ]
   },
   {
