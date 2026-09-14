@@ -50,93 +50,161 @@
   {
     "subsidyId": "a0WJ200000CDXEmMAP",
     "toolSlug": "consulting",
-    "score": 75,
+    "score": 60,
     "reasons": [
-      "補助金申請の複雑な事務手続きを専門家に相談することで、研修計画の策定から申請・報告までを効率化できるため相性が良い"
+      "補助金申請には複雑な手続きが伴うため、研修計画の策定や申請サポートができる専門家の重要性は高い。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "freee-accounting",
+    "score": 70,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbHxMAL",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "accounting",
     "score": 95,
     "reasons": [
-      "補助金事業の『経理業務効率化事業』に完全適合し、会計ソフト導入は採択時の評価が高いDXの基本であるため。",
-      "インボイス対応など、法対応を自動化することで補助金の目的に直接寄与する。"
+      "デジタル化による業務効率化という目的に直結するツールであること",
+      "ソフトウェア利用料が補助対象経費に含まれており、非常に相性が良い"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "invoice",
     "score": 90,
     "reasons": [
-      "インボイス制度対応や請求書発行のデジタル化は、業務効率化の観点から最も成果を実感しやすい領域であるため。",
-      "補助金の申請対象である『営業・経理業務効率化』に直結する。"
+      "クラウド請求書ソフトはデジタル化の第一歩として推奨されやすく、補助金要件を満たしやすい",
+      "業務効率化という補助金の主目的に合致する"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "cost-reduction",
+    "score": 80,
+    "reasons": [
+      "デジタル技術活用による経営基盤の強化という文脈で導入が認められる可能性が高い",
+      "通信環境の整備はDX推進の必須インフラである"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDbpCMAT",
     "toolSlug": "consulting",
     "score": 85,
     "reasons": [
-      "専門家による事前相談が必須要件となっており、採択率を最大化するために不可欠な支援を受けられるため。",
-      "補助金申請の複雑な事務手続きをサポートし、申請の脱落を防ぐ。"
+      "補助金申請にはアドバイザーの提案が必要なため、専門家への相談は採択率を高めるために不可欠である",
+      "複雑な申請プロセスをサポートする専門家の存在は成功率を大きく左右する"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
+    "subsidyId": "a0WJ200000CDbpCMAT",
+    "toolSlug": "cashflow",
+    "score": 50,
+    "reasons": [
+      "補助金入金までの資金繰り改善には有効だが、本補助金の目的である『デジタル化』そのものとは直接的な関係が薄い"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "accounting",
+    "score": 70,
+    "reasons": [
+      "商店街の店舗運営におけるバックオフィス効率化に必須",
+      "デジタル化推進の第一歩として会計のクラウド化が評価されやすい"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "invoice",
     "score": 75,
     "reasons": [
-      "電話環境のDX化や通信インフラの刷新は、業務効率化・コストカットの両面で推奨されるデジタル投資であるため。",
-      "事業の基盤整備として認められやすいカテゴリーである。"
+      "インボイス対応や事務処理のデジタル化は商店街DXの要",
+      "請求書や契約書の電子化は本補助金の対象となるシステム構築経費に合致"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "cost-reduction",
+    "score": 60,
     "reasons": [
-      "invoiceカテゴリ一致"
+      "通信環境の整備は商店街のDX推進に不可欠なインフラ",
+      "システム運用コストを抑制し、本来のデジタル導入へ予算を回すために有効"
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
+    "subsidyId": "a0WJ200000CDdgEMAT",
+    "toolSlug": "consulting",
+    "score": 85,
     "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbHxMAL",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
+      "申請書類作成支援や専門家活用経費として補助対象になり得る",
+      "採択率を最大化させるために専門家の知見を借りることは経営的判断として非常に合理的"
     ]
   },
   {
