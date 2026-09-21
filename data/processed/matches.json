@@ -25,26 +25,11 @@
   },
   {
     "subsidyId": "a0WJ200000CDRArMAP",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
+    "toolSlug": "consulting",
+    "score": 60,
     "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDRArMAP",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDRArMAP",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
+      "税理士は補助金申請のサポートを行う場合がありますが、本件は医療特有のシステム要件が強いため、IT導入に特化した専門家のアドバイスが推奨されます。",
+      "補助金申請の専門家相談という意味では一定のシナジーがあります。"
     ]
   },
   {
@@ -52,7 +37,8 @@
     "toolSlug": "consulting",
     "score": 90,
     "reasons": [
-      "スキルアップ支援事業は申請書類や研修計画の策定が複雑であり、専門家の支援を受けることで採択率を劇的に高められる可能性があるため"
+      "補助金申請には複雑な書類準備と提出期限の管理が不可欠であり、専門家のサポートが採択率を劇的に高めるため。",
+      "研修計画書の策定など、プロのアドバイスにより助成対象範囲を最適化できる。"
     ]
   },
   {
@@ -149,42 +135,6 @@
     "score": 63,
     "reasons": [
       "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "accounting",
-    "score": 70,
-    "reasons": [
-      "商店街のデジタル化に伴うバックオフィス効率化に必須",
-      "デジタル技術活用の一環としてクラウド会計導入は合理性が高い"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "invoice",
-    "score": 75,
-    "reasons": [
-      "商店街のデジタル化における取引の電子化・インボイス対応を支援",
-      "デジタル技術導入という補助金の目的と親和性が高い"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "cost-reduction",
-    "score": 60,
-    "reasons": [
-      "商店街のデジタルインフラ整備（通信環境）に寄与する",
-      "ただし、今回の補助金は商店街の集客や魅力向上に重点があるため優先度は中程度"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
-    "score": 85,
-    "reasons": [
-      "専門家の支援経費も補助対象に含まれているため、申請支援や導入相談として活用できる",
-      "高度なITツール導入には専門家の知見が不可欠"
     ]
   },
   {
