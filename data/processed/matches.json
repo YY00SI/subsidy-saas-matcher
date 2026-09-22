@@ -25,32 +25,6 @@
   },
   {
     "subsidyId": "a0WJ200000CDRArMAP",
-    "toolSlug": "consulting",
-    "score": 60,
-    "reasons": [
-      "税理士は補助金申請のサポートを行う場合がありますが、本件は医療特有のシステム要件が強いため、IT導入に特化した専門家のアドバイスが推奨されます。",
-      "補助金申請の専門家相談という意味では一定のシナジーがあります。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
-    "score": 90,
-    "reasons": [
-      "補助金申請には複雑な書類準備と提出期限の管理が不可欠であり、専門家のサポートが採択率を劇的に高めるため。",
-      "研修計画書の策定など、プロのアドバイスにより助成対象範囲を最適化できる。"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
     "toolSlug": "kanbei-sign",
     "score": 69,
     "reasons": [
@@ -58,15 +32,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDRArMAP",
     "toolSlug": "misoca-invoice",
     "score": 65,
     "reasons": [
@@ -74,7 +40,7 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
+    "subsidyId": "a0WJ200000CDRArMAP",
     "toolSlug": "airpay",
     "score": 63,
     "reasons": [
@@ -83,10 +49,37 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
+    "toolSlug": "accounting",
+    "score": 95,
     "reasons": [
-      "accountingカテゴリ一致"
+      "補助対象事業として『経理業務効率化』が明記されており、会計ソフトは最優先で導入すべきツールであるため",
+      "freeeやマネーフォワード等のクラウド会計は、インボイス対応や業務効率化に直結するため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "invoice",
+    "score": 90,
+    "reasons": [
+      "インボイス対応や請求業務のデジタル化は本補助金の目的である『営業・経理業務効率化』に合致するため",
+      "Misoca等のSaaS導入は、人手不足を補うデジタル技術活用として非常に効果的であるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "cost-reduction",
+    "score": 80,
+    "reasons": [
+      "グループウェアやその他効率化事業として、クラウドフォンによる通信環境のDX化は補助要件に適合するため",
+      "リモートワークや業務効率化を推進する上で通信環境の刷新は重要な投資対象となるため"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "consulting",
+    "score": 50,
+    "reasons": [
+      "申請支援（税理士ドットコム）は間接的に役立つが、補助金の対象経費（ITツール導入費）とは異なるため"
     ]
   },
   {
