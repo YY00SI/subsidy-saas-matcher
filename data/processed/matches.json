@@ -49,37 +49,50 @@
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "補助対象事業として『経理業務効率化』が明記されており、会計ソフトは最優先で導入すべきツールであるため",
-      "freeeやマネーフォワード等のクラウド会計は、インボイス対応や業務効率化に直結するため"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "インボイス対応や請求業務のデジタル化は本補助金の目的である『営業・経理業務効率化』に合致するため",
-      "Misoca等のSaaS導入は、人手不足を補うデジタル技術活用として非常に効果的であるため"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
-    "score": 80,
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
     "reasons": [
-      "グループウェアやその他効率化事業として、クラウドフォンによる通信環境のDX化は補助要件に適合するため",
-      "リモートワークや業務効率化を推進する上で通信環境の刷新は重要な投資対象となるため"
+      "accountingカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 50,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "申請支援（税理士ドットコム）は間接的に役立つが、補助金の対象経費（ITツール導入費）とは異なるため"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
