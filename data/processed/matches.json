@@ -2,9 +2,9 @@
   {
     "subsidyId": "a0WJ20000087jeOMAQ",
     "toolSlug": "consulting",
-    "score": 60,
+    "score": 70,
     "reasons": [
-      "補助金申請の実務が不安な医療機関にとって、専門家によるサポートは採択率向上のための有効な手段となり得るため"
+      "医療機関における特殊なIT要件や申請要件を確認するため、専門家のサポートは有効である可能性があるため。"
     ]
   },
   {
@@ -32,39 +32,59 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "accounting",
-    "score": 95,
-    "reasons": [
-      "補助金の公募要領で『経理業務効率化事業』として会計システムが明確に対象とされている",
-      "インボイス対応など、小規模事業者が抱える喫緊の課題を解決できるため相性が非常に良い"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "invoice",
-    "score": 90,
-    "reasons": [
-      "インボイス制度対応の請求書発行ソフト導入は、補助金の『経理業務効率化』の典型的な対象",
-      "低コストで導入でき、補助金の枠内で手軽に業務改善が見込める"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "cost-reduction",
+    "subsidyId": "a0WJ200000CDXEmMAP",
+    "toolSlug": "consulting",
     "score": 80,
     "reasons": [
-      "クラウド型電話システム等は『業務効率化事業』の対象となり得る",
-      "スマホ活用による場所を選ばない働き方は、小規模事業者の人手不足解消に貢献する"
+      "スキルアップ支援事業は申請プロセスが細かく、期限管理が重要であるため、専門家によるサポートや適切な管理環境の構築は成功率を直結させる。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "consulting",
-    "score": 85,
+    "toolSlug": "freee-accounting",
+    "score": 70,
     "reasons": [
-      "申請に際して『専門機関での事前相談』が必須条件となっているため、専門家のサポートは非常に重要",
-      "採択率を高めるために、プロのアドバイスを得ることは賢明な戦略である"
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "kanbei-sign",
+    "score": 69,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "yayoi-accounting-next",
+    "score": 68,
+    "reasons": [
+      "accountingカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "moneyforward-tax",
+    "score": 59.5,
+    "reasons": [
+      "accountingカテゴリ一致"
     ]
   },
   {
@@ -93,81 +113,26 @@
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "accounting",
-    "score": 95,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "デジタル化による業務効率化という補助金の目的に直結する必須ツールであるため",
-      "バックオフィス業務のDXは補助対象となる『ソフトウェア利用料』として認められやすいため"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "invoice",
-    "score": 90,
+    "toolSlug": "misoca-invoice",
+    "score": 65,
     "reasons": [
-      "インボイス制度対応を含めた請求業務のデジタル化は小規模事業者の経営課題解決そのものであるため",
-      "ソフトウェア購入費・クラウド利用料として経費計上が明確であるため"
+      "invoiceカテゴリ一致"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cost-reduction",
-    "score": 80,
+    "toolSlug": "airpay",
+    "score": 63,
     "reasons": [
-      "通信環境や電話業務のデジタル化は、DX推進の一環として評価されやすいため",
-      "業務効率化という補助金目的に合致する"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "consulting",
-    "score": 75,
-    "reasons": [
-      "専門家のコンサル費用が補助対象経費に含まれており、申請支援やDX推進に活用できるため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDbpCMAT",
-    "toolSlug": "cashflow",
-    "score": 50,
-    "reasons": [
-      "補助金受給までのつなぎ資金として有用だが、今回の補助金が目指す『デジタル化・業務効率化』の主目的とは直接の因果関係が薄いため"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "accounting",
-    "score": 60,
-    "reasons": [
-      "デジタル化による事務効率化の一環として導入が可能",
-      "商店街組織の会計透明性向上に寄与する"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "invoice",
-    "score": 75,
-    "reasons": [
-      "商店街の共同事業やイベント管理における請求・決済のDX化に適している",
-      "インボイス対応を含むデジタル事務処理の効率化に直結する"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "cost-reduction",
-    "score": 50,
-    "reasons": [
-      "商店街のインフラ整備としての通信環境改善に活用できる",
-      "固定コストの削減によりデジタル化の持続可能性を高める"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDdgEMAT",
-    "toolSlug": "consulting",
-    "score": 80,
-    "reasons": [
-      "補助金申請には複雑な書類作成が必要であり、専門家のサポートが採択率を劇的に高める",
-      "デジタル導入計画の策定から運用支援までを一括して相談可能"
+      "invoiceカテゴリ一致"
     ]
   },
   {
