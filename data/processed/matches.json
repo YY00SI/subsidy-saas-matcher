@@ -1,10 +1,26 @@
 [
   {
     "subsidyId": "a0WJ20000087jeOMAQ",
-    "toolSlug": "consulting",
-    "score": 70,
+    "toolSlug": "kanbei-sign",
+    "score": 69,
     "reasons": [
-      "医療機関における特殊なIT要件や申請要件を確認するため、専門家のサポートは有効である可能性があるため。"
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ20000087jeOMAQ",
+    "toolSlug": "misoca-invoice",
+    "score": 65,
+    "reasons": [
+      "invoiceカテゴリ一致"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ20000087jeOMAQ",
+    "toolSlug": "airpay",
+    "score": 63,
+    "reasons": [
+      "invoiceカテゴリ一致"
     ]
   },
   {
@@ -32,59 +48,35 @@
     ]
   },
   {
-    "subsidyId": "a0WJ200000CDXEmMAP",
-    "toolSlug": "consulting",
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "accounting",
+    "score": 95,
+    "reasons": [
+      "補助金事業内の『経理業務効率化事業』と完全合致し、採択の優先度が高いカテゴリーであるため。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "invoice",
+    "score": 95,
+    "reasons": [
+      "インボイス対応システムや受発注管理システム導入として、補助金の目的に直接寄与するため。"
+    ]
+  },
+  {
+    "subsidyId": "a0WJ200000CDYEIMA5",
+    "toolSlug": "cost-reduction",
     "score": 80,
     "reasons": [
-      "スキルアップ支援事業は申請プロセスが細かく、期限管理が重要であるため、専門家によるサポートや適切な管理環境の構築は成功率を直結させる。"
+      "グループウェアやその他業務効率化ツールとしての側面を持ち、業務のデジタル化を推進するため。"
     ]
   },
   {
     "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "freee-accounting",
-    "score": 70,
+    "toolSlug": "consulting",
+    "score": 90,
     "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "kanbei-sign",
-    "score": 69,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "yayoi-accounting-next",
-    "score": 68,
-    "reasons": [
-      "accountingカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "misoca-invoice",
-    "score": 65,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "airpay",
-    "score": 63,
-    "reasons": [
-      "invoiceカテゴリ一致"
-    ]
-  },
-  {
-    "subsidyId": "a0WJ200000CDYEIMA5",
-    "toolSlug": "moneyforward-tax",
-    "score": 59.5,
-    "reasons": [
-      "accountingカテゴリ一致"
+      "本補助金は専門家への事前相談が必須要件となっており、支援体制を構築する上で不可欠なため。"
     ]
   },
   {
