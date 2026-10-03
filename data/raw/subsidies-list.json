@@ -1,5 +1,82 @@
 [
   {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RVUA0",
+    "institution_name": null,
+    "name": "S-00009888",
+    "subsidy_max_limit": 8000000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_専門家活用枠(買い手支援類型／売り手支援類型)"
+  },
+  {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RbUAK",
+    "institution_name": null,
+    "name": "S-00009894",
+    "subsidy_max_limit": 3000000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_廃業・再チャレンジ枠"
+  },
+  {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RaUAK",
+    "institution_name": null,
+    "name": "S-00009893",
+    "subsidy_max_limit": 10000000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_事業承継促進枠"
+  },
+  {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RZUA0",
+    "institution_name": null,
+    "name": "S-00009892",
+    "subsidy_max_limit": 4500000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_専門家活用枠(小規模売り手支援類型)"
+  },
+  {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RYUA0",
+    "institution_name": null,
+    "name": "S-00009891",
+    "subsidy_max_limit": 10000000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_PMI推進枠(事業統合投資類型)"
+  },
+  {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RXUA0",
+    "institution_name": null,
+    "name": "S-00009890",
+    "subsidy_max_limit": 1500000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_PMI推進枠(PMI専門家活用類型)"
+  },
+  {
+    "acceptance_end_datetime": "2026-11-06T08:30:00.000Z",
+    "acceptance_start_datetime": "2026-10-02T06:00:00.000Z",
+    "id": "a0WfQ000003N1RWUA0",
+    "institution_name": null,
+    "name": "S-00009889",
+    "subsidy_max_limit": 20000000,
+    "target_area_search": "全国",
+    "target_number_of_employees": "従業員数の制約なし",
+    "title": "中小企業生産性革命推進事業_事業承継・M&A補助金(16次公募)_専門家活用枠(買い手支援類型-100億企業特例)"
+  },
+  {
     "acceptance_end_datetime": "2026-11-30T14:59:00.000Z",
     "acceptance_start_datetime": "2026-04-14T15:00:00.000Z",
     "id": "a0WJ200000CDXvUMAX",
